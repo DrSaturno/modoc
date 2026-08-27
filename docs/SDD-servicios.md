@@ -15,7 +15,7 @@ Implementar las páginas estáticas de detalle de los cuatro servicios del home 
 
 ## Invariantes del proyecto
 
-- El home aprobado no se rediseña en esta etapa. Solo se agregan el destinatario solicitado del formulario, el comportamiento del menú de Acceso Clientes y los enlaces a las páginas de servicios.
+- El home aprobado no se rediseña en esta etapa. Solo se agregan el destinatario solicitado del formulario, los menús de Acceso Clientes y Servicios, y se alinea el carrusel con las cuatro páginas de servicios aprobadas.
 - El texto de las páginas se toma del backup sin reescritura editorial. Las correcciones de estilo o contenido quedan sujetas a aprobación del sector Comercial de MODOC.
 - La implementación es HTML5 semántico, CSS3 y JavaScript vanilla ES6. No se agrega una dependencia de PHP.
 - El layout debe funcionar dentro de `/propuestas-v2/` en desktop y mobile.
@@ -41,13 +41,15 @@ El formulario del home queda dirigido a `mailto:contacto.web@modoc.com.ar` como 
 
 ### Acceso Clientes
 
-El control se convierte en un botón accesible con apertura por click, hover y foco. El submenú conserva los accesos detectados en `Backup 20-04/sistemas.html`:
+El control se convierte en un botón accesible con apertura por click, hover y teclado. Por decisión del cliente, el submenú muestra únicamente los dos accesos con hipervínculo aprobados:
 
 1. `https://gd.modoc.com.ar/zamba.web/` — Gestor Documental - Despachantes de Aduana.
 2. `http://gdg1.modoc.com.ar` — Gestor Documental - Administración de Archivos.
-3. `http://bddo1.modoc.com.ar` — Sistema de Firma y Recibo de Sueldo Digital.
+No se muestran el tercer renglón ni los iconos decorativos del panel anterior.
 
-El tercer acceso está presente en el backup aunque la referencia visual entregada muestre dos líneas principales; se conserva para no perder una ruta existente.
+### Menú Servicios y carrusel
+
+El ítem Servicios despliega las cuatro páginas de detalle por hover, teclado y click/toque. En mobile el desplegable se integra al menú hamburguesa. El carrusel del home contiene exactamente los cuatro servicios desarrollados: Comercio Exterior PSAD, Consultoría, Digitalización y Gestión Documental, y Guarda y Custodia. Firma Digital y Logística no forman parte del carrusel de esta etapa.
 
 ### CAPTCHA
 
@@ -60,6 +62,9 @@ El backup implementa Google reCAPTCHA v2 y la propuesta conserva el bloque visua
 - No existe una referencia funcional a `index.php` para renderizar las páginas nuevas.
 - El formulario contiene el destinatario `contacto.web@modoc.com.ar` y el botón es de tipo submit.
 - Acceso Clientes abre y cierra el submenú con mouse, teclado y click fuera; Escape lo cierra.
-- El menú y el contenido no generan overflow horizontal en un viewport mobile.
+- Servicios abre sus cuatro enlaces con mouse, teclado y toque, tanto en el home como en las páginas de detalle.
+- El carrusel presenta cuatro slides y cada botón “Más información” abre el detalle correspondiente.
+- Las cabeceras de los servicios muestran una imagen a pantalla completa con contraste suficiente para el texto.
+- El menú y el contenido no generan overflow horizontal en viewports desktop, tablet o mobile.
 - Los textos incorporados pueden contrastarse literalmente con los archivos fuente indicados.
 - Los enlaces externos de acceso se abren en una pestaña nueva con `rel="noopener"`.

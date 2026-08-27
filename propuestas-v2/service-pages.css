@@ -25,24 +25,32 @@ button { font: inherit; }
 .service-nav a { position: relative; padding: 36px 0 34px; font-family: "HP Simplified", sans-serif; font-size: 14px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; }
 .service-nav a::after { content: ""; position: absolute; right: 100%; bottom: 24px; left: 0; height: 3px; background: var(--yellow); transition: right .2s ease; }
 .service-nav a:hover::after, .service-nav a:focus-visible::after { right: 0; }
+.services-menu-wrap { position: relative; display: flex; align-self: stretch; align-items: center; }
+.services-menu-trigger { position: relative; padding: 36px 0 34px; border: 0; background: transparent; color: inherit; cursor: pointer; font-family: "HP Simplified", sans-serif; font-size: 14px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; }
+.services-menu-trigger::after { content: ""; position: absolute; right: 100%; bottom: 24px; left: 0; height: 3px; background: var(--yellow); transition: right .2s ease; }
+.services-menu-wrap:hover .services-menu-trigger::after, .services-menu-trigger:focus-visible::after, .services-menu-trigger[aria-expanded="true"]::after { right: 0; }
+.services-menu { position: absolute; z-index: 125; top: calc(100% - 12px); left: 50%; width: 330px; padding: 9px 18px 14px; background: #202020; border-top: 3px solid var(--yellow); box-shadow: 0 22px 55px rgb(0 0 0 / 34%); opacity: 0; visibility: hidden; pointer-events: none; transform: translate(-50%, -8px); transition: opacity .18s ease, transform .18s ease, visibility .18s ease; }
+.services-menu-wrap:not(.is-hover-suppressed):hover .services-menu, .services-menu.is-open { opacity: 1; visibility: visible; pointer-events: auto; transform: translate(-50%, 0); }
+.service-nav .services-menu a { display: block; padding: 12px 2px; border-top: 1px solid rgb(255 255 255 / 17%); color: rgb(255 255 255 / 82%); font-family: "Myriad Pro", sans-serif; font-size: 11px; letter-spacing: .1em; line-height: 1.4; }
+.service-nav .services-menu a:first-child { border-top: 0; }
+.service-nav .services-menu a::after { display: none; }
+.service-nav .services-menu a:hover, .service-nav .services-menu a:focus-visible { color: var(--yellow); }
 .service-nav-toggle { display: none; }
 .service-actions { display: flex; align-items: center; gap: 18px; }
 .service-language { font-family: "Myriad Pro", sans-serif; font-size: 13px; letter-spacing: .07em; }
 .service-language span { opacity: .5; padding-inline: 4px; }
 .client-access-wrap { position: relative; z-index: 120; }
 .client-access { min-height: 44px; padding: 0 20px; display: inline-flex; align-items: center; justify-content: center; border: 2px solid var(--yellow); background: var(--yellow); color: #111; cursor: pointer; font-family: "HP Simplified", sans-serif; font-size: 13px; font-weight: 700; letter-spacing: .045em; text-transform: uppercase; }
-.client-access-menu { position: absolute; top: calc(100% + 14px); right: 0; width: min(438px, calc(100vw - 34px)); padding: 25px 25px 20px; display: flex; flex-direction: column; gap: 12px; background: #202020; color: #fff; box-shadow: 0 22px 55px rgb(0 0 0 / 34%); opacity: 0; visibility: hidden; pointer-events: none; transform: translateY(-8px); transition: opacity .18s ease, transform .18s ease, visibility .18s ease; }
+.client-access-menu { position: absolute; top: calc(100% + 14px); right: 0; width: min(410px, calc(100vw - 34px)); padding: 25px 25px 20px; display: flex; flex-direction: column; gap: 12px; background: #202020; color: #fff; box-shadow: 0 22px 55px rgb(0 0 0 / 34%); opacity: 0; visibility: hidden; pointer-events: none; transform: translateY(-8px); transition: opacity .18s ease, transform .18s ease, visibility .18s ease; }
 .client-access-menu::before { content: ""; position: absolute; top: -8px; right: 32px; width: 16px; height: 16px; background: #202020; transform: rotate(45deg); }
-.client-access-wrap:hover .client-access-menu, .client-access-wrap:focus-within .client-access-menu, .client-access-menu.is-open { opacity: 1; visibility: visible; pointer-events: auto; transform: translateY(0); }
+.client-access-wrap:not(.is-hover-suppressed):hover .client-access-menu, .client-access-menu.is-open { opacity: 1; visibility: visible; pointer-events: auto; transform: translateY(0); }
 .client-access-menu > strong { position: relative; z-index: 1; margin-bottom: 2px; font-family: "HP Simplified", sans-serif; font-size: 22px; line-height: 1; }
 .client-access-menu > a { position: relative; z-index: 1; padding-top: 10px; border-top: 1px solid rgb(255 255 255 / 17%); color: rgb(255 255 255 / 82%); font-family: "Myriad Pro", sans-serif; font-size: 11px; letter-spacing: .13em; line-height: 1.45; text-transform: uppercase; }
 .client-access-menu > a:hover, .client-access-menu > a:focus-visible { color: var(--yellow); }
-.client-access-menu__icons { position: relative; z-index: 1; display: flex; justify-content: center; gap: 22px; padding-top: 19px; }
-.client-access-menu__icons svg { width: 38px; height: 38px; fill: none; stroke: var(--yellow); stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
 
 /* Service hero */
 .service-hero { min-height: 640px; display: flex; align-items: flex-end; position: relative; overflow: hidden; background: var(--dark) var(--hero-image) center / cover no-repeat; color: #fff; }
-.service-hero::before { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgb(4 8 10 / 92%) 0%, rgb(4 8 10 / 74%) 39%, rgb(4 8 10 / 18%) 78%, transparent 100%); }
+.service-hero::before { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgb(4 8 10 / 88%) 0%, rgb(4 8 10 / 62%) 38%, rgb(4 8 10 / 16%) 70%, rgb(4 8 10 / 7%) 100%); }
 .service-hero__inner { position: relative; z-index: 1; padding-top: 160px; padding-bottom: 74px; }
 .service-hero__copy { max-width: 730px; }
 .service-hero h1 { max-width: 760px; margin: 0 0 24px; font-family: "HP Simplified", sans-serif; font-size: clamp(50px, 6.2vw, 88px); line-height: .94; letter-spacing: -.025em; text-transform: uppercase; }
@@ -118,6 +126,8 @@ button { font: inherit; }
   .service-nav-shell { grid-template-columns: 132px 1fr auto; gap: 16px; }
   .service-nav { gap: 18px; }
   .service-nav a { font-size: 11px; }
+  .services-menu-trigger { font-size: 11px; }
+  .services-menu { width: 300px; }
   .service-language { display: none; }
   .service-split, .service-split--reverse { grid-template-columns: 1fr; gap: 38px; }
   .service-split--reverse .service-media { order: 0; }
@@ -137,17 +147,21 @@ button { font: inherit; }
   .service-nav.is-open { display: flex; }
   .service-nav a { padding: 10px; }
   .service-nav a::after { display: none; }
+  .services-menu-wrap { display: block; width: 100%; }
+  .services-menu-trigger { width: 100%; padding: 10px; color: #fff; text-align: left; }
+  .services-menu-trigger::after { display: none; }
+  .services-menu { position: static; width: 100%; margin: 2px 0 4px; padding: 5px 11px 9px; box-shadow: none; transform: none; }
+  .services-menu-wrap:not(.is-hover-suppressed):hover .services-menu, .services-menu.is-open { transform: none; }
+  .service-nav .services-menu a { padding: 10px 2px; }
   .service-nav-toggle { width: 42px; height: 42px; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 5px; border: 1px solid currentColor; background: transparent; color: #fff; }
   .service-nav-toggle span { width: 19px; height: 2px; background: currentColor; }
   .service-actions { justify-self: end; }
   .client-access { min-height: 40px; padding: 0 11px; font-size: 10px; }
-  .client-access-menu { top: calc(100% + 11px); width: min(430px, calc(100vw - 28px)); padding: 21px 20px 18px; }
+  .client-access-menu { top: calc(100% + 11px); width: min(410px, calc(100vw - 28px)); padding: 21px 20px 18px; }
   .client-access-menu > strong { font-size: 18px; }
   .client-access-menu > a { font-size: 10px; letter-spacing: .09em; }
-  .client-access-menu__icons { gap: 16px; padding-top: 12px; }
-  .client-access-menu__icons svg { width: 31px; height: 31px; }
   .service-hero { min-height: 640px; background-position: 64% center; }
-  .service-hero::before { background: linear-gradient(0deg, rgb(4 8 10 / 96%) 0%, rgb(4 8 10 / 80%) 52%, rgb(4 8 10 / 23%) 100%); }
+  .service-hero::before { background: linear-gradient(0deg, rgb(4 8 10 / 94%) 0%, rgb(4 8 10 / 70%) 49%, rgb(4 8 10 / 12%) 100%); }
   .service-hero__inner { padding-top: 150px; padding-bottom: 55px; }
   .service-hero h1 { font-size: clamp(42px, 13vw, 66px); }
   .service-hero p { font-size: 14px; line-height: 1.65; }

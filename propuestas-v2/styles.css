@@ -365,8 +365,8 @@ html[data-theme="3"] .captcha { background: #071a26; }
   .section-heading--about { margin-bottom: 38px; }
   .section-heading--about h2 { font-size: 58px; }
   .about-copy p { font-size: 14px; line-height: 1.75; }
-  .client-grid { grid-template-columns: repeat(2, 1fr); }
-  .client-logo { min-height: 110px; padding: 18px; }
+  .client-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .client-logo { min-width: 0; min-height: 110px; padding: 18px; }
   .client-logo:last-child { grid-column: 1 / -1; }
   .contact-band { width: 100%; height: 43%; bottom: auto; }
   .contact-grid { display: block; }
@@ -1264,7 +1264,7 @@ html[data-theme="3"] .receptorias-list span {
   position: absolute;
   top: calc(100% + 14px);
   right: 0;
-  width: min(438px, calc(100vw - 34px));
+  width: min(410px, calc(100vw - 34px));
   padding: 25px 25px 20px;
   display: flex;
   flex-direction: column;
@@ -1290,8 +1290,7 @@ html[data-theme="3"] .receptorias-list span {
   transform: rotate(45deg);
 }
 
-.client-access-wrap:hover .client-access-menu,
-.client-access-wrap:focus-within .client-access-menu,
+.client-access-wrap:not(.is-hover-suppressed):hover .client-access-menu,
 .client-access-menu.is-open {
   opacity: 1;
   visibility: visible;
@@ -1328,37 +1327,128 @@ html[data-theme="3"] .receptorias-list span {
   color: var(--accent);
 }
 
-.client-access-menu__icons {
+/* Submenú de servicios: hover en escritorio y apertura por toque/teclado. */
+.services-menu-wrap {
   position: relative;
-  z-index: 1;
   display: flex;
+  align-self: stretch;
   align-items: center;
-  justify-content: center;
-  gap: 22px;
-  padding-top: 19px;
 }
 
-.client-access-menu__icons svg {
-  width: 38px;
-  height: 38px;
-  fill: none;
-  stroke: var(--accent);
-  stroke-width: 1.6;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+.services-menu-trigger {
+  position: relative;
+  padding: 34px 0 31px;
+  border: 0;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  font-family: "HP Simplified", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: .045em;
+  text-transform: uppercase;
+}
+
+.services-menu-trigger::after {
+  content: "";
+  position: absolute;
+  right: 100%;
+  bottom: 23px;
+  left: 0;
+  height: 3px;
+  background: var(--accent);
+  transition: right .2s ease;
+}
+
+.services-menu-wrap:hover .services-menu-trigger::after,
+.services-menu-trigger:focus-visible::after,
+.services-menu-trigger[aria-expanded="true"]::after {
+  right: 0;
+}
+
+.services-menu {
+  position: absolute;
+  z-index: 125;
+  top: calc(100% - 12px);
+  left: 50%;
+  width: 330px;
+  padding: 9px 18px 14px;
+  background: #202020;
+  border-top: 3px solid var(--accent);
+  box-shadow: 0 22px 55px rgb(0 0 0 / 34%);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translate(-50%, -8px);
+  transition: opacity .18s ease, transform .18s ease, visibility .18s ease;
+}
+
+.services-menu-wrap:not(.is-hover-suppressed):hover .services-menu,
+.services-menu.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translate(-50%, 0);
+}
+
+.main-nav .services-menu a {
+  display: block;
+  padding: 12px 2px;
+  border-top: 1px solid rgb(255 255 255 / 17%);
+  color: rgb(255 255 255 / 82%);
+  font-family: "Myriad Pro", sans-serif;
+  font-size: 11px;
+  letter-spacing: .1em;
+  line-height: 1.4;
+}
+
+.main-nav .services-menu a:first-child { border-top: 0; }
+.main-nav .services-menu a::after { display: none; }
+.main-nav .services-menu a:hover,
+.main-nav .services-menu a:focus-visible { color: var(--accent); }
+
+@media (max-width: 1060px) and (min-width: 761px) {
+  .services-menu-trigger { font-size: 12px; }
+  .services-menu { width: 300px; }
 }
 
 @media (max-width: 760px) {
   .client-access-menu {
     top: calc(100% + 11px);
-    width: min(438px, calc(100vw - 28px));
+    width: min(410px, calc(100vw - 28px));
     padding: 21px 20px 18px;
   }
 
   .client-access-menu > strong { font-size: 18px; }
   .client-access-menu > a { font-size: 10px; letter-spacing: .09em; }
-  .client-access-menu__icons { gap: 16px; padding-top: 12px; }
-  .client-access-menu__icons svg { width: 31px; height: 31px; }
+
+  .services-menu-wrap {
+    display: block;
+    width: 100%;
+  }
+
+  .services-menu-trigger {
+    width: 100%;
+    padding: 11px;
+    color: #fff;
+    text-align: left;
+  }
+
+  .services-menu-trigger::after { display: none; }
+
+  .services-menu {
+    position: static;
+    width: 100%;
+    margin: 2px 0 4px;
+    padding: 5px 11px 9px;
+    box-shadow: none;
+    transform: none;
+  }
+
+  .services-menu-wrap:not(.is-hover-suppressed):hover .services-menu,
+  .services-menu.is-open { transform: none; }
+
+  .main-nav .services-menu a { padding: 10px 2px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1408,4 +1498,14 @@ html[data-theme="3"] .receptorias-list span {
     width: min(100%, 360px);
     max-height: 430px;
   }
+}
+
+/* Ajuste final de la placa del hero para tablet. */
+@media (max-width: 1060px) and (min-width: 761px) {
+  html[data-theme="2"] .hero-copy::before { width: min(63%, 640px); }
+
+  html[data-theme="2"] .hero h1,
+  html[data-theme="2"] .hero-copy > p { max-width: calc(63% - 76px); }
+
+  html[data-theme="2"] .hero h1 { font-size: clamp(42px, 5vw, 58px); }
 }

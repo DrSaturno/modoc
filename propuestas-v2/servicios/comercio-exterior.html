@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="COMERCIO EXTERIOR PSAD — MODOC">
   <title>Comercio Exterior PSAD | MODOC</title>
-  <link rel="stylesheet" href="../service-pages.css?v=1.2">
+  <link rel="stylesheet" href="../service-pages.css?v=1.4">
 </head>
 <body>
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -15,7 +15,15 @@
       <button class="service-nav-toggle" type="button" aria-expanded="false" aria-controls="service-nav" aria-label="Abrir menú"><span></span><span></span><span></span></button>
       <nav class="service-nav" id="service-nav" aria-label="Navegación principal">
         <a href="../index.html#nosotros">Nosotros</a>
-        <a href="../index.html#servicios">Servicios</a>
+        <div class="services-menu-wrap">
+          <button class="services-menu-trigger" type="button" aria-expanded="false" aria-controls="services-menu">Servicios</button>
+          <div class="services-menu" id="services-menu" role="menu" aria-label="Páginas de servicios">
+            <a role="menuitem" href="comercio-exterior.html">Comercio Exterior (PSAD)</a>
+            <a role="menuitem" href="consultoria.html">Consultoría</a>
+            <a role="menuitem" href="digitalizacion.html">Digitalización y Gestión Documental</a>
+            <a role="menuitem" href="guarda-custodia.html">Guarda y Custodia</a>
+          </div>
+        </div>
         <a href="../index.html#clientes">Clientes</a>
         <a href="../index.html#contacto">Contacto</a>
       </nav>
@@ -27,8 +35,6 @@
             <strong>ACCESO SISTEMAS</strong>
             <a role="menuitem" href="https://gd.modoc.com.ar/zamba.web/" target="_blank" rel="noopener">GESTOR DOCUMENTAL - DESPACHANTES DE ADUANA.</a>
             <a role="menuitem" href="http://gdg1.modoc.com.ar" target="_blank" rel="noopener">GESTOR DOCUMENTAL - ADMINISTRACION DE ARCHIVOS.</a>
-            <a role="menuitem" href="http://bddo1.modoc.com.ar" target="_blank" rel="noopener">SISTEMA DE FIRMA Y RECIBO DE SUELDO DIGITAL.</a>
-            <div class="client-access-menu__icons" aria-hidden="true"><svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="11"></circle><path d="M5 16h22M16 5c3 3.1 4.3 6.8 4.3 11S19 23.9 16 27c-3-3.1-4.3-6.8-4.3-11S13 8.1 16 5ZM7 10.5c2.6 1.5 5.6 2.2 9 2.2s6.4-.7 9-2.2M7 21.5c2.6-1.5 5.6-2.2 9-2.2s6.4.7 9 2.2"></path></svg><svg viewBox="0 0 32 32"><circle cx="16" cy="9" r="4"></circle><path d="M8 26c.7-5 3.3-8 8-8s7.3 3 8 8M4 27h24"></path></svg><svg viewBox="0 0 32 32"><path d="M7 4h13l5 5v19H7zM20 4v6h5M11 16h10M11 21h10"></path></svg><svg viewBox="0 0 32 32"><path d="M7 4h13l5 5v12H7zM20 4v6h5M11 15h10M11 19h10"></path><rect x="17" y="20" width="9" height="8" rx="1"></rect><path d="M19 20v-2a2.5 2.5 0 0 1 5 0v2"></path></svg></div>
           </div>
         </div>
       </div>
@@ -36,7 +42,7 @@
   </header>
 
   <main id="contenido">
-    <section class="service-hero" style="--hero-image: url('../assets/services/psad/banner.jpg')">
+    <section class="service-hero" style="--hero-image: url('assets/services/psad/banner.jpg')">
       <div class="shell service-hero__inner"><div class="service-hero__copy">
         <h1>COMERCIO EXTERIOR PSAD</h1>
         <p><strong>MODOC</strong> es depositario fiel de documentación aduanera (PSAD NUMERO 6),<br>podemos realizar la digitalización, indexación, certificación<br>y guarda de despachos aduaneros.<br>Para realizar esta tarea hemos cumplido con todos los requerimientos físicos,<br>tecnológicos y de seguridad requeridos por el gobierno Argentino.</p>
@@ -70,6 +76,6 @@
     <div class="service-certifications"><h3>CERTIFICACIONES IRAM</h3><div class="service-certifications__list"><img src="../assets/certifications/iram-iso-27001-badge.png" alt="IRAM ISO/IEC 27001:2026"><img src="../assets/certifications/iram-iso-9001-badge.png" alt="IRAM ISO 9001:2015"><img src="../assets/certifications/iram-iso-22301-badge.png" alt="IRAM ISO 22301:2019"></div></div>
   </div><div class="service-footer__bottom"><div class="shell service-footer__bottom-inner"><span>© Copyright 2026 MODOC.SA</span><a class="service-signature" href="http://www.planetasaturno.com" target="_blank" rel="noopener">By ◉ DrSaturno</a><span>Buenos Aires · Argentina</span></div></div></footer>
   <a class="service-whatsapp" href="https://wa.me/5491168861829" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp al 11 6886-1829"><svg viewBox="0 0 32 32"><path d="M16 5.4A10.4 10.4 0 0 0 7.1 21.2L5.6 26.6l5.5-1.4A10.4 10.4 0 1 0 16 5.4Zm0 18.8c-1.6 0-3.2-.5-4.5-1.3l-.3-.2-3.2.8.9-3.1-.2-.3A8.4 8.4 0 1 1 16 24.2Zm4.6-6.3c-.3-.1-1.5-.8-1.8-.8-.2-.1-.4-.1-.6.2-.2.3-.7.8-.9 1-.2.2-.3.2-.6.1-1.6-.8-2.7-1.5-3.8-3.4-.3-.5.3-.5.8-1.6.1-.2 0-.4 0-.6l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5 4.5 1.9.8 2.7.9 3.7.8 1.1-.2 3.3-1.4 3.8-2.7.5-1.3.5-2.4.3-2.6-.1-.2-.3-.2-.6-.4Z"/></svg><span>11 6886-1829</span></a>
-  <script src="../service-pages.js?v=1.3"></script>
+  <script src="../service-pages.js?v=1.4"></script>
 </body>
 </html>
