@@ -1,0 +1,34 @@
+{
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "/propuestas-v2/",
+      "permanent": false
+    },
+    {
+      "source": "/index.html",
+      "destination": "/propuestas-v2/",
+      "permanent": false
+    },
+    {
+      "source": "/comercio-exterior.html",
+      "destination": "/propuestas-v2/servicios/comercio-exterior.html",
+      "permanent": false
+    },
+    {
+      "source": "/consultoria.html",
+      "destination": "/propuestas-v2/servicios/consultoria.html",
+      "permanent": false
+    },
+    {
+      "source": "/digitalizacion.html",
+      "destination": "/propuestas-v2/servicios/digitalizacion.html",
+      "permanent": false
+    },
+    {
+      "source": "/guarda-custodia.html",
+      "destination": "/propuestas-v2/servicios/guarda-custodia.html",
+      "permanent": false
+    }
+  ]
+}
