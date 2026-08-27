@@ -115,6 +115,10 @@ button { font: inherit; }
 .service-certifications { min-width: 0; }
 .service-certifications__list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
 .service-certifications__list img { width: 100%; aspect-ratio: 2.95 / 1; object-fit: contain; }
+.service-certifications__list .certificate-link { display: block; min-width: 0; }
+.service-certifications__list .certificate-link img { display: block; transition: opacity .2s ease, transform .2s ease; }
+.service-certifications__list .certificate-link:hover img, .service-certifications__list .certificate-link:focus-visible img { opacity: .86; transform: translateY(-2px); }
+.service-certifications__list .certificate-link:focus-visible { outline: 2px solid var(--yellow); outline-offset: 3px; }
 .service-footer__bottom { border-top: 1px solid rgb(255 255 255 / 12%); }
 .service-footer__bottom-inner { min-height: 69px; display: flex; align-items: center; justify-content: space-between; gap: 20px; color: rgb(255 255 255 / 52%); font-size: 10px; }
 .service-signature { opacity: .7; }
