@@ -1,0 +1,628 @@
+.divServicos{
+    width: 1200px;
+    height: auto;
+    margin: auto;
+    overflow: hidden;
+    margin-top: 50px;
+    position: relative;
+}
+@media(max-width:1200px){
+    .divServicos{
+        width: 95%;
+    }
+}
+@media(max-width:600px){
+    .divServicos{
+        margin-top: 120px;
+    }   
+}
+/*Banner*/
+.bannerServicio{
+    width: 100%;
+    height: 500px;
+    position: relative;
+    background-image: url(../servicios/imgDigitalizacion/banner.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-top: 100px;
+}
+.divContBanner{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3);
+}
+.centroBanner{
+    width: 1250px;
+    margin: auto;
+    padding-top: 80px;
+}
+.centroBanner h1{
+    font-family: hp-simplifiedBold;
+    font-size: 35pt;
+    padding-bottom: 10px;
+    color: white;
+}
+.centroBanner p{
+    font-family: OpenSans-Semibold;
+    font-size: 14pt;
+    color: white;
+    width: 450px;
+}
+@media(max-width:1250px){
+    .centroBanner{
+        width: 95%;
+    }
+}
+@media(max-width:700px){
+    .bannerServicio{
+        background-image: url(../servicios/imgDigitalizacion/bannerMini.jpg);
+        background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    }
+    .centroBanner h1{
+        font-size: 25pt;
+    }
+    .centroBanner p{
+        font-size: 12pt;
+    }
+    .centroBanner p{
+        width: 100%;
+    }
+}
+@media(max-width:600px){    
+    .bannerServicio{
+        margin-top: 80px;
+    }
+}
+@media(max-width:330px){
+    .centroBanner{
+        padding-top: 20px;
+    }
+    .centroBanner p{
+        font-size: 11pt;
+    }
+}
+.centroTitulo h1{
+    font-size: 30pt;
+    font-family: hp-simplifiedBold;
+    text-align: center;
+    padding-top: 25px;
+    color: black;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.lineaSutitulo{
+    border-top: solid 4px #FFDA00;
+    width: 200px;
+    margin: auto;
+}
+.centroTitulo p{
+    text-align: center;
+    padding-top: 20px;
+    color: black;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-family: OpenSans-semiBold;
+}
+@media(max-width:550px){
+    .centroTitulo h1{
+        font-size: 18pt;
+    }
+}
+.divServicos .div1{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+    
+    
+}
+.div1Texto{
+    width: 48%;
+    float: left;
+    margin-right:2%;
+    position: relative;
+}
+.div1Texto h1{
+    font-family: hp-simplifiedBold;
+    font-size: 23pt;
+    color: black;
+    width: 100%;
+}
+.divServicos .div1 .olvidesePapel{
+    font-size: 40pt;
+}
+.divServicos .div1 .lineaSutitulo1{
+    margin-left: 120px;
+}
+.div1Texto p{
+    font-size: 12pt;
+    font-family: OpenSans-semiBold;
+    width: 100%;
+}
+.div1Img{
+    width: 48%;
+    float: left;
+    margin-top: 40px;
+    border-top: solid 4px #FFDA00;
+}
+.tituloLinea{
+    font-size: 23pt;
+    
+    font-family: hp-simplifiedBold;
+    color: black;
+    width: 100%;
+}
+.div1 img{
+    width: 100%;
+}
+.divServicos .div1 .div1Texto .img1{
+    margin-top: 80px;
+}
+@media(max-width:700px){
+    .divServicos{
+        margin: auto;
+    }
+    .div1Texto{
+        float: inherit;
+        width:100%;
+    }
+    .div1Img{
+        float: inherit;
+        width:100%;
+    }
+    .divServicos .div1 .div1Texto .img1{
+    margin-top: 20px;
+}
+}
+@media(max-width: 550px){
+    .divServicos .div1 .olvidesePapel{
+    font-size: 20pt;
+}
+.divServicos .div1 .lineaSutitulo1{
+    margin: auto;
+}
+    .div1Texto p{
+        font-size: 10pt;
+    }
+    .div1Img h1{
+        font-size: 12pt;
+    }
+}
+.clickG{
+    margin-bottom: 30px;
+}
+.clickG a{
+    font-size: 8pt;
+    font-family: hp-simplifiedBold;
+    color: #20BB65;
+    float: left;
+    cursor: pointer;
+}
+.clickG span{
+    float: left;
+    width: 85%;
+    margin-top: 17px;
+}
+.clickG img{
+    width: 8%;
+    float: left;
+}
+.clickG a:hover{
+    color: #20BB65;
+}
+.clickG:hover{
+    opacity: 0.9;
+}
+
+.telefonoH1{
+    font-size: 13pt;
+    text-align: center;
+    margin-top: 50px;
+    font-family: OpenSans-ExtraBold;
+}
+.Mtext{
+    font-family: OpenSans-ExtraBold;
+}
+@media(max-width:500px){
+    .telefonoH1{
+        font-size: 11pt;
+        margin-top: 50px;
+    }
+    .clickG{
+        height: auto;
+        overflow: hidden;
+    }
+    .clickG a{
+        font-size: 8pt;
+        
+    }
+    .clickG span{
+        margin-top: 10px;
+    }
+}
+.div1 .div1Texto h1{
+    text-align: left;
+    margin-bottom: 5px;
+    font-size: 25pt;
+    font-family: hp-simplifiedBold;
+}
+.lineaSutitulo1{
+    border-top: solid 4px #FFDA00;
+    width: 200px;
+    margin-left: 50px;
+}
+.img2{
+    border-top: solid 4px #FFDA00;
+}
+@media(max-width: 500px){
+    .div1 .div1Texto h1{
+        font-size: 15pt;
+        text-align: center;
+        margin: inherit;
+        margin-bottom: 7px;
+        margin-top: 20px;
+    }
+    .lineaSutitulo1{
+        width: 100px;
+        margin-left: inherit;
+        margin: auto;
+    }
+}
+.tabla1{
+    width: 100%;    
+    margin: 0;
+    padding: 0;
+    margin-top: 35px;
+}
+.tabla1 img{
+    width: 100%;
+    margin-top: -25px;
+}
+.tabla1 p{
+    padding-bottom: 5px;
+    color: black;
+}
+.div1Img p{
+    line-height: 13pt;
+    font-family: hp-simplifiedRegular;
+}
+.tabla1 .subTitu{
+    font-family: hp-simplifiedBold;
+    color: black;
+    display: block;
+    padding-bottom: 5px;
+}
+.tabla1 .tdImg{
+    padding-right: 15px;
+    width: 100px;
+}
+@media(max-width:330px){
+    .tabla1 .tdImg{
+        width: 70px;
+    }
+}
+/*Paralax*/
+.paralax{
+    margin-top: 40px;
+    width: 100%;
+    height: 530px;
+}
+.paralax1{
+    background-image: url("../servicios/imgDigitalizacion/paralax/paralax1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.centroParalax{
+    width: 1250px;
+    margin: auto;
+    position: relative;
+}
+.centroParalax h1{
+    padding-top: 70px;
+    font-family: hp-simplifiedBold;
+    font-size: 30pt;
+    color: white;
+}
+.lineaParalax{
+    border-top: solid 4px #FFDA00;
+    width: 200px;
+}
+.centroParalax p{
+    padding-top: 30px;
+    font-size: 11pt;
+    font-family: OpenSans-semiBold;
+    width: 100%;
+    color: white;
+    width: 780px;
+}
+@media(max-width:1250px){
+    .centroParalax{
+        width: 95%;
+    }
+}
+@media(max-width:800px){
+    .centroParalax p{
+        width: 100%;
+    }
+}
+@media(max-width:600px){
+    .centroParalax h1{
+        font-size: 18pt;
+    }
+    .paralax1{
+    background-image: url("../servicios/imgDigitalizacion/paralax/paralax1Mini.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    }
+}
+@media(max-width:400px){
+    .centroParalax h1{
+        font-size: 15pt;
+        padding-top: 30px;
+    }
+    .centroParalax p{
+        font-size: 10pt;
+    }
+}
+@media(max-width:350px){
+    .centroParalax h1{
+        padding-top: 28px;
+    }
+    .centroParalax p{
+        padding-top: 20px;
+        line-height: 12.5pt;
+    }
+    .paralax{
+        height: 480px;
+    }
+}
+
+/*///*/
+.divServicos2 .div1 p{
+    line-height: 14pt;
+    font-family: hp-simplifiedRegular;
+}
+.divServicos2 .div1Img img{
+    width: 95%;
+    margin-left: 2.5%;
+}
+.tituloLineaS2{
+    font-size: 15pt;
+    font-family: hp-simplifiedBold;
+    color: black;
+}
+.paralax2{
+    background-image: url("../servicios/imgDigitalizacion/paralax/paralax2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    }
+.paralax2 h1{
+    display: block;
+    text-align: right;
+    font-size: 27pt;
+}
+.paralax2 .divH1{
+    float: right;
+    width: 100%;
+}
+.paralax2 .lineaParalax2{
+    width: 200px;
+    border-top: solid 4px #FFDA00;
+    float: right;
+    margin-right: 200px;
+}
+.paralax2 p{
+    float: right;
+    width: 580px;
+    font-size: 14pt;
+}
+@media(max-width:600px){
+    .paralax2 h1{
+        font-size: 19pt;
+        margin-top: 50px;
+        text-align: center;
+        float: inherit;
+        width: 100%;
+    }   
+    .divH1{
+        width: 100%;
+        float: inherit;
+    }
+    .paralax2 .lineaParalax2{
+        width: 40%;
+        margin: inherit;
+        margin-right: 0;
+        float: left;
+        margin: auto;
+        margin-left: 30%;
+        margin-bottom: 20px;
+    }
+    .paralax2 p{
+        width: 100%;
+        font-size: 12pt;
+        float: inherit;
+        padding-top: 20px;
+        display: block;
+    }
+    .paralax2{
+        height: 450px;
+    }
+}
+@media(max-width:400px){
+    .paralax2 h1{
+        font-size: 13pt;
+    }
+    .paralax2 p{
+        font-size: 12pt;
+    }
+    .paralax2{
+    background-image: url("../servicios/imgDigitalizacion/paralax/paralax2Mini.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    }
+
+}
+/*///*/
+.divServicos3 .div1Texto h1{
+    font-size: 31pt;
+    margin: 0;
+    text-align: center;
+    margin-top: 30px;
+}
+.divServicos3 .div1Texto p{
+    font-size: 11pt;
+    font-family: OpenSans-semiBold;
+}
+.divServicos3 .div1Texto p span{
+    font-family: hp-simplifiedBold;
+}
+.divServicos3 .div1Texto .lineaSutitulo1{
+    margin: auto;
+    margin-top: 5px;
+}
+.divServicos3 .div1Img h1{
+    font-size: 23pt;
+    text-align: center;
+}
+.tabla3 td{
+    padding-bottom: 5px;
+}
+.divServicos3 .img2{
+    margin-top: 50px;
+}
+@media(max-width:600px){
+    .divServicos3 .div1Texto h1{
+        font-size: 18pt;
+    }
+    .divServicos3 .img2{
+        margin-top: inherit;
+    }
+    .divServicos3 .div1Img h1{
+        font-size: 15pt;
+    }
+}
+/*/////////*/
+.paralax3{
+    background-image: url("../servicios/imgDigitalizacion/paralax/paralax3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    }
+.paralax3 h1{
+    margin-bottom: 0px;
+}
+.paralax3 p{
+    font-size: 15pt;
+    margin-top: 0;
+    font-family: OpenSans-semiBold;
+}
+@media(max-width:600px){
+    .paralax3{
+    background-image: url("../servicios/imgDigitalizacion/paralax/paralax3Mini.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    }
+    .paralax3 h1{
+        display: block;
+        padding-top: 40px;
+    }
+    .paralax3 p{
+        font-size: 12pt;
+        line-height: inherit;
+    }
+    .paralax3{
+        height: 400px;
+    }
+}
+.divServicos4{
+    margin-top: 0px;
+}
+.divServicos4 .div1 .lineaSutitulo1{
+    margin: 0;
+    float: inherit;
+    margin-left: 50px;
+}
+.divServicos4 .div1 .div1Texto h1{
+    font-size: 32pt;
+}
+.divServicos4 .div1 .div1Texto{
+    width: 38%;
+}
+.divServicos4 .div1 .div1Texto p{
+    font-size: 11pt;
+}
+.divServicos4 .div1 .div1Texto p span{
+    font-size: 10pt;
+    color: black;
+    font-family: hp-simplifiedBold;
+}
+.divServicos4 .div1 .div1Img h1{
+    font-family: hp-simplifiedBold;
+    font-size: 32pt;
+    text-align: center;
+}
+.divServicos4 .div1 .div1Img{
+    width: 60%;
+}
+.divServicos4 .div1 .div1Img img{
+    border-top: solid 4px #FFDA00;
+}
+.divServicos4 .div1 .div1Texto img{
+    width: 100%;
+    margin-top: 60px;
+}
+@media(max-width:700px){
+    .divServicos4 .div1 .div1Texto img{
+        width: 60%;
+        float: inherit;
+        margin-left: 20%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .divServicos4 .div1 .lineaSutitulo1{
+        margin: auto;
+    }
+}
+@media(max-width:700px){
+    .divServicos4 .div1 .div1Texto{
+        width: 100%;
+        float: inherit;
+    }
+    .divServicos4 .div1 .div1Img{
+        width: 100%;
+        float: inherit;
+    }
+}
+@media(max-width:500px){
+    .divServicos4 .div1 .div1Texto h1{
+        font-size: 20pt;
+    }
+    .centroTitulo3 h1{
+        font-size: 13pt;
+    }
+    .centroTitulo3 p{
+        font-size: 10pt;
+    }
+    .divServicos4 .div1 .div1Img .tituloLineaS2{
+        margin: 0;
+        margin-bottom: 5px;
+    }
+    .divServicos4 .div1 .div1Img .lineaSutitulo{
+        width: 50px;
+    }
+    .divServicos4 .div1 .tabla3 td{
+        font-size: 10pt;
+    }
+    .divServicos4 .div1 .div1Img h1{
+        font-size: 20pt;
+    }
+}

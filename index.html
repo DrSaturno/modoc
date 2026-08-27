@@ -16,7 +16,7 @@
         rel="stylesheet">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="style.css?v=1.3">
+    <link rel="stylesheet" href="style.css?v=2.8">
 
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -31,14 +31,17 @@
         <div class="glow-2"></div>
     </div>
 
-    <nav>
+    <nav class="site-nav">
         <a href="#" class="logo">
-            <img src="imagenes/logomodoc.png" alt="MODOC Logo" class="nav-logo">
+            <img src="propuestas-v2/assets/brand/modoc-logo-white.png" alt="MODOC powered by Kodak" class="nav-logo nav-logo--on-dark">
+            <img src="propuestas-v2/assets/brand/modoc-logo-dark-cropped.png" alt="" class="nav-logo nav-logo--on-light" aria-hidden="true">
         </a>
         <div class="nav-links">
             <a href="#servicios">Servicios</a>
             <a href="#nosotros">Nosotros</a>
             <a href="#contacto">Contacto</a>
+        </div>
+        <div class="nav-actions">
             <a href="https://clientes.modoc.com.ar" class="accent-link">Acceso Clientes</a>
         </div>
         <!-- Hamburger button (solo visible en mobile) -->
@@ -61,23 +64,11 @@
     <main>
 
         <!-- ===== HERO CAROUSEL ===== -->
-        <section class="hero-carousel">
+        <section class="hero-carousel" id="inicio" aria-label="Servicios destacados">
             <div class="hero-slider">
-
-                <!-- Slide 1 -->
+                <!-- Slide 1: Firma Digital -->
                 <div class="hero-slide active">
-                    <picture>
-                        <source media="(max-width: 768px)" srcset="imagenes/header/banner1mobile.jpg">
-                        <img src="imagenes/header/banner1.png" alt="MODOC - Gestión Documental">
-                    </picture>
-                </div>
-
-                <!-- Slide 2: Firma Digital -->
-                <div class="hero-slide">
-                    <picture>
-                        <source media="(max-width: 768px)" srcset="imagenes/header/banner2mobile.png">
-                        <img src="imagenes/header/banner2.png" alt="Firma Digital MODOC">
-                    </picture>
+                    <img src="propuestas-v2/assets/heroes/firma-digital.png" alt="Firma Digital MODOC">
                     <div class="slide-content">
                         <h2>FIRMA DIGITAL</h2>
                         <p>En Modoc contamos con soluciones que le permiten tener su propia firma digital. La firma
@@ -88,12 +79,9 @@
                     </div>
                 </div>
 
-                <!-- Slide 3: Guarda y Custodia -->
+                <!-- Slide 2: Guarda y Custodia -->
                 <div class="hero-slide">
-                    <picture>
-                        <source media="(max-width: 768px)" srcset="imagenes/header/banner3mobile.png">
-                        <img src="imagenes/header/banner3.png" alt="Guarda Documentación Segura MODOC">
-                    </picture>
+                    <img src="propuestas-v2/assets/heroes/guarda-custodia.png" alt="Guarda y custodia documental MODOC">
                     <div class="slide-content">
                         <h2>GUARDE DOCUMENTACIÓN<br>DE MANERA SEGURA</h2>
                         <p>El servicio de guarda y custodia de documentación de <strong>MODOC</strong> abarca además de
@@ -103,30 +91,9 @@
                     </div>
                 </div>
 
-                <!-- Slide 4: Consultoría Documental -->
+                <!-- Slide 3: Servicios Aduaneros -->
                 <div class="hero-slide">
-                    <picture>
-                        <source media="(max-width: 768px)" srcset="imagenes/header/banner4mobile.png">
-                        <img src="imagenes/header/banner4.png" alt="Consultoría Documental MODOC">
-                    </picture>
-                    <div class="slide-content">
-                        <h2>CONSULTORIA DOCUMENTAL</h2>
-                        <p>Cada empresa tiene una serie de procesos específicos en el desarrollo de su actividad,
-                            procesos únicos que incluyen el archivo y la gestión documental. La consultoría integral de
-                            <strong>MODOC</strong> analiza cada caso particular para detectar posibles mejoras y
-                            aumentar la rentabilidad de cualquier negocio, gracias a una correcta gestión de sus
-                            archivos.
-                        </p>
-                        <a href="comercio-exterior.html" class="slide-btn">Más información</a>
-                    </div>
-                </div>
-
-                <!-- Slide 5: Servicios Aduaneros -->
-                <div class="hero-slide">
-                    <picture>
-                        <source media="(max-width: 768px)" srcset="imagenes/header/banner5mobile.png">
-                        <img src="imagenes/header/banner5.png" alt="Servicios Aduaneros PSAD N6 MODOC">
-                    </picture>
+                    <img src="propuestas-v2/assets/heroes/psad.png" alt="Servicios Aduaneros PSAD N6 MODOC">
                     <div class="slide-content">
                         <h2>PRESTACION DE SERVICIOS<br>ADUANEROS PSAD N6</h2>
                         <p><strong>MODOC</strong> es depositario fiel de documentación aduanera (PSAD NUMERO 6), podemos
@@ -137,12 +104,23 @@
                     </div>
                 </div>
 
-                <!-- Slide 6: Logística -->
+                <!-- Slide 4: Consultoría Documental -->
                 <div class="hero-slide">
-                    <picture>
-                        <source media="(max-width: 768px)" srcset="imagenes/header/banner6mobile.png">
-                        <img src="imagenes/header/banner6.png" alt="Logística Sin Límites MODOC">
-                    </picture>
+                    <img src="propuestas-v2/assets/heroes/consultoria.png" alt="Consultoría Documental MODOC">
+                    <div class="slide-content">
+                        <h2>CONSULTORIA DOCUMENTAL</h2>
+                        <p>Cada empresa tiene una serie de procesos específicos en el desarrollo de su actividad,
+                            procesos únicos que incluyen el archivo y la gestión documental. La consultoría integral de
+                            <strong>MODOC</strong> analiza cada caso particular para detectar posibles mejoras y
+                            aumentar la rentabilidad de cualquier negocio, gracias a una correcta gestión de sus
+                            archivos.</p>
+                        <a href="consultoria.html" class="slide-btn">Más información</a>
+                    </div>
+                </div>
+
+                <!-- Slide 5: Logística -->
+                <div class="hero-slide">
+                    <img src="propuestas-v2/assets/heroes/logistica.png" alt="Logística Sin Límites MODOC">
                     <div class="slide-content">
                         <h2>LOGISTICA SIN LIMITES</h2>
                         <p>Gracias a nuestros socios comerciales en <strong>MODOC</strong> contamos con un servicio de
@@ -155,41 +133,28 @@
             </div>
         </section>
 
-        <!-- ===== HERO INTRO ===== -->
-        <section class="hero-intro">
-            <span class="hero-tag">Seguridad y Eficiencia Digital</span>
-            <h1 class="gradient-text">El Futuro de la Gestión Documental</h1>
-            <p>Transformamos la información de su empresa en activos estratégicos. Consultoría, digitalización y
-                custodia con los más altos estándares de seguridad en Argentina.</p>
-            <div class="hero-actions">
-                <a href="#contacto" class="cta-button">Empezar Modernización</a>
-            </div>
-        </section>
-
         <!-- ===== SERVICIOS ===== -->
         <section class="services" id="servicios">
             <div class="section-title">
                 <h2 class="gradient-text">Nuestras Soluciones</h2>
             </div>
             <div class="services-grid">
-                <div class="service-card" onclick="window.location.href='guarda-custodia.html'"
-                    style="cursor: pointer;">
+                <div class="service-card" onclick="window.location.href='guarda-custodia.html'">
                     <div class="service-icon"><i data-lucide="archive"></i></div>
                     <h3>Guarda y Custodia</h3>
                     <p>Custodia física de documentación fiscal con acceso digital inmediato y seguridad 24/7.</p>
                 </div>
-                <div class="service-card" onclick="window.location.href='digitalizacion.html'" style="cursor: pointer;">
+                <div class="service-card" onclick="window.location.href='digitalizacion.html'">
                     <div class="service-icon"><i data-lucide="scan"></i></div>
                     <h3>Digitalización</h3>
                     <p>Conversión inteligente de papel a datos. Gestión documental eficiente y firmas digitales.</p>
                 </div>
-                <div class="service-card" onclick="window.location.href='comercio-exterior.html'"
-                    style="cursor: pointer;">
+                <div class="service-card" onclick="window.location.href='comercio-exterior.html'">
                     <div class="service-icon"><i data-lucide="ship"></i></div>
                     <h3>Comercio Exterior</h3>
                     <p>Servicios aduaneros especializados PSAD N6 para despachantes e importadores.</p>
                 </div>
-                <div class="service-card" onclick="window.location.href='consultoria.html'" style="cursor: pointer;">
+                <div class="service-card" onclick="window.location.href='consultoria.html'">
                     <div class="service-icon"><i data-lucide="briefcase"></i></div>
                     <h3>Consultoría</h3>
                     <p>Optimización de procesos documentales para reducir costos y aumentar la productividad.</p>
@@ -200,28 +165,22 @@
         <!-- ===== NOSOTROS ===== -->
         <section class="about" id="nosotros">
             <div class="about-content">
+                <div class="about-visual about-logo-column">
+                    <img src="propuestas-v2/assets/brand/modoc-logo-white.png" alt="MODOC powered by Kodak" class="about-img about-logo">
+                </div>
                 <div class="about-text">
                     <h2 class="gradient-text">Trayectoria y Seguridad</h2>
                     <p>Con años de experiencia en el mercado argentino, MODOC se ha consolidado como el socio
                         estratégico ideal para empresas que buscan la transformación digital sin comprometer la
                         seguridad física de sus activos.</p>
-                    <div class="stats">
-                        <div class="stat-item">
-                            <h4>+15</h4>
-                            <p>Años de Experiencia</p>
-                        </div>
-                        <div class="stat-item">
-                            <h4>100%</h4>
-                            <p>Seguridad Garantizada</p>
-                        </div>
-                        <div class="stat-item">
-                            <h4>PSAD N6</h4>
-                            <p>Certificación Oficial</p>
-                        </div>
-                    </div>
                 </div>
-                <div class="about-visual">
-                    <img src="imagenes/n6.png" alt="Certificación PSAD N6 MODOC" class="about-img">
+                <div class="about-text about-text--supporting">
+                    <h3>Qué hacemos</h3>
+                    <p>Nuestro enfoque estratégico permite la mejora y automatización de sus procesos, brindando
+                        información adecuada en el momento oportuno. Ayudamos a reducir errores humanos, esfuerzos
+                        operativos como la búsqueda de archivos manual y reducción de costos como el espacio físico de
+                        almacenaje. Aumentamos la eficiencia automatizando el intercambio de información tanto dentro
+                        de la empresa como hacia afuera.</p>
                 </div>
             </div>
         </section>
@@ -243,24 +202,9 @@
             </div>
         </section>
 
-        <!-- ===== PARTNERS ===== -->
-        <section class="partners-banner">
-            <div class="partners-content">
-                <span class="partners-tag">PARTNERS</span>
-                <div class="partners-grid">
-                    <img src="imagenes/partners/kodak.png" alt="Kodak" class="partner-logo">
-                    <img src="imagenes/partners/andreani.png" alt="Andreani" class="partner-logo">
-                    <img src="imagenes/partners/despachantes.png" alt="Centro Despachantes" class="partner-logo">
-                    <img src="imagenes/partners/ack.png" alt="ACK" class="partner-logo">
-                    <img src="imagenes/partners/stardoc.png" alt="StarDoc" class="partner-logo">
-                </div>
-            </div>
-        </section>
-
         <!-- ===== MAPA ===== -->
         <section class="map-section">
             <div class="map-info">
-                <span class="partners-tag">UBICACIÓN</span>
                 <h2 class="gradient-text">MODOC S.A.</h2>
                 <div class="contact-detail">
                     <i data-lucide="map-pin"></i>
@@ -284,15 +228,21 @@
                     </div>
                 </div>
                 <a href="https://www.google.com/maps/dir/?api=1&destination=San+Jose+1540+CABA" target="_blank"
-                    class="cta-button" style="padding: 1rem 2rem; font-size: 0.9rem; display: inline-block;">
+                    class="cta-button map-cta-btn">
                     Cómo llegar
                 </a>
             </div>
             <div class="map-container">
-                <iframe class="map-iframe"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.181242335191!2d-58.3897103!3d-34.6248552!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccb29a6566c0d%3A0x6b2e5a4d6ca27d6d!2sSan%20Jos%C3%A9%201540%2C%20C1136AAH%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1708215000000!5m2!1ses-419!2sar"
-                    allowfullscreen="" loading="lazy">
-                </iframe>
+                <div class="map-visual" role="img" aria-label="Ubicación de MODOC S.A. en San José 1540, Buenos Aires">
+                    <span class="map-road map-road--one"></span>
+                    <span class="map-road map-road--two"></span>
+                    <span class="map-road map-road--three"></span>
+                    <div class="map-marker">
+                        <i data-lucide="map-pin"></i>
+                        <strong>San José 1540</strong>
+                        <span>Buenos Aires</span>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -311,6 +261,11 @@
                     <div class="form-group">
                         <textarea placeholder="¿En qué podemos ayudarle?" rows="4"></textarea>
                     </div>
+                    <div class="captcha" aria-label="Verificación CAPTCHA">
+                        <span class="captcha-check">✓</span>
+                        <span><strong>Verificación de seguridad</strong><small>Cloudflare Turnstile</small></span>
+                        <i data-lucide="shield-check"></i>
+                    </div>
                     <button type="submit" class="cta-button">Enviar Mensaje</button>
                 </form>
             </div>
@@ -323,16 +278,17 @@
         <div class="footer-main">
             <!-- Columna 1: Logo y Certificaciones -->
             <div class="footer-brand-col">
-                <img src="imagenes/logomodoc.png" alt="MODOC" class="footer-logo-small">
+                <img src="propuestas-v2/assets/brand/modoc-logo-white.png" alt="MODOC powered by Kodak" class="footer-logo-small">
+                <p class="footer-business-info">RAZÓN SOCIAL: MODOC S.A.<br>DIRECCIÓN: San José 1540 - C1136AAH - BUENOS AIRES<br>TELÉFONOS: +54 11 4304-2933 / 6823 / 4864</p>
                 <div class="footer-certs-row">
                     <a href="pdf/MODOC S.A. 27001 iram.pdf" target="_blank" class="small-cert-circle">
-                        <img src="imagenes/27001B.png" alt="ISO 27001">
+                        <img src="propuestas-v2/assets/certifications/iram-iso-27001-badge.png" alt="IRAM ISO/IEC 27001:2026">
                     </a>
                     <a href="pdf/MODOC S.A. 9001 iram.pdf" target="_blank" class="small-cert-circle">
-                        <img src="imagenes/9001B.png" alt="ISO 9001">
+                        <img src="propuestas-v2/assets/certifications/iram-iso-9001-badge.png" alt="IRAM ISO 9001:2015">
                     </a>
                     <a href="pdf/UAF-Americo-ISO-22301-MODOC-S.pdf" target="_blank" class="small-cert-circle">
-                        <img src="imagenes/2301.png" alt="ISO 22301">
+                        <img src="propuestas-v2/assets/certifications/iram-iso-22301-badge.png" alt="IRAM ISO 22301:2019">
                     </a>
                 </div>
             </div>
@@ -365,11 +321,11 @@
         </div>
         <div class="footer-legal-bottom">
             <p>&copy; 2026 MODOC S.A. - Todos los derechos reservados</p>
+            <a class="signature" href="http://www.planetasaturno.com" target="_blank" rel="noopener">By <span class="saturn-mark" aria-hidden="true"></span> DrSaturno</a>
         </div>
     </footer>
 
-    <script src="main.js"></script>
-    <script>lucide.createIcons();</script>
+    <script src="main.js?v=2.2"></script>
     <a href="https://wa.me/541168861829" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
         <i class="fa-brands fa-whatsapp"></i>
     </a>

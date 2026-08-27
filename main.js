@@ -129,11 +129,26 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ===== NAV SCROLL EFFECT =====
-    const nav = document.querySelector('nav');
+    const nav = document.querySelector('.site-nav');
     if (nav) {
-        window.addEventListener('scroll', () => {
+        const lightSections = [...document.querySelectorAll('.logos-section, .contact')];
+        const footer = document.querySelector('footer');
+        const updateNavAppearance = () => {
             nav.classList.toggle('nav-scrolled', window.scrollY > 50);
-        }, { passive: true });
+            const navProbe = Math.max(1, nav.getBoundingClientRect().height / 2);
+            const isOnLightSection = lightSections.some((section) => {
+                const bounds = section.getBoundingClientRect();
+                return bounds.top <= navProbe && bounds.bottom >= navProbe;
+            });
+            nav.classList.toggle('nav-on-light', isOnLightSection);
+            if (footer) {
+                const footerBounds = footer.getBoundingClientRect();
+                nav.classList.toggle('nav-hidden', footerBounds.top <= navProbe && footerBounds.bottom >= navProbe);
+            }
+        };
+        window.addEventListener('scroll', updateNavAppearance, { passive: true });
+        window.addEventListener('resize', updateNavAppearance, { passive: true });
+        updateNavAppearance();
     }
 
     // ===== HAMBURGER MENU =====
@@ -169,5 +184,11 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.mobile-nav-link').forEach(link => {
         link.addEventListener('click', closeMenu);
     });
+
+
+    // ===== LUCIDE ICONS =====
+    if (typeof lucide !== 'undefined') {
+        lucide.createIcons();
+    }
 
 });

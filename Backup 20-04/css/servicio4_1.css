@@ -1,0 +1,280 @@
+.divServicos{
+    width: 1200px;
+    height: auto;
+    margin: auto;
+    overflow: hidden;
+    margin-top: 50px;
+    position: relative;
+}
+@media(max-width:1200px){
+    .divServicos{
+        width: 95%;
+    }
+}
+@media(max-width:600px){
+    .divServicos{
+        margin-top: 120px;
+    }   
+}
+/*Banner*/
+.bannerServicio{
+    width: 100%;
+    height: 500px;
+    position: relative;
+    background-image: url(../servicios/imgGuardaCustodia/banner.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-top: 100px;
+}
+.divContBanner{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.centroBanner{
+    width: 1250px;
+    margin: auto;
+    padding-top: 80px;
+}
+.centroBanner h1{
+    font-family: hp-simplifiedBold;
+    font-size: 35pt;
+    padding-bottom: 10px;
+    color: white;
+}
+.centroBanner p{
+    font-family: OpenSans-Semibold;
+    font-size: 14pt;
+    color: white;
+}
+@media(max-width:1250px){
+    .centroBanner{
+        width: 95%;
+    }
+}
+@media(max-width:700px){
+    .bannerServicio{
+        background-image: url(../servicios/imgGuardaCustodia/bannerMini.jpg);
+        background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    }
+    .centroBanner h1{
+        font-size: 25pt;
+    }
+    .centroBanner p{
+        font-size: 12pt;
+    }
+}
+@media(max-width:600px){    
+    .bannerServicio{
+        margin-top: 80px;
+    }
+}
+@media(max-width:330px){
+    .centroBanner{
+        padding-top: 20px;
+    }
+    .centroBanner p{
+        font-size: 11pt;
+    }
+}
+.centroTitulo h1{
+    font-size: 30pt;
+    font-family: hp-simplifiedBold;
+    text-align: center;
+    padding-top: 25px;
+    color: black;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.lineaSutitulo{
+    border-top: solid 4px #FFDA00;
+    width: 200px;
+    margin: auto;
+}
+.centroTitulo p{
+    text-align: center;
+    padding-top: 20px;
+    color: black;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-family: OpenSans-semiBold;
+}
+@media(max-width:550px){
+    .centroTitulo h1{
+        font-size: 18pt;
+    }
+}
+.divServicos .div1{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+    
+    
+}
+.div1Texto{
+    width: 45%;
+    float: left;
+    margin-right:5%;
+    position: relative;
+}
+.div1Texto h1{
+    font-family: hp-simplifiedBold;
+    font-size: 23pt;
+    color: black;
+    width: 100%;
+}
+.div1Texto p{
+    font-size: 12pt;
+    font-family: OpenSans-semiBold;
+    width: 100%;
+}
+.div1Img{
+    width: 43%;
+    float: left;
+    margin-top: 40px;
+    border-top: solid 4px #FFDA00;
+}
+.tituloLinea2{
+    font-size: 16pt;
+    text-align: center;
+    font-family: hp-simplifiedBold;
+    color: black;
+    width: 100%;
+}
+.div1 img{
+    width: 100%;
+}
+@media(max-width:700px){
+    .divServicos{
+        margin: auto;
+    }
+    .div1Texto{
+        float: inherit;
+        width:100%;
+    }
+    .div1Img{
+        float: inherit;
+        width:100%;
+    }
+}
+@media(max-width: 550px){
+    .div1Texto h1{
+        font-size: 20pt;
+        
+    }
+    .div1Texto p{
+        font-size: 10pt;
+    }
+    .div1Img h1{
+        font-size: 12pt;
+    }
+}
+.div2{
+    
+    overflow: hidden;
+}
+.div2Img{
+    width: 45%;
+    float: left;
+    border-top: solid 4px #FFDA00;
+    margin-right: 2%;
+}
+.div2Img img{
+    width: 100%;
+}
+.divTtexto2{
+    float: left;
+    width: 50%;
+}
+.divTtexto2 p{
+    font-family: OpenSans-semiBold;
+}
+.clickG a{
+    font-size: 11pt;
+    font-family: hp-simplifiedBold;
+    color: #20BB65;
+    float: left;
+    cursor: pointer;
+}
+.clickG span{
+    float: left;
+    width: 80%;
+    margin-top: 18px;
+}
+.clickG img{
+    width: 15%;
+    float: left;
+}
+.clickG a:hover{
+    color: #20BB65;
+}
+.clickG:hover{
+    opacity: 0.7;
+}
+.telefonoH1{
+    font-size: 13pt;
+    text-align: center;
+    margin-top: 50px;
+    font-family: OpenSans-ExtraBold;
+}
+.Mtext{
+    font-family: OpenSans-ExtraBold;
+}
+@media(max-width:500px){
+    .div2Img{
+        width: 100%;
+        float: inherit;
+        margin-right: inherit;
+    }
+    .divTtexto2{
+        width: 100%;
+        float: inherit;
+    }
+    .divTtexto2 p{
+        font-size: 10pt;
+    }
+    .telefonoH1{
+        font-size: 11pt;
+        margin-top: 50px;
+    }
+    .clickG{
+        height: auto;
+        overflow: hidden;
+    }
+    .clickG a{
+        font-size: 8pt;
+        
+    }
+    .clickG span{
+        margin-top: 10px;
+    }
+}
+.div1 .div1Texto h1{
+    text-align: left;
+    margin-left: 20px;
+    font-size: 25pt;
+    font-family: hp-simplifiedBold;
+}
+.lineaSutitulo1{
+    border-top: solid 4px #FFDA00;
+    width: 180px;
+    margin-left: 65px;
+}
+@media(max-width: 500px){
+    .div1 .div1Texto h1{
+        font-size: 15pt;
+        text-align: center;
+        margin: inherit;
+        margin-bottom: 7px;
+        margin-top: 20px;
+    }
+    .lineaSutitulo1{
+        width: 100px;
+        margin-left: inherit;
+        margin: auto;
+    }
+}
