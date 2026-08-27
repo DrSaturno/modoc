@@ -1249,6 +1249,118 @@ html[data-theme="3"] .receptorias-list span {
   }
 }
 
+/* Acceso Clientes: panel único para desktop, hover, foco y click */
+.client-access-wrap {
+  position: relative;
+  z-index: 120;
+}
+
+.client-access {
+  cursor: pointer;
+  font-family: "HP Simplified", sans-serif;
+}
+
+.client-access-menu {
+  position: absolute;
+  top: calc(100% + 14px);
+  right: 0;
+  width: min(438px, calc(100vw - 34px));
+  padding: 25px 25px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: #202020;
+  color: #fff;
+  box-shadow: 0 22px 55px rgb(0 0 0 / 34%);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(-8px);
+  transition: opacity .18s ease, transform .18s ease, visibility .18s ease;
+}
+
+.client-access-menu::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  right: 32px;
+  width: 16px;
+  height: 16px;
+  background: #202020;
+  transform: rotate(45deg);
+}
+
+.client-access-wrap:hover .client-access-menu,
+.client-access-wrap:focus-within .client-access-menu,
+.client-access-menu.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.client-access-menu > strong {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 2px;
+  font-family: "HP Simplified", sans-serif;
+  font-size: 22px;
+  line-height: 1;
+  letter-spacing: .02em;
+}
+
+.client-access-menu > a {
+  position: relative;
+  z-index: 1;
+  padding-top: 10px;
+  border-top: 1px solid rgb(255 255 255 / 17%);
+  color: rgb(255 255 255 / 82%);
+  font-family: "Myriad Pro", sans-serif;
+  font-size: 11px;
+  letter-spacing: .13em;
+  line-height: 1.45;
+  text-transform: uppercase;
+  transition: color .18s ease;
+}
+
+.client-access-menu > a:hover,
+.client-access-menu > a:focus-visible {
+  color: var(--accent);
+}
+
+.client-access-menu__icons {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  padding-top: 19px;
+}
+
+.client-access-menu__icons svg {
+  width: 38px;
+  height: 38px;
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+@media (max-width: 760px) {
+  .client-access-menu {
+    top: calc(100% + 11px);
+    width: min(438px, calc(100vw - 28px));
+    padding: 21px 20px 18px;
+  }
+
+  .client-access-menu > strong { font-size: 18px; }
+  .client-access-menu > a { font-size: 10px; letter-spacing: .09em; }
+  .client-access-menu__icons { gap: 16px; padding-top: 12px; }
+  .client-access-menu__icons svg { width: 31px; height: 31px; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .receptorias-pin__pulse { opacity: .7; }
 }
