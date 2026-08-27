@@ -1,0 +1,4 @@
+.playwright-cli/
+output/
+Thumbs.db
+.DS_Store

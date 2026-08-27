@@ -1,34 +1,66 @@
 {
   "redirects": [
     {
-      "source": "/",
-      "destination": "/propuestas-v2/",
-      "permanent": false
+      "source": "/propuestas-v2",
+      "destination": "/",
+      "permanent": true
     },
     {
-      "source": "/index.html",
-      "destination": "/propuestas-v2/",
-      "permanent": false
+      "source": "/propuestas-v2/index.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/propuestas-v2/servicios/:path*",
+      "destination": "/servicios/:path*",
+      "permanent": true
     },
     {
       "source": "/comercio-exterior.html",
-      "destination": "/propuestas-v2/servicios/comercio-exterior.html",
-      "permanent": false
+      "destination": "/servicios/comercio-exterior.html",
+      "permanent": true
     },
     {
       "source": "/consultoria.html",
-      "destination": "/propuestas-v2/servicios/consultoria.html",
-      "permanent": false
+      "destination": "/servicios/consultoria.html",
+      "permanent": true
     },
     {
       "source": "/digitalizacion.html",
-      "destination": "/propuestas-v2/servicios/digitalizacion.html",
-      "permanent": false
+      "destination": "/servicios/digitalizacion.html",
+      "permanent": true
     },
     {
       "source": "/guarda-custodia.html",
-      "destination": "/propuestas-v2/servicios/guarda-custodia.html",
-      "permanent": false
+      "destination": "/servicios/guarda-custodia.html",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; img-src 'self' data:; font-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self'; form-action 'self' https://formsubmit.co; frame-ancestors 'self'; base-uri 'self'"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=()"
+        }
+      ]
     }
   ]
 }

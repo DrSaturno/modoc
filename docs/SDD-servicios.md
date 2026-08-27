@@ -18,9 +18,9 @@ Implementar las páginas estáticas de detalle de los cuatro servicios del home 
 - El home aprobado no se rediseña en esta etapa. Solo se agregan el destinatario solicitado del formulario, los menús de Acceso Clientes y Servicios, y se alinea el carrusel con las cuatro páginas de servicios aprobadas.
 - El texto de las páginas se toma del backup sin reescritura editorial. Las correcciones de estilo o contenido quedan sujetas a aprobación del sector Comercial de MODOC.
 - La implementación es HTML5 semántico, CSS3 y JavaScript vanilla ES6. No se agrega una dependencia de PHP.
-- El layout debe funcionar dentro de `/propuestas-v2/` en desktop y mobile.
+- El layout debe funcionar desde la raíz del sitio o dentro de una subcarpeta, en desktop y mobile.
 - Se mantienen las tipografías locales y la paleta aprobada: blanco, negro y amarillo MODOC.
-- Las imágenes se sirven desde `propuestas-v2/assets/services/` para que el prototipo sea autocontenido.
+- Las imágenes se sirven desde `assets/services/` para que el sitio sea autocontenido.
 
 ## Fuentes de contenido
 
@@ -31,13 +31,13 @@ La fuente primaria es `Backup 20-04/servicios/`:
 - `DIGITALIZACION Y GESTION DOCUMENTAL/index.html` y `index_en.php`.
 - `GUARDA Y CUSTODIA DE DOCUMENTACION FISICA Y DIGITAL/index.html` y `index_en.php`.
 
-Las imágenes originales se copian a `propuestas-v2/assets/services/` manteniendo una carpeta por servicio.
+Las imágenes originales se copian a `assets/services/` manteniendo una carpeta por servicio.
 
 ## Decisiones técnicas
 
 ### Formulario
 
-El formulario del home queda dirigido a `mailto:contacto.web@modoc.com.ar` como destino estático verificable en el prototipo. La entrega real de correo y la validación CAPTCHA efectiva requieren definir el proveedor y sus claves antes de publicación.
+El formulario del home se envía por HTTPS a FormSubmit para entregar las consultas a `contacto.web@modoc.com.ar`, sin depender de PHP. La primera recepción requiere confirmar el correo de activación del proveedor.
 
 ### Acceso Clientes
 
@@ -53,7 +53,7 @@ El ítem Servicios despliega las cuatro páginas de detalle por hover, teclado y
 
 ### CAPTCHA
 
-El backup implementa Google reCAPTCHA v2 y la propuesta conserva el bloque visual con ese proveedor. No se simula una validación de seguridad en JavaScript: la integración real queda pendiente de la clave de sitio, el dominio y el endpoint de envío definidos por MODOC.
+El backup implementaba Google reCAPTCHA v2. La versión estática utiliza el CAPTCHA administrado por FormSubmit (`_captcha=true`) para evitar una simulación insegura en JavaScript y no requerir claves expuestas ni un backend PHP.
 
 ## Criterios de aceptación
 

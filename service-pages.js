@@ -1,47 +1,12 @@
 (() => {
-  const slides = [...document.querySelectorAll('.hero-slide')];
-  const dots = [...document.querySelectorAll('.carousel-pagination button')];
-  const previous = document.querySelector('.carousel-arrow--prev');
-  const next = document.querySelector('.carousel-arrow--next');
-  const navToggle = document.querySelector('.nav-toggle');
-  const nav = document.querySelector('.main-nav');
+  const navToggle = document.querySelector('.service-nav-toggle');
+  const nav = document.querySelector('.service-nav');
   const servicesMenuWrap = document.querySelector('.services-menu-wrap');
   const servicesMenuTrigger = document.querySelector('.services-menu-trigger');
   const servicesMenu = document.querySelector('.services-menu');
   const clientAccessWrap = document.querySelector('.client-access-wrap');
   const clientAccess = document.querySelector('.client-access');
   const clientAccessMenu = document.querySelector('.client-access-menu');
-  const heroStage = document.querySelector('.hero-stage');
-  const languageLink = document.querySelector('.language a');
-  let current = 0;
-
-  const showSlide = (index) => {
-    current = (index + slides.length) % slides.length;
-    slides.forEach((slide, slideIndex) => {
-      slide.classList.toggle('is-active', slideIndex === current);
-      slide.setAttribute('aria-hidden', String(slideIndex !== current));
-    });
-    dots.forEach((dot, dotIndex) => {
-      dot.classList.toggle('is-active', dotIndex === current);
-      dot.setAttribute('aria-current', dotIndex === current ? 'true' : 'false');
-    });
-  };
-
-  previous?.addEventListener('click', () => showSlide(current - 1));
-  next?.addEventListener('click', () => showSlide(current + 1));
-  dots.forEach((dot) => dot.addEventListener('click', () => showSlide(Number(dot.dataset.go))));
-
-  if (heroStage && slides.length > 1) {
-    let touchStartX = 0;
-    heroStage.addEventListener('touchstart', (event) => {
-      touchStartX = event.changedTouches[0]?.clientX ?? 0;
-    }, { passive: true });
-    heroStage.addEventListener('touchend', (event) => {
-      const touchEndX = event.changedTouches[0]?.clientX ?? touchStartX;
-      const distance = touchStartX - touchEndX;
-      if (Math.abs(distance) >= 48) showSlide(current + (distance > 0 ? 1 : -1));
-    }, { passive: true });
-  }
 
   const setNav = (open) => {
     if (!navToggle || !nav) return;
@@ -89,7 +54,6 @@
   });
   clientAccessWrap?.addEventListener('pointerenter', () => clientAccessWrap.classList.remove('is-hover-suppressed'));
   clientAccessWrap?.addEventListener('pointerleave', () => clientAccessWrap.classList.remove('is-hover-suppressed'));
-
   clientAccessMenu?.querySelectorAll('a').forEach((link) => {
     link.addEventListener('click', () => setAccessMenu(false));
   });
@@ -110,10 +74,4 @@
       else if (focusInAccess) clientAccess?.focus();
     }
   });
-
-  if (languageLink && window.location.hash) {
-    languageLink.href = `${languageLink.getAttribute('href').split('#')[0]}${window.location.hash}`;
-  }
-
-  showSlide(0);
 })();
