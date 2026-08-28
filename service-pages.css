@@ -201,3 +201,18 @@ button { font: inherit; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
 }
+
+/* Mismo criterio en el pie de las páginas de servicio. */
+@media (max-width: 680px) {
+  .service-footer__grid { text-align: center; }
+  .service-footer__brand img { object-position: center; margin-inline: auto; }
+
+  .service-certifications__list {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    max-width: 200px;
+    margin-inline: auto;
+  }
+
+  .rite-trigger { max-width: 210px; }
+}

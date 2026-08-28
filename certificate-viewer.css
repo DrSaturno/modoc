@@ -263,7 +263,7 @@ body.has-rite-modal { overflow: hidden; }
 
 @media (max-width: 680px) {
   .rite-strip { margin-top: 20px; padding-top: 18px; }
-  .rite-trigger { max-width: 280px; }
+  .rite-trigger { max-width: 210px; }
   .rite-modal__header { padding: 16px 18px; }
   .rite-modal__body { padding: 20px 18px 24px; }
   .rite-modal__body p { font-size: 14px; }

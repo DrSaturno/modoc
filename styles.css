@@ -1522,3 +1522,24 @@ html[data-theme="3"] .receptorias-list span {
 
   html[data-theme="2"] .hero h1 { font-size: clamp(42px, 5vw, 58px); }
 }
+
+/* En mobile el pie queda en una sola columna: se centra y las
+   certificaciones pasan a ser un detalle, no un bloque a ancho completo. */
+@media (max-width: 760px) {
+  .footer-grid { text-align: center; }
+  .footer-brand > img { margin-inline: auto; }
+  .socials { justify-content: center; }
+  .footer-nav { grid-template-columns: 1fr; gap: 34px; }
+
+  .certificate-list {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    max-width: 200px;
+    margin-inline: auto;
+  }
+
+  .certificate-card { min-height: 0; aspect-ratio: 2.95 / 1; }
+
+  .rite-strip { justify-content: center; }
+  .rite-trigger { max-width: 210px; }
+}
