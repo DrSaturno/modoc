@@ -89,10 +89,13 @@ La tercera modernización individual se aplica a Digitalización y Gestión Docu
 
 La cuarta y última modernización individual se aplica a Guarda y Custodia en español e inglés, manteniendo el contenido del backup y el sistema visual aprobado para PSAD, Consultoría y Digitalización.
 
-- El hero reutiliza la fotografía `assets/heroes/guarda-custodia.png` generada para el carrusel del home (pasillo de archivo de alta seguridad con velo amarillo/negro), copiada a `assets/services/guarda-custodia/hero-2026.png` para servir como imagen dedicada de la página de detalle.
-- "Profesionales para sus archivos" conserva el texto original y agrega una franja de cuatro capacidades HTML/CSS (guarda física, guarda digital, seguimiento de requerimientos, expurgo certificado) derivadas literalmente del párrafo del hero, sin texto nuevo inventado.
-- "Todo en su lugar,siempre" conserva sus tres párrafos originales y se combina con la fotografía real de estanterías de archivo (`assets/services/guarda-custodia/2.jpg`).
-- "Contratar servicio de guarda documental" conserva sus siete beneficios originales y los presenta como una grilla numerada de dos columnas sobre fondo oscuro, reemplazando la antigua fotografía genérica de sala de servidores (`1.jpg`) que no correspondía temáticamente al servicio.
+- La página adopta el mismo ritmo de secciones que PSAD: hero fotográfico, intro blanca, infografía sobre papel, sección oscura, beneficios en blanco y cierre amarillo. Son seis secciones, con la misma escala tipográfica, la misma barra amarilla de 58 × 4 px bajo cada título y los mismos iconos de 70 px en cuadro amarillo con borde negro.
+- El hero reutiliza la fotografía `assets/heroes/guarda-custodia.png` generada para el carrusel del home (pasillo de archivo de alta seguridad), copiada a `assets/services/guarda-custodia/hero-2026.png` y aplicada con la variable `--hero-image` y el velo amarillo/negro doble del sistema.
+- "Profesionales para sus archivos" conserva el texto original y se resuelve como split asimétrico con la fotografía de estanterías de archivo (`2.jpg`) a sangre sobre la columna derecha.
+- La infografía central presenta el ciclo de custodia documental en cuatro etapas conectadas por chevrons CSS: guarda física, guarda digital, seguimiento de requerimientos y expurgo certificado. Las cuatro denominaciones se toman literalmente del párrafo del hero; en inglés se usan los términos equivalentes del backup, incluido "uselessness certification". Las etapas alternan blanco, amarillo y negro, y no dependen de ninguna imagen rasterizada.
+- "Todo en su lugar,siempre" conserva sus tres párrafos originales y los distribuye en bloques diferenciados sobre fondo oscuro, con el primero destacado en amarillo y a mayor escala. La fotografía de infraestructura tecnológica (`1.jpg`) ilustra la guarda digital, que es la mitad del servicio y estaba sin representar.
+- Bajo esa sección, una franja de sectores repite en formato de datos los cuatro rubros ya nombrados en el segundo párrafo (clínico, financiero, fiscal y jurídico), siguiendo el mismo recurso que la franja normativa de PSAD.
+- "Contratar servicio de guarda documental" conserva sus siete beneficios originales y los presenta como tarjetas con icono propio, alternando papel, amarillo y negro; el séptimo ocupa el ancho completo como cierre. No se numeran, porque no constituyen una secuencia operativa, igual que en Consultoría.
 - El cierre amarillo incorpora un formulario propio con destino `contacto.web@modoc.com.ar`, CAPTCHA de FormSubmit, campo trampa y el teléfono de WhatsApp `11 6886-1829`.
 - El título "GUARDIA Y CUSTODIA" conserva literalmente la denominación del backup, incluyendo su diferencia con el resto de las menciones "Guarda y Custodia" del sitio.
 
@@ -141,5 +144,6 @@ El backup implementaba Google reCAPTCHA v2. La versión estática utiliza el CAP
 - Consultoría de Archivos contiene un formulario funcional en español e inglés y mantiene la misma grilla lateral a 1280 px, tablet y mobile.
 - Digitalización y Gestión Documental presenta el proceso completo como siete etapas HTML/CSS y no depende de `4.gif` para comunicarlo.
 - Digitalización y Gestión Documental contiene un formulario funcional en español e inglés y no genera overflow horizontal a 1280 px, 834 px ni 390 px.
-- Guarda y Custodia presenta sus cuatro capacidades (guarda física, guarda digital, seguimiento de requerimientos, expurgo certificado) como contenido HTML/CSS y no depende de imágenes rasterizadas para comunicarlas.
+- Guarda y Custodia presenta su ciclo de custodia como una infografía HTML/CSS de cuatro etapas y no depende de imágenes rasterizadas para comunicarlo.
+- Guarda y Custodia mantiene el mismo ritmo de secciones, escala tipográfica y tratamiento de iconos que las otras tres páginas de servicio.
 - Guarda y Custodia contiene un formulario funcional en español e inglés y no genera overflow horizontal a 1280 px, 834 px ni 390 px.
