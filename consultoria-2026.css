@@ -10,6 +10,10 @@
 .service-page--consultoria .consultoria-hero {
   min-height: 780px;
   align-items: center;
+  background-color: var(--consultoria-black);
+  background-image: url("assets/services/consultoria/hero-2026.png");
+  background-repeat: no-repeat;
+  background-size: cover;
   background-position: center;
 }
 
@@ -70,7 +74,7 @@ html[lang="en"] .service-page--consultoria .consultoria-hero h1 {
   width: var(--shell);
   margin-inline: auto;
   display: grid;
-  grid-template-columns: minmax(0, .82fr) minmax(0, 1.18fr);
+  grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
   align-items: stretch;
   min-height: 560px;
 }
@@ -94,6 +98,11 @@ html[lang="en"] .service-page--consultoria .consultoria-hero h1 {
   line-height: .92;
   letter-spacing: -.02em;
   text-transform: uppercase;
+}
+
+.service-page--consultoria .consultoria-intro h2 {
+  max-width: 100%;
+  font-size: clamp(42px, 4vw, 58px);
 }
 
 .service-page--consultoria .consultoria-intro h2::after,
@@ -156,10 +165,12 @@ html[lang="en"] .service-page--consultoria .consultoria-hero h1 {
 .consultoria-service-card:first-child {
   grid-column: 1 / -1;
   display: grid;
-  grid-template-columns: minmax(0, 1.3fr) minmax(260px, .7fr);
+  grid-template-columns: minmax(290px, .72fr) minmax(0, 1.28fr);
   align-items: center;
   gap: clamp(32px, 5vw, 76px);
 }
+
+.consultoria-service-card:first-child > div:first-child { order: 2; }
 
 .consultoria-service-card--yellow {
   border-color: var(--consultoria-yellow);
@@ -202,31 +213,40 @@ html[lang="en"] .service-page--consultoria .consultoria-hero h1 {
 .consultoria-service-card--dark p { color: rgb(255 255 255 / 78%); }
 
 .consultoria-instruments {
+  order: 1;
   display: grid;
-  gap: 10px;
+  gap: 12px;
 }
 
 .consultoria-instruments span {
-  min-height: 62px;
-  padding: 0 18px;
-  display: flex;
+  min-height: 74px;
+  padding: 8px 18px 8px 8px;
+  display: grid;
+  grid-template-columns: 56px minmax(0, 1fr);
   align-items: center;
-  justify-content: space-between;
-  gap: 18px;
-  border-bottom: 1px solid #ccc;
+  gap: 16px;
+  border: 1px solid #d1d1cc;
+  background: #f7f7f4;
+}
+
+.consultoria-instruments svg {
+  width: 56px;
+  height: 56px;
+  padding: 14px;
+  fill: none;
+  stroke: #111;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  background: var(--consultoria-yellow);
+}
+
+.consultoria-instruments strong {
   font-family: "HP Simplified", sans-serif;
   font-size: 14px;
   font-weight: 700;
   letter-spacing: .04em;
   text-transform: uppercase;
-}
-
-.consultoria-instruments span::after {
-  content: "";
-  width: 10px;
-  height: 10px;
-  flex: 0 0 auto;
-  background: var(--consultoria-yellow);
 }
 
 .consultoria-implementation {
@@ -295,16 +315,16 @@ html[lang="en"] .service-page--consultoria .consultoria-hero h1 {
 }
 
 .consultoria-benefits__mark {
-  width: 42px;
-  height: 42px;
+  width: 68px;
+  height: 68px;
   display: grid;
   place-items: center;
   border: 2px solid currentColor;
 }
 
 .consultoria-benefits__mark svg {
-  width: 23px;
-  height: 23px;
+  width: 38px;
+  height: 38px;
   fill: none;
   stroke: currentColor;
   stroke-width: 1.8;
@@ -608,12 +628,16 @@ html[lang="en"] .service-page--consultoria .consultoria-hero h1 {
   .consultoria-value__grid { margin-top: 38px; }
   .consultoria-service-card { padding: 28px 23px; }
   .consultoria-service-card p { font-size: 14px; }
-  .consultoria-instruments span { min-height: 54px; padding-inline: 0; font-size: 12px; }
+  .consultoria-instruments span { min-height: 68px; grid-template-columns: 50px minmax(0, 1fr); padding: 8px 14px 8px 8px; gap: 13px; }
+  .consultoria-instruments svg { width: 50px; height: 50px; padding: 12px; }
+  .consultoria-instruments strong { font-size: 12px; }
   .consultoria-implementation__lead { margin-top: 22px; font-size: 16px; }
   .consultoria-implementation__media,
   .consultoria-implementation__media img { min-height: 390px; }
   .consultoria-implementation__media img { object-position: 48% center; }
   .consultoria-benefits li { padding: 28px 23px; font-size: 14px; }
+  .consultoria-benefits__mark { width: 60px; height: 60px; }
+  .consultoria-benefits__mark svg { width: 33px; height: 33px; }
   .consultoria-value-card { padding: 28px 23px; }
   .consultoria-value__statement { grid-template-columns: 1fr; gap: 18px; }
   .consultoria-value__statement span { width: 48px; height: 48px; font-size: 18px; }

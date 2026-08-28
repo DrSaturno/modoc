@@ -55,7 +55,7 @@ La segunda modernización individual se aplica a Consultoría de Archivos en esp
 
 - El hero utiliza una fotografía nueva de consultoría documental activa, con espacio de lectura a la izquierda y un velo amarillo/negro moderado.
 - “Asesoramiento experto”, “Nuestro servicio” y las secciones siguientes comparten el mismo ancho `shell` y las mismas guías laterales.
-- Los textos originales de “Nuestro servicio” se conservan y se distribuyen en módulos de instrumentos, mejora del archivo y gestión MODOC.
+- Los textos originales de “Nuestro servicio” se conservan y se distribuyen en módulos de instrumentos, mejora del archivo y gestión MODOC; los instrumentos se ubican a la izquierda con iconos semánticos de clasificación, acceso y seguridad.
 - “Contratar servicio de consultoría” conserva sus cuatro beneficios y los presenta como módulos visuales sin numerarlos, porque no constituyen una secuencia operativa.
 - La antigua imagen rasterizada “Nuestra oferta de valor” se reemplaza por una infografía semántica HTML/CSS con Digitalización, Procesamiento e Impresión; su contenido permanece visible y legible en mobile.
 - El cierre amarillo incorpora un formulario propio con destino `contacto.web@modoc.com.ar`, CAPTCHA de FormSubmit, campo trampa y el teléfono de WhatsApp `11 6886-1829`.
