@@ -27,7 +27,7 @@ Documento de continuidad para que otra persona o IA pueda retomar el proyecto si
 | Comercio Exterior PSAD | `servicios/comercio-exterior.html`, `servicios/comercio-exterior-en.html`, `psad-2026.css` |
 | Consultoría | `servicios/consultoria.html`, `servicios/consultoria-en.html`, `consultoria-2026.css` |
 | Digitalización | `servicios/digitalizacion.html`, `servicios/digitalizacion-en.html`, `digitalizacion-2026.css` |
-| Guarda y Custodia | `servicios/guarda-custodia.html`, `servicios/guarda-custodia-en.html` |
+| Guarda y Custodia | `servicios/guarda-custodia.html`, `servicios/guarda-custodia-en.html`, `guarda-2026.css` |
 | Certificados | `certificate-viewer.css`, `certificate-viewer.js`, `assets/certifications/` |
 | Especificaciones | `docs/SDD-site.md`, `docs/SDD-servicios.md` |
 
@@ -47,20 +47,16 @@ No editar como fuente productiva:
 - Menús desplegables de Servicios y Acceso Clientes compatibles con mouse, teclado y toque.
 - Burbuja de WhatsApp con `11 6886-1829`.
 - Certificados IRAM en visor emergente, con descarga de su PDF correspondiente.
-- Comercio Exterior PSAD, Consultoría y Digitalización modernizados en español e inglés.
-- Los tres servicios modernizados tienen hero fotográfico, contenido visual HTML/CSS, formulario propio y adaptación desktop/tablet/mobile.
+- Comercio Exterior PSAD, Consultoría, Digitalización y Guarda y Custodia modernizados en español e inglés.
+- Los cuatro servicios modernizados tienen hero fotográfico, contenido visual HTML/CSS, formulario propio y adaptación desktop/tablet/mobile.
 
 ### Siguiente tarea recomendada
 
-Modernizar Guarda y Custodia en este orden:
+Las cuatro páginas de servicio ya están modernizadas. No hay una tarea de modernización pendiente por defecto; antes de iniciar trabajo nuevo:
 
-1. Conservar literalmente los textos actuales del backup en español e inglés.
-2. Crear un hero fotográfico con velo amarillo/negro moderado y buena legibilidad.
-3. Rediseñar “Profesionales para sus archivos”, “Todo en su lugar, siempre” y “Contratar servicio de guarda documental” con una presentación más visual.
-4. Actualizar fotografías, infografías e iconos sin incrustar textos en imágenes.
-5. Agregar un formulario propio bilingüe en una sección amarilla.
-6. Verificar desktop, 834 px y 390 px antes de cerrar la iteración.
-7. Documentar las decisiones en `docs/SDD-servicios.md`.
+1. Confirmar con Comercial de MODOC si hay pedidos de ajuste de contenido, fotografía o formulario sobre alguno de los cuatro servicios.
+2. Revisar los "Pendientes externos" de este documento (redes sociales, activación de FormSubmit, aprobación final de textos) por si ya fueron resueltos y pueden cerrarse.
+3. Si no hay pedidos nuevos, tratar cualquier cambio como una iteración puntual: documentar la decisión en `docs/SDD-servicios.md` y validar HTML/responsive antes de cerrar.
 
 ## Reglas que no deben cambiarse sin aprobación
 

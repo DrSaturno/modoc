@@ -8,7 +8,7 @@ Sitio institucional estático de MODOC S.A. La dirección visual aprobada es B2 
 - Comercio Exterior PSAD modernizado en español e inglés.
 - Consultoría de Archivos modernizada en español e inglés.
 - Digitalización y Gestión Documental modernizada en español e inglés.
-- Guarda y Custodia disponible en ambos idiomas, pendiente de la modernización visual 2026 y del formulario propio.
+- Guarda y Custodia modernizada en español e inglés.
 
 Para continuar el proyecto con otra persona o IA, leer primero [docs/AI-HANDOFF.md](docs/AI-HANDOFF.md), [docs/SDD-site.md](docs/SDD-site.md) y [docs/SDD-servicios.md](docs/SDD-servicios.md).
 

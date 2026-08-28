@@ -1,0 +1,455 @@
+/* Guarda y Custodia 2026 — custodia física, digital y trazabilidad */
+.service-page--guarda {
+  --guarda-black: #0b0c0c;
+  --guarda-yellow: #ffd400;
+  --guarda-paper: #f2f1ec;
+  --guarda-grey: #5b5c58;
+  background: var(--guarda-paper);
+}
+
+.service-page--guarda .guarda-hero {
+  min-height: 780px;
+  align-items: center;
+  background-color: var(--guarda-black);
+  background-image: url("assets/services/guarda-custodia/hero-2026.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.service-page--guarda .guarda-hero::before {
+  background:
+    linear-gradient(90deg, rgb(6 7 7 / 80%) 0%, rgb(9 10 9 / 60%) 42%, rgb(255 212 0 / 18%) 75%, rgb(255 212 0 / 30%) 100%),
+    linear-gradient(0deg, rgb(0 0 0 / 34%) 0%, transparent 58%);
+}
+
+.service-page--guarda .service-hero__inner {
+  padding-top: 154px;
+  padding-bottom: 80px;
+}
+
+.guarda-hero__copy {
+  max-width: 800px;
+  padding: clamp(34px, 4.3vw, 58px);
+  background: rgb(8 8 7 / 70%);
+  border-top: 4px solid var(--guarda-yellow);
+  box-shadow: 0 28px 80px rgb(0 0 0 / 28%);
+  backdrop-filter: blur(5px);
+}
+
+.service-page--guarda .guarda-hero h1 {
+  max-width: 760px;
+  margin-bottom: 26px;
+  font-size: clamp(52px, 6vw, 88px);
+}
+
+.service-page--guarda .guarda-hero p {
+  max-width: 690px;
+  color: rgb(255 255 255 / 91%);
+  font-size: clamp(16px, 1.35vw, 19px);
+  line-height: 1.72;
+}
+
+.service-page--guarda .service-button {
+  transition: background-color .2s ease, border-color .2s ease, color .2s ease, transform .2s ease;
+}
+
+.service-page--guarda .service-button:hover,
+.service-page--guarda .service-button:focus-visible {
+  transform: translateY(-2px);
+}
+
+.service-page--guarda .guarda-intro h2,
+.service-page--guarda .guarda-expertise h2,
+.service-page--guarda .guarda-hire h2,
+.service-page--guarda .guarda-contact h2 {
+  margin: 0;
+  font-family: "HP Simplified", sans-serif;
+  font-size: clamp(42px, 4.4vw, 64px);
+  line-height: .94;
+  letter-spacing: -.02em;
+  text-transform: uppercase;
+}
+
+.service-page--guarda .guarda-intro h2::after,
+.service-page--guarda .guarda-expertise h2::after,
+.service-page--guarda .guarda-hire h2::after {
+  content: "";
+  width: 54px;
+  height: 3px;
+  display: block;
+  margin-top: 24px;
+  background: var(--guarda-yellow);
+}
+
+/* Intro + capabilities */
+.guarda-intro {
+  padding: 108px 0;
+  background: #fff;
+}
+
+.guarda-intro__lead {
+  max-width: 620px;
+}
+
+.guarda-intro__lead p {
+  max-width: 480px;
+  margin: 26px 0 0;
+  color: var(--guarda-grey);
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+.guarda-capabilities {
+  margin: 56px 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  list-style: none;
+  border-top: 1px solid #dcdcd6;
+}
+
+.guarda-capabilities li {
+  min-height: 190px;
+  padding: 28px 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 22px;
+  border-right: 1px solid #dcdcd6;
+  border-bottom: 1px solid #dcdcd6;
+}
+
+.guarda-capabilities li:last-child { border-right: none; }
+
+.guarda-capabilities__icon {
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  border: 2px solid var(--guarda-black);
+  color: var(--guarda-black);
+}
+
+.guarda-capabilities__icon svg {
+  width: 25px;
+  height: 25px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.guarda-capabilities strong {
+  display: block;
+  font-family: "HP Simplified", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: .03em;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+/* Expertise (todo en su lugar, siempre) */
+.guarda-expertise {
+  padding: 108px 0;
+  background: var(--guarda-paper);
+}
+
+.guarda-expertise__stage {
+  margin-top: 52px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.02fr) minmax(0, .98fr);
+  align-items: stretch;
+  gap: clamp(32px, 5vw, 64px);
+}
+
+.guarda-expertise__copy {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.guarda-expertise__copy p {
+  max-width: 520px;
+  margin: 20px 0 0;
+  color: var(--guarda-grey);
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.guarda-expertise__copy p:first-of-type { margin-top: 0; }
+
+.guarda-expertise__media {
+  min-height: 480px;
+  margin: 0;
+  overflow: hidden;
+  background: #111;
+}
+
+.guarda-expertise__media img {
+  width: 100%;
+  height: 100%;
+  min-height: 480px;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Hire section */
+.guarda-hire {
+  padding: 108px 0;
+  background: var(--guarda-black);
+  color: #fff;
+}
+
+.guarda-hire__lead {
+  max-width: 640px;
+  margin: 28px 0 0;
+  color: var(--guarda-yellow);
+  font-family: "HP Simplified", sans-serif;
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: .01em;
+}
+
+.guarda-hire__grid {
+  margin: 52px 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  list-style: none;
+  background: rgb(255 255 255 / 12%);
+}
+
+.guarda-hire__grid li {
+  min-height: 118px;
+  padding: 26px 28px;
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  background: var(--guarda-black);
+}
+
+.guarda-hire__mark {
+  flex: none;
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgb(255 212 0 / 55%);
+  color: var(--guarda-yellow);
+  font-family: "HP Simplified", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.guarda-hire__grid p {
+  margin: 0;
+  color: rgb(255 255 255 / 82%);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.guarda-hire__grid strong { color: #fff; }
+
+/* Contact */
+.guarda-contact {
+  padding: 108px 0;
+  background: var(--guarda-yellow);
+  color: #111;
+}
+
+.guarda-contact__grid {
+  display: grid;
+  grid-template-columns: minmax(0, .72fr) minmax(0, 1.28fr);
+  align-items: center;
+  gap: clamp(48px, 8vw, 118px);
+}
+
+.guarda-contact__intro { min-width: 0; }
+
+.guarda-contact__intro p {
+  max-width: 490px;
+  margin: 32px 0 0;
+  font-size: 16px;
+  line-height: 1.72;
+}
+
+.guarda-contact__phone {
+  margin-top: 30px;
+  display: inline-block;
+  font-family: "HP Simplified", sans-serif;
+  font-size: clamp(35px, 4vw, 54px);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.guarda-form {
+  min-width: 0;
+  padding: clamp(30px, 4.5vw, 58px);
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px 24px;
+  background: #fff;
+  border: 1px solid #d4d4d0;
+  box-shadow: 0 26px 70px rgb(0 0 0 / 16%);
+}
+
+.guarda-form__trap { position: absolute !important; }
+.guarda-form__field { min-width: 0; }
+.guarda-form__field--wide { grid-column: 1 / -1; }
+
+.guarda-form label {
+  display: block;
+  margin-bottom: 6px;
+  font-family: "HP Simplified", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.guarda-form input,
+.guarda-form textarea {
+  width: 100%;
+  padding: 11px 2px;
+  border: 0;
+  border-bottom: 1px solid #c7c7c2;
+  border-radius: 0;
+  outline: 0;
+  background: transparent;
+  color: #111;
+  font: inherit;
+}
+
+.guarda-form textarea {
+  min-height: 108px;
+  resize: vertical;
+}
+
+.guarda-form input:focus,
+.guarda-form textarea:focus { border-color: #111; }
+
+.guarda-form__captcha {
+  min-height: 70px;
+  padding: 14px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 13px;
+  border: 1px solid #d4d4d0;
+  background: #f7f7f5;
+}
+
+.guarda-form__captcha-check {
+  width: 31px;
+  height: 31px;
+  display: grid;
+  place-items: center;
+  border: 2px solid #111;
+  font-weight: 700;
+}
+
+.guarda-form__captcha strong,
+.guarda-form__captcha small { display: block; }
+.guarda-form__captcha strong { font-size: 12px; }
+.guarda-form__captcha small { margin-top: 2px; color: #666; font-size: 10px; }
+
+.guarda-form__captcha svg {
+  width: 25px;
+  height: 25px;
+  fill: none;
+  stroke: #111;
+  stroke-width: 1.7;
+}
+
+.guarda-form__submit {
+  min-height: 54px;
+  border: 0;
+  background: #111;
+  color: #fff;
+  cursor: pointer;
+  font-family: "HP Simplified", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  transition: background-color .2s ease, color .2s ease;
+}
+
+.guarda-form__submit:hover,
+.guarda-form__submit:focus-visible {
+  background: var(--guarda-yellow);
+  color: #111;
+  outline: 2px solid #111;
+}
+
+@media (max-width: 1080px) {
+  .service-page--guarda .guarda-hero h1 { font-size: clamp(52px, 7vw, 76px); }
+  .guarda-intro { padding: 84px 0; }
+  .guarda-capabilities { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .guarda-capabilities li:nth-child(2) { border-right: none; }
+  .guarda-expertise__stage { grid-template-columns: 1fr; }
+  .guarda-expertise__media,
+  .guarda-expertise__media img { min-height: 420px; }
+  .guarda-hire__grid { grid-template-columns: 1fr; }
+  .guarda-contact__grid { grid-template-columns: 1fr; gap: 54px; }
+}
+
+@media (max-width: 900px) {
+  .guarda-expertise,
+  .guarda-hire,
+  .guarda-contact { padding: 84px 0; }
+}
+
+@media (max-width: 680px) {
+  .service-page--guarda .guarda-hero {
+    min-height: 720px;
+    background-position: 70% center;
+  }
+  .service-page--guarda .guarda-hero::before {
+    background: linear-gradient(0deg, rgb(6 6 5 / 94%) 0%, rgb(8 8 7 / 72%) 53%, rgb(255 212 0 / 15%) 100%);
+  }
+  .service-page--guarda .service-hero__inner { padding-top: 132px; padding-bottom: 44px; }
+  .guarda-hero__copy {
+    padding: 25px 21px 28px;
+    border-top-width: 3px;
+    backdrop-filter: blur(3px);
+  }
+  .service-page--guarda .guarda-hero h1 { font-size: clamp(40px, 12vw, 54px); }
+  .service-page--guarda .guarda-hero p { font-size: 14px; line-height: 1.6; }
+  .service-page--guarda .service-hero__actions { gap: 9px; }
+  .service-page--guarda .service-button { padding-inline: 14px; font-size: 11px; }
+  .guarda-intro { padding: 72px 0; }
+  .service-page--guarda .guarda-intro h2,
+  .service-page--guarda .guarda-expertise h2,
+  .service-page--guarda .guarda-hire h2,
+  .service-page--guarda .guarda-contact h2 { font-size: clamp(38px, 11.5vw, 52px); }
+  .guarda-intro__lead p { margin-top: 20px; font-size: 16px; }
+  .guarda-capabilities { grid-template-columns: 1fr; margin-top: 40px; }
+  .guarda-capabilities li { min-height: 0; border-right: none; }
+  .guarda-expertise { padding: 72px 0; }
+  .guarda-expertise__stage { margin-top: 36px; gap: 26px; }
+  .guarda-expertise__copy p { font-size: 15px; }
+  .guarda-expertise__media,
+  .guarda-expertise__media img { min-height: 300px; }
+  .guarda-hire { padding: 72px 0; }
+  .guarda-hire__lead { margin-top: 22px; font-size: 17px; }
+  .guarda-hire__grid { margin-top: 36px; }
+  .guarda-hire__grid li { padding: 22px 20px; }
+  .guarda-contact { padding: 72px 0; }
+  .guarda-contact__intro p { margin-top: 24px; font-size: 14px; }
+  .guarda-form { padding: 25px 20px; grid-template-columns: 1fr; }
+  .guarda-form__field--wide { grid-column: auto; }
+  .guarda-form__captcha { grid-template-columns: auto 1fr; }
+  .guarda-form__captcha svg { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .service-page--guarda .service-button,
+  .guarda-form__submit { transition: none; }
+}

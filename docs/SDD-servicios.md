@@ -42,9 +42,9 @@ Las imágenes originales se copian a `assets/services/` manteniendo una carpeta 
 | Comercio Exterior PSAD | Terminado | Terminado | Sí | Sí |
 | Consultoría de Archivos | Terminado | Terminado | Sí | Sí |
 | Digitalización y Gestión Documental | Terminado | Terminado | Sí | Sí |
-| Guarda y Custodia | Disponible | Disponible | Pendiente | Pendiente |
+| Guarda y Custodia | Terminado | Terminado | Sí | Sí |
 
-La siguiente iteración debe modernizar Guarda y Custodia aplicando el mismo sistema aprobado, conservando literalmente los textos del backup y agregando su formulario bilingüe.
+Las cuatro páginas de servicio están modernizadas. Las siguientes iteraciones quedan sujetas a nuevos pedidos (ajustes de contenido aprobados por Comercial, nueva fotografía, etc.).
 
 ### Iteración 2026 — Comercio Exterior PSAD
 
@@ -84,6 +84,17 @@ La tercera modernización individual se aplica a Digitalización y Gestión Docu
 - Las secciones de registros en papel, firma digital, validez jurídica y recibos de sueldo conservan sus textos originales y se distribuyen en mapas de relación, módulos legales y tarjetas de funcionalidades.
 - El cierre amarillo incorpora un formulario propio con destino `contacto.web@modoc.com.ar`, CAPTCHA de FormSubmit, campo trampa y el teléfono de WhatsApp `11 6886-1829`.
 - Las fotografías nuevas se almacenan en `assets/services/digitalizacion/`; no contienen textos, logos, zócalos ni una dominante azul.
+
+### Iteración 2026 — Guarda y Custodia
+
+La cuarta y última modernización individual se aplica a Guarda y Custodia en español e inglés, manteniendo el contenido del backup y el sistema visual aprobado para PSAD, Consultoría y Digitalización.
+
+- El hero reutiliza la fotografía `assets/heroes/guarda-custodia.png` generada para el carrusel del home (pasillo de archivo de alta seguridad con velo amarillo/negro), copiada a `assets/services/guarda-custodia/hero-2026.png` para servir como imagen dedicada de la página de detalle.
+- "Profesionales para sus archivos" conserva el texto original y agrega una franja de cuatro capacidades HTML/CSS (guarda física, guarda digital, seguimiento de requerimientos, expurgo certificado) derivadas literalmente del párrafo del hero, sin texto nuevo inventado.
+- "Todo en su lugar,siempre" conserva sus tres párrafos originales y se combina con la fotografía real de estanterías de archivo (`assets/services/guarda-custodia/2.jpg`).
+- "Contratar servicio de guarda documental" conserva sus siete beneficios originales y los presenta como una grilla numerada de dos columnas sobre fondo oscuro, reemplazando la antigua fotografía genérica de sala de servidores (`1.jpg`) que no correspondía temáticamente al servicio.
+- El cierre amarillo incorpora un formulario propio con destino `contacto.web@modoc.com.ar`, CAPTCHA de FormSubmit, campo trampa y el teléfono de WhatsApp `11 6886-1829`.
+- El título "GUARDIA Y CUSTODIA" conserva literalmente la denominación del backup, incluyendo su diferencia con el resto de las menciones "Guarda y Custodia" del sitio.
 
 ### Visor de certificados IRAM
 
@@ -130,3 +141,5 @@ El backup implementaba Google reCAPTCHA v2. La versión estática utiliza el CAP
 - Consultoría de Archivos contiene un formulario funcional en español e inglés y mantiene la misma grilla lateral a 1280 px, tablet y mobile.
 - Digitalización y Gestión Documental presenta el proceso completo como siete etapas HTML/CSS y no depende de `4.gif` para comunicarlo.
 - Digitalización y Gestión Documental contiene un formulario funcional en español e inglés y no genera overflow horizontal a 1280 px, 834 px ni 390 px.
+- Guarda y Custodia presenta sus cuatro capacidades (guarda física, guarda digital, seguimiento de requerimientos, expurgo certificado) como contenido HTML/CSS y no depende de imágenes rasterizadas para comunicarlas.
+- Guarda y Custodia contiene un formulario funcional en español e inglés y no genera overflow horizontal a 1280 px, 834 px ni 390 px.
