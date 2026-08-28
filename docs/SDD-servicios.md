@@ -40,7 +40,8 @@ Las imágenes originales se copian a `assets/services/` manteniendo una carpeta 
 La primera modernización individual se aplica a Comercio Exterior PSAD en español e inglés. Las otras tres páginas conservan su composición actual hasta ser abordadas una por una.
 
 - El hero utiliza una nueva fotografía aduanera en colores naturales, con luz cálida y un velo amarillo/negro moderado para reforzar la identidad MODOC sin ocultar la imagen.
-- “Digitalización de despachos aduaneros” combina una fotografía nueva de captura documental con una cadena visual documento físico → registro digital.
+- “Digitalización de despachos aduaneros” combina el título con una fotografía luminosa del equipo trabajando en captura documental; la imagen no incorpora zócalos, textos ni overlays.
+- Las secciones “Digitalización de despachos aduaneros”, “Nuestro servicio” y “Cómo lo hacemos posible” comparten el mismo ancho `shell` y las mismas guías laterales.
 - “Nuestro servicio” conserva literalmente los dos párrafos aprobados y los distribuye en dos módulos visuales: cumplimiento normativo/guarda y cobertura logística/receptorías.
 - “Cómo lo hacemos posible” combina una fotografía nueva de custodia segura con los plazos de 24 horas y 10 años ya presentes en el backup, y destaca el respaldo KODAK como parte del método.
 - “Nuestro proceso” se implementa como una infografía HTML/CSS vertical de cuatro etapas: recepción, captura y control, firma/publicación, y rearmado/guarda.

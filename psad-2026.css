@@ -59,26 +59,27 @@ html[lang="en"] .service-page--psad .psad-hero h1 {
 .service-page--psad .service-button:focus-visible { transform: translateY(-2px); }
 
 .service-page--psad .psad-intro {
-  padding: 0;
+  padding: 108px 0;
   overflow: hidden;
   background: #fff;
   text-align: left;
 }
 
 .psad-intro__layout {
-  width: min(100%, 1600px);
+  width: var(--shell);
   max-width: none;
-  padding: 0;
+  margin-inline: auto;
   display: grid;
-  grid-template-columns: minmax(360px, .78fr) minmax(0, 1.22fr);
-  min-height: 660px;
+  grid-template-columns: minmax(0, .82fr) minmax(0, 1.18fr);
+  align-items: stretch;
+  min-height: 560px;
 }
 
 .psad-intro__copy {
   position: relative;
   z-index: 2;
   min-width: 0;
-  padding: clamp(74px, 8vw, 132px) clamp(34px, 5vw, 78px);
+  padding: clamp(60px, 6vw, 96px) clamp(40px, 4vw, 64px) clamp(60px, 6vw, 96px) 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -104,55 +105,19 @@ html[lang="en"] .service-page--psad .psad-hero h1 {
 
 .psad-intro__media {
   position: relative;
-  min-height: 660px;
+  min-height: 560px;
   margin: 0;
   overflow: hidden;
   background: #111;
 }
 
-.psad-intro__media::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(90deg, rgb(0 0 0 / 18%), transparent 42%);
-  pointer-events: none;
-}
-
 .psad-intro__media img {
   width: 100%;
   height: 100%;
-  min-height: 660px;
+  min-height: 560px;
   display: block;
   object-fit: cover;
-  object-position: 42% center;
-}
-
-.psad-document-chain {
-  position: absolute;
-  z-index: 2;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  min-height: 92px;
-  padding: 24px clamp(22px, 4vw, 52px);
-  display: grid;
-  grid-template-columns: auto minmax(44px, 1fr) auto;
-  align-items: center;
-  gap: 20px;
-  background: rgb(9 9 9 / 90%);
-  color: #fff;
-  font-family: "HP Simplified", sans-serif;
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: .06em;
-}
-
-.psad-document-chain svg {
-  width: 100%;
-  height: 18px;
-  fill: none;
-  stroke: var(--psad-yellow);
-  stroke-width: 2;
+  object-position: 54% center;
 }
 
 .psad-overview {
@@ -622,10 +587,11 @@ html[lang="en"] .service-page--psad .psad-hero h1 {
   .psad-method__stage,
   .psad-process__layout,
   .psad-contact__grid { grid-template-columns: 1fr; }
+  .service-page--psad .psad-intro { padding: 84px 0; }
   .psad-intro__layout { min-height: auto; }
-  .psad-intro__copy { min-height: 480px; }
+  .psad-intro__copy { min-height: 0; padding: 0 0 58px; }
   .psad-intro__media,
-  .psad-intro__media img { min-height: 560px; }
+  .psad-intro__media img { min-height: 520px; }
   .psad-overview__cards { gap: 22px; }
   .psad-service-card { min-height: 0; }
   .psad-method__media,
@@ -666,21 +632,13 @@ html[lang="en"] .service-page--psad .psad-hero h1 {
   .service-page--psad .psad-hero p { font-size: 14px; line-height: 1.62; }
   .service-page--psad .service-hero__actions { gap: 9px; }
   .service-page--psad .service-button { padding-inline: 14px; font-size: 11px; }
-  .service-page--psad .psad-intro { padding: 0; }
-  .psad-intro__copy { min-height: 0; padding: 72px 24px 66px; }
+  .service-page--psad .psad-intro { padding: 72px 0; }
+  .psad-intro__copy { min-height: 0; padding: 0 0 48px; }
   .service-page--psad .psad-intro h2 { font-size: clamp(42px, 12vw, 56px); }
   .service-page--psad .psad-intro p { margin-top: 22px; font-size: 16px; }
   .psad-intro__media,
-  .psad-intro__media img { min-height: 390px; }
-  .psad-intro__media img { object-position: 36% center; }
-  .psad-document-chain {
-    min-height: 80px;
-    padding: 18px 16px;
-    grid-template-columns: auto minmax(24px, 1fr) auto;
-    gap: 10px;
-    font-size: 10px;
-  }
-  .psad-document-chain span:last-child { padding-right: 44px; text-align: right; }
+  .psad-intro__media img { min-height: 360px; }
+  .psad-intro__media img { object-position: 58% center; }
   .psad-overview,
   .psad-method,
   .psad-process,
