@@ -39,12 +39,14 @@ Las imágenes originales se copian a `assets/services/` manteniendo una carpeta 
 
 La primera modernización individual se aplica a Comercio Exterior PSAD en español e inglés. Las otras tres páginas conservan su composición actual hasta ser abordadas una por una.
 
-- El hero utiliza una nueva fotografía aduanera en colores naturales, con luz cálida y un velo amarillo/negro de baja opacidad para mantener legibilidad sin ocultar la imagen.
-- El contenido existente se conserva literalmente y se redistribuye en bloques editoriales más legibles.
-- “Cómo lo hacemos posible” presenta las mismas tres ideas del backup y destaca el respaldo KODAK como parte del método, sin incorporar métricas nuevas.
+- El hero utiliza una nueva fotografía aduanera en colores naturales, con luz cálida y un velo amarillo/negro moderado para reforzar la identidad MODOC sin ocultar la imagen.
+- “Digitalización de despachos aduaneros” combina una fotografía nueva de captura documental con una cadena visual documento físico → registro digital.
+- “Nuestro servicio” conserva literalmente los dos párrafos aprobados y los distribuye en dos módulos visuales: cumplimiento normativo/guarda y cobertura logística/receptorías.
+- “Cómo lo hacemos posible” combina una fotografía nueva de custodia segura con los plazos de 24 horas y 10 años ya presentes en el backup, y destaca el respaldo KODAK como parte del método.
 - “Nuestro proceso” se implementa como una infografía HTML/CSS vertical de cuatro etapas: recepción, captura y control, firma/publicación, y rearmado/guarda.
 - El cierre amarillo contiene el mismo llamado comercial y un formulario propio que utiliza el mismo destinatario, CAPTCHA y protección antispam del home.
 - La infografía, el formulario y el hero deben conservar su jerarquía a 390 px sin depender de una imagen rasterizada para explicar el proceso.
+- Los llamados comerciales usan el número de WhatsApp `11 6886-1829`; los teléfonos institucionales originales permanecen únicamente dentro de la información legal del footer.
 
 ### Visor de certificados IRAM
 
@@ -85,3 +87,4 @@ El backup implementaba Google reCAPTCHA v2. La versión estática utiliza el CAP
 - Los enlaces externos de acceso se abren en una pestaña nueva con `rel="noopener"`.
 - Las imágenes IRAM abren el visor emergente, Escape y el botón cerrar lo cierran, y la descarga conserva el nombre correcto del PDF.
 - Comercio Exterior PSAD presenta su proceso como una secuencia vertical de cuatro etapas y contiene un formulario funcional en su cierre amarillo.
+- Los títulos y el formulario de Comercio Exterior PSAD no se superponen entre sí en desktop, tablet o mobile.
