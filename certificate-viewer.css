@@ -1,0 +1,132 @@
+.certificate-modal {
+  width: min(1080px, calc(100% - 32px));
+  max-width: none;
+  height: min(88svh, 880px);
+  max-height: none;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  background: #111;
+  color: #fff;
+  box-shadow: 0 32px 110px rgb(0 0 0 / 55%);
+}
+
+.certificate-modal[open] {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+}
+
+.certificate-modal::backdrop {
+  background: rgb(0 0 0 / 78%);
+  backdrop-filter: blur(5px);
+}
+
+.certificate-modal__header,
+.certificate-modal__actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 16px 20px;
+}
+
+.certificate-modal__header {
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(255 255 255 / 14%);
+}
+
+.certificate-modal__title {
+  margin: 0;
+  font-family: "HP Simplified", "Arial Narrow", sans-serif;
+  font-size: clamp(18px, 2vw, 25px);
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.certificate-modal__close {
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgb(255 255 255 / 32%);
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  font-size: 28px;
+  line-height: 1;
+}
+
+.certificate-modal__frame {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  border: 0;
+  background: #fff;
+}
+
+.certificate-modal__actions {
+  justify-content: flex-end;
+  border-top: 1px solid rgb(255 255 255 / 14%);
+  background: #111;
+}
+
+.certificate-modal__open,
+.certificate-modal__download {
+  min-height: 44px;
+  padding: 0 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgb(255 255 255 / 38%);
+  color: #fff;
+  font-family: "HP Simplified", "Arial Narrow", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .045em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.certificate-modal__download {
+  border-color: #ffd400;
+  background: #ffd400;
+  color: #111;
+}
+
+.certificate-modal__close:hover,
+.certificate-modal__close:focus-visible,
+.certificate-modal__open:hover,
+.certificate-modal__open:focus-visible {
+  border-color: #ffd400;
+  color: #ffd400;
+}
+
+.certificate-modal__download:hover,
+.certificate-modal__download:focus-visible {
+  background: #fff;
+  border-color: #fff;
+}
+
+.certificate-modal :focus-visible {
+  outline: 2px solid #ffd400;
+  outline-offset: 3px;
+}
+
+body.has-certificate-modal { overflow: hidden; }
+
+@media (max-width: 620px) {
+  .certificate-modal {
+    width: calc(100% - 18px);
+    height: 94svh;
+  }
+
+  .certificate-modal__header,
+  .certificate-modal__actions { padding: 12px; }
+  .certificate-modal__actions { gap: 8px; }
+  .certificate-modal__open,
+  .certificate-modal__download { flex: 1; padding-inline: 10px; font-size: 10px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .certificate-modal::backdrop { backdrop-filter: none; }
+}
