@@ -16,7 +16,7 @@
   <link rel="alternate" hreflang="en" href="https://www.modoc.com.ar/index-en.html">
   <link rel="preload" href="assets/heroes/psad.png" as="image" fetchpriority="high">
   <link rel="stylesheet" href="styles.css?v=1.1.0">
-  <link rel="stylesheet" href="certificate-viewer.css?v=1.0.0">
+  <link rel="stylesheet" href="certificate-viewer.css?v=1.1.0">
 </head>
 <body>
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -343,6 +343,7 @@
           <div class="certificate-card"><a class="certificate-link" href="assets/certifications/official/MODOC-IRAM-ISO-9001.pdf" download="MODOC-IRAM-ISO-9001.pdf" aria-label="Descargar certificado IRAM ISO 9001:2015"><img src="assets/certifications/iram-iso-9001-badge.png" alt="IRAM ISO 9001:2015"></a></div>
           <div class="certificate-card"><a class="certificate-link" href="assets/certifications/official/MODOC-IRAM-ISO-22301.pdf" download="MODOC-IRAM-ISO-22301.pdf" aria-label="Descargar certificado IRAM ISO 22301:2019"><img src="assets/certifications/iram-iso-22301-badge.png" alt="IRAM ISO 22301:2019"></a></div>
         </div>
+          <div class="rite-strip"><button class="rite-trigger" type="button" aria-haspopup="dialog" aria-controls="rite-modal" aria-label="Ver información sobre RITE"><img src="assets/brand/rite-oa.png" alt="RITE, Registro de Integridad y Transparencia, y Oficina Anticorrupción" loading="lazy"></button></div>
       </div>
     </div>
     <div class="footer-bottom">
@@ -353,13 +354,25 @@
       </div>
     </div>
   </footer>
+  <dialog class="rite-modal" id="rite-modal" aria-labelledby="rite-modal-title">
+    <div class="rite-modal__header">
+      <h2 class="rite-modal__title" id="rite-modal-title">RITE</h2>
+      <button class="rite-modal__close" type="button" aria-label="Cerrar">&times;</button>
+    </div>
+    <div class="rite-modal__body">
+      <p>Formamos parte del Registro de Integridad y Transparencia para Empresas y Entidades (RITE), plataforma impulsada por la Oficina Anticorrupción, con el apoyo del Banco Mundial, BID y PNUD, con la finalidad de contribuir al desarrollo y mejora de los programas de integridad, el intercambio de buenas prácticas y la promoción de ambientes transparentes en negocios y mercados.</p>
+      <p>Cabe destacar que nos constituimos como empresa pionera manteniendo encuentros con el equipo de la OA y los consultores que acompañan a la iniciativa, en los cuales trabajaron sobre elementos de los Programas de Integridad aportando sugerencias y recomendaciones para la mejora de la plataforma.</p>
+      <p class="rite-modal__source">RITE – Oficina Anticorrupción</p>
+    </div>
+  </dialog>
+
 
   <a class="whatsapp" href="https://wa.me/5491168861829" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp al 11 6886-1829">
     <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 5.4A10.4 10.4 0 0 0 7.1 21.2L5.6 26.6l5.5-1.4A10.4 10.4 0 1 0 16 5.4Zm0 18.8c-1.6 0-3.2-.5-4.5-1.3l-.3-.2-3.2.8.9-3.1-.2-.3A8.4 8.4 0 1 1 16 24.2Zm4.6-6.3c-.3-.1-1.5-.8-1.8-.8-.2-.1-.4-.1-.6.2-.2.3-.7.8-.9 1-.2.2-.3.2-.6.1-1.6-.8-2.7-1.5-3.8-3.4-.3-.5.3-.5.8-1.6.1-.2 0-.4 0-.6l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5 4.5 1.9.8 2.7.9 3.7.8 1.1-.2 3.3-1.4 3.8-2.7.5-1.3.5-2.4.3-2.6-.1-.2-.3-.2-.6-.4Z"/></svg>
     <span>11 6886-1829</span>
   </a>
 
-  <script src="certificate-viewer.js?v=1.0.0"></script>
+  <script src="certificate-viewer.js?v=1.1.2"></script>
   <script src="main.js?v=1.1.0"></script>
 </body>
 </html>

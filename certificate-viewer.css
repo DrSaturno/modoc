@@ -130,3 +130,125 @@ body.has-certificate-modal { overflow: hidden; }
 @media (prefers-reduced-motion: reduce) {
   .certificate-modal::backdrop { backdrop-filter: none; }
 }
+
+/* Franja RITE centrada bajo la línea de certificaciones IRAM */
+.rite-strip {
+  margin-top: 24px;
+  padding-top: 22px;
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid rgb(255 255 255 / 14%);
+}
+
+.rite-trigger {
+  width: 100%;
+  max-width: 330px;
+  padding: 0;
+  display: block;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.rite-trigger img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: opacity .2s ease, transform .2s ease;
+}
+
+.rite-trigger:hover img,
+.rite-trigger:focus-visible img {
+  opacity: .78;
+  transform: translateY(-2px);
+}
+
+.rite-trigger:focus-visible {
+  outline: 2px solid var(--yellow, #ffd400);
+  outline-offset: 5px;
+}
+
+.rite-modal {
+  width: min(660px, calc(100% - 32px));
+  max-width: none;
+  padding: 0;
+  border: 0;
+  background: #fff;
+  color: #111;
+  box-shadow: 0 32px 110px rgb(0 0 0 / 55%);
+}
+
+.rite-modal[open] { display: block; }
+
+.rite-modal::backdrop {
+  background: rgb(0 0 0 / 78%);
+  backdrop-filter: blur(5px);
+}
+
+.rite-modal__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 20px 24px;
+  border-bottom: 1px solid #e3e3de;
+}
+
+.rite-modal__title {
+  margin: 0;
+  font-family: "HP Simplified", "Arial Narrow", sans-serif;
+  font-size: clamp(24px, 3vw, 34px);
+  line-height: 1;
+  letter-spacing: -.01em;
+  text-transform: uppercase;
+}
+
+.rite-modal__close {
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #d4d4cf;
+  background: transparent;
+  color: #111;
+  cursor: pointer;
+  font-size: 24px;
+  line-height: 1;
+}
+
+.rite-modal__close:hover,
+.rite-modal__close:focus-visible {
+  background: #111;
+  color: #fff;
+}
+
+.rite-modal__body { padding: 26px 24px 30px; }
+
+.rite-modal__body p {
+  margin: 0 0 18px;
+  color: #3f3f3b;
+  font-size: 15px;
+  line-height: 1.78;
+}
+
+.rite-modal__body p:last-child { margin-bottom: 0; }
+
+.rite-modal__source {
+  padding-top: 16px;
+  border-top: 1px solid #e3e3de;
+  font-family: "HP Simplified", sans-serif;
+  font-size: 13px;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+body.has-rite-modal { overflow: hidden; }
+
+@media (max-width: 680px) {
+  .rite-strip { margin-top: 20px; padding-top: 18px; }
+  .rite-trigger { max-width: 280px; }
+  .rite-modal__header { padding: 16px 18px; }
+  .rite-modal__body { padding: 20px 18px 24px; }
+  .rite-modal__body p { font-size: 14px; }
+}

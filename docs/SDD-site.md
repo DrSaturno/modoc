@@ -93,3 +93,14 @@ Cambios pedidos por MODOC sobre el sitio ya publicado:
 - El carrusel del home avanza solo cada 7 segundos. Se detiene con hover, foco, pestaña oculta o `prefers-reduced-motion`, y cualquier interacción manual reinicia el ciclo.
 - Receptorías amplía el listado y el mapa para ganar legibilidad; el mapa pasa de 520 px a 628 px de ancho.
 - Los logos de clientes se agrandan y los tres originales con más margen interno (Swiss Medical, Ministerio de Hacienda y Gobierno de la Ciudad) reciben una ampliación adicional para leerse a la par del resto.
+
+## RITE
+
+Bajo la línea de certificaciones IRAM, en el pie de las diez páginas, se muestra centrado el logotipo conjunto de RITE y la Oficina Anticorrupción. Al pulsarlo se abre un diálogo con el texto institucional sobre la participación de MODOC en el Registro de Integridad y Transparencia para Empresas y Entidades.
+
+- El logotipo es blanco y se apoya sobre el pie negro; vive en `assets/brand/rite-oa.png`.
+- El texto del diálogo está en el HTML, no se inyecta por JavaScript, para que siga siendo contenido de la página.
+- El diálogo cierra con el botón, con click en el fondo y con Escape. El desbloqueo del scroll no depende del evento `close`.
+- Si el archivo del logotipo faltara, la franja se retira sola en lugar de dejar una imagen rota en el pie.
+
+Pendiente: la URL oficial de la ficha de MODOC en RITE. Hasta tenerla, el pie del diálogo muestra "RITE – Oficina Anticorrupción" como texto y no como enlace; no se inventa una dirección.

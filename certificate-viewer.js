@@ -68,3 +68,46 @@
     activeTrigger = null;
   });
 })();
+
+/* Aviso RITE: el texto vive en el HTML; el script solo abre y cierra el diálogo. */
+(() => {
+  const trigger = document.querySelector('.rite-trigger');
+  const dialog = document.querySelector('.rite-modal');
+  if (!trigger || !dialog || typeof dialog.showModal !== 'function') return;
+
+  const closeButton = dialog.querySelector('.rite-modal__close');
+  const logo = trigger.querySelector('img');
+
+  // Sin el logotipo la franja no comunica nada: se oculta en lugar de
+  // dejar un icono de imagen rota en el pie.
+  if (logo) {
+    logo.addEventListener('error', () => {
+      trigger.closest('.rite-strip')?.remove();
+    });
+  }
+
+  // El desbloqueo no depende del evento close: si no llegara a dispararse,
+  // el body quedaría con overflow hidden y la página sin scroll.
+  const unlock = () => document.body.classList.remove('has-rite-modal');
+
+  const closeDialog = () => {
+    if (dialog.open) dialog.close();
+    unlock();
+    trigger.focus();
+  };
+
+  trigger.addEventListener('click', () => {
+    document.body.classList.add('has-rite-modal');
+    dialog.showModal();
+    closeButton?.focus();
+  });
+
+  closeButton?.addEventListener('click', closeDialog);
+
+  dialog.addEventListener('click', (event) => {
+    if (event.target === dialog) closeDialog();
+  });
+
+  dialog.addEventListener('cancel', unlock);
+  dialog.addEventListener('close', unlock);
+})();
