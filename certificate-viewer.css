@@ -243,6 +243,22 @@ body.has-certificate-modal { overflow: hidden; }
   text-transform: uppercase;
 }
 
+.rite-modal__source a {
+  color: #111;
+  border-bottom: 2px solid var(--yellow, #ffd400);
+  text-decoration: none;
+}
+
+.rite-modal__source a:hover,
+.rite-modal__source a:focus-visible {
+  background: var(--yellow, #ffd400);
+}
+
+.rite-modal__source a:focus-visible {
+  outline: 2px solid #111;
+  outline-offset: 3px;
+}
+
 body.has-rite-modal { overflow: hidden; }
 
 @media (max-width: 680px) {

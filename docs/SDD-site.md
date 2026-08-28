@@ -103,4 +103,5 @@ Bajo la línea de certificaciones IRAM, en el pie de las diez páginas, se muest
 - El diálogo cierra con el botón, con click en el fondo y con Escape. El desbloqueo del scroll no depende del evento `close`.
 - Si el archivo del logotipo faltara, la franja se retira sola en lugar de dejar una imagen rota en el pie.
 
-Pendiente: la URL oficial de la ficha de MODOC en RITE. Hasta tenerla, el pie del diálogo muestra "RITE – Oficina Anticorrupción" como texto y no como enlace; no se inventa una dirección.
+- El pie del diálogo enlaza a `https://www.rite.gob.ar/` en una pestaña nueva con `rel="noopener"`.
+- El texto existe en español e inglés, igual que el resto del sitio.
