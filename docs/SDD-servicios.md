@@ -35,9 +35,20 @@ Las imágenes originales se copian a `assets/services/` manteniendo una carpeta 
 
 ## Decisiones técnicas
 
+## Estado de implementación
+
+| Servicio | Español | Inglés | Diseño 2026 | Formulario propio |
+| --- | --- | --- | --- | --- |
+| Comercio Exterior PSAD | Terminado | Terminado | Sí | Sí |
+| Consultoría de Archivos | Terminado | Terminado | Sí | Sí |
+| Digitalización y Gestión Documental | Terminado | Terminado | Sí | Sí |
+| Guarda y Custodia | Disponible | Disponible | Pendiente | Pendiente |
+
+La siguiente iteración debe modernizar Guarda y Custodia aplicando el mismo sistema aprobado, conservando literalmente los textos del backup y agregando su formulario bilingüe.
+
 ### Iteración 2026 — Comercio Exterior PSAD
 
-La primera modernización individual se aplica a Comercio Exterior PSAD en español e inglés. Las otras tres páginas conservan su composición actual hasta ser abordadas una por una.
+La primera modernización individual se aplicó a Comercio Exterior PSAD en español e inglés y estableció el patrón visual para las páginas siguientes.
 
 - El hero utiliza una nueva fotografía aduanera en colores naturales, con luz cálida y un velo amarillo/negro moderado para reforzar la identidad MODOC sin ocultar la imagen.
 - “Digitalización de despachos aduaneros” combina el título con una fotografía luminosa del equipo trabajando en captura documental; la imagen no incorpora zócalos, textos ni overlays.
