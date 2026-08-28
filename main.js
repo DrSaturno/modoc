@@ -27,9 +27,44 @@
     });
   };
 
-  previous?.addEventListener('click', () => showSlide(current - 1));
-  next?.addEventListener('click', () => showSlide(current + 1));
-  dots.forEach((dot) => dot.addEventListener('click', () => showSlide(Number(dot.dataset.go))));
+  const AUTOPLAY_MS = 7000;
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  let autoplayId = null;
+
+  const stopAutoplay = () => {
+    if (autoplayId !== null) {
+      clearInterval(autoplayId);
+      autoplayId = null;
+    }
+  };
+
+  const startAutoplay = () => {
+    stopAutoplay();
+    if (slides.length < 2 || reduceMotion.matches || document.hidden) return;
+    autoplayId = setInterval(() => showSlide(current + 1), AUTOPLAY_MS);
+  };
+
+  // Cada interacción manual reinicia el ciclo para no cortar la lectura.
+  const goTo = (index) => {
+    showSlide(index);
+    startAutoplay();
+  };
+
+  previous?.addEventListener('click', () => goTo(current - 1));
+  next?.addEventListener('click', () => goTo(current + 1));
+  dots.forEach((dot) => dot.addEventListener('click', () => goTo(Number(dot.dataset.go))));
+
+  if (heroStage && slides.length > 1) {
+    heroStage.addEventListener('mouseenter', stopAutoplay);
+    heroStage.addEventListener('mouseleave', startAutoplay);
+    heroStage.addEventListener('focusin', stopAutoplay);
+    heroStage.addEventListener('focusout', startAutoplay);
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) stopAutoplay(); else startAutoplay();
+    });
+    reduceMotion.addEventListener('change', startAutoplay);
+    startAutoplay();
+  }
 
   if (heroStage && slides.length > 1) {
     let touchStartX = 0;
@@ -39,7 +74,7 @@
     heroStage.addEventListener('touchend', (event) => {
       const touchEndX = event.changedTouches[0]?.clientX ?? touchStartX;
       const distance = touchStartX - touchEndX;
-      if (Math.abs(distance) >= 48) showSlide(current + (distance > 0 ? 1 : -1));
+      if (Math.abs(distance) >= 48) goTo(current + (distance > 0 ? 1 : -1));
     }, { passive: true });
   }
 

@@ -16,7 +16,7 @@
 
 .service-page--guarda .guarda-hero::before {
   background:
-    linear-gradient(90deg, rgb(7 7 6 / 78%) 0%, rgb(10 10 8 / 54%) 43%, rgb(255 212 0 / 26%) 78%, rgb(255 212 0 / 40%) 100%),
+    linear-gradient(90deg, rgb(6 7 8 / 84%) 0%, rgb(8 9 10 / 54%) 46%, rgb(8 9 10 / 16%) 78%, rgb(8 9 10 / 6%) 100%),
     linear-gradient(0deg, rgb(0 0 0 / 38%) 0%, transparent 56%);
 }
 
@@ -26,30 +26,31 @@
 }
 
 .service-page--guarda .guarda-hero__copy {
-  max-width: 820px;
-  padding: clamp(34px, 4.3vw, 58px);
-  background: rgb(8 8 7 / 72%);
+  max-width: 700px;
+  padding: clamp(30px, 3.4vw, 46px);
+  background: #fff;
   border-top: 4px solid var(--guarda-yellow);
   box-shadow: 0 28px 80px rgb(0 0 0 / 28%);
-  backdrop-filter: blur(5px);
 }
 
 .service-page--guarda .guarda-hero h1 {
   max-width: 760px;
+  color: #111;
   margin-bottom: 26px;
-  font-size: clamp(58px, 6.7vw, 98px);
+  font-size: clamp(40px, 4.4vw, 66px);
 }
 
 .service-page--guarda .guarda-hero p {
   max-width: 680px;
-  color: rgb(255 255 255 / 91%);
+  color: #3f3f3b;
   font-size: clamp(16px, 1.35vw, 19px);
   line-height: 1.72;
 }
 
 html[lang="en"] .service-page--guarda .guarda-hero h1 {
   max-width: 800px;
-  font-size: clamp(48px, 5.7vw, 82px);
+  color: #111;
+  font-size: clamp(40px, 4.4vw, 66px);
 }
 
 .service-page--guarda .service-button {
@@ -315,58 +316,6 @@ html[lang="en"] .service-page--guarda .guarda-hero h1 {
   line-height: 1.18;
 }
 
-.guarda-sectors {
-  grid-column: 1 / -1;
-  display: grid;
-  grid-template-columns: 230px minmax(0, 1fr);
-  align-items: center;
-  background: #fff;
-  color: #111;
-}
-
-.guarda-sectors__label {
-  min-height: 100%;
-  padding: 26px 24px;
-  display: grid;
-  place-items: center;
-  border-right: 1px solid rgb(0 0 0 / 18%);
-  background: var(--guarda-yellow);
-  font-family: "HP Simplified", sans-serif;
-  font-size: 18px;
-  line-height: 1.05;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.guarda-sectors__list {
-  margin: 0;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  list-style: none;
-}
-
-.guarda-sectors__list li {
-  min-height: 84px;
-  padding: 16px 12px;
-  display: grid;
-  place-items: center;
-  border-right: 1px solid rgb(0 0 0 / 12%);
-  font-family: "HP Simplified", sans-serif;
-  font-size: 15px;
-  letter-spacing: .03em;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.guarda-sectors__list li:last-child { border-right: 0; }
-
-/* Contratar servicio */
-.guarda-hire {
-  padding: 120px 0;
-  background: #fff;
-}
-
 .guarda-hire__lead {
   max-width: 620px;
   margin: 0 0 54px;
@@ -622,34 +571,23 @@ html[lang="en"] .service-page--guarda .guarda-hero h1 {
 }
 
 @media (max-width: 900px) {
-  .guarda-sectors { grid-template-columns: 1fr; }
-  .guarda-sectors__label {
-    min-height: 74px;
-    border-right: 0;
-    border-bottom: 1px solid rgb(0 0 0 / 18%);
-  }
-  .guarda-sectors__list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .guarda-sectors__list li:nth-child(2) { border-right: 0; }
-  .guarda-sectors__list li:nth-child(-n+2) { border-bottom: 1px solid rgb(0 0 0 / 12%); }
-}
-
-@media (max-width: 680px) {
+  @media (max-width: 680px) {
   .service-page--guarda .guarda-hero {
     min-height: 720px;
     align-items: flex-end;
     background-position: 66% center;
   }
   .service-page--guarda .guarda-hero::before {
-    background: linear-gradient(0deg, rgb(7 7 6 / 84%) 0%, rgb(7 7 6 / 50%) 58%, rgb(255 212 0 / 28%) 100%);
+    background: linear-gradient(0deg, rgb(6 6 5 / 90%) 0%, rgb(8 8 7 / 60%) 56%, rgb(8 8 7 / 20%) 100%);
   }
   .service-page--guarda .service-hero__inner { padding-top: 118px; padding-bottom: 38px; }
   .service-page--guarda .guarda-hero__copy {
     padding: 28px 22px 30px;
-    background: rgb(8 8 7 / 76%);
-    backdrop-filter: blur(3px);
+    background: #fff;
+    border-top-width: 3px;
   }
   .service-page--guarda .guarda-hero h1,
-  html[lang="en"] .service-page--guarda .guarda-hero h1 { font-size: clamp(42px, 13vw, 58px); }
+  html[lang="en"] .service-page--guarda .guarda-hero h1 { font-size: clamp(40px, 4.4vw, 66px); }
   .service-page--guarda .guarda-hero p { font-size: 14px; line-height: 1.62; }
   .service-page--guarda .service-hero__actions { gap: 9px; }
   .service-page--guarda .service-button { padding-inline: 14px; font-size: 11px; }
@@ -680,28 +618,7 @@ html[lang="en"] .service-page--guarda .guarda-hero h1 {
   .guarda-expertise__media img { min-height: 360px; }
   .guarda-expertise__block { padding: 32px 22px; }
   .guarda-expertise__block p { font-size: 15px; }
-  .guarda-sectors__list { grid-template-columns: 1fr; }
-  .guarda-sectors__list li {
-    min-height: 62px;
-    border-right: 0;
-    border-bottom: 1px solid rgb(0 0 0 / 12%);
-  }
-  .guarda-sectors__list li:last-child { border-bottom: 0; }
-
-  .guarda-hire__grid { grid-template-columns: 1fr; }
-  .guarda-benefit { min-height: 0; padding: 28px 22px; gap: 22px; }
-  .guarda-benefit p { font-size: 15px; line-height: 1.72; }
-  .guarda-benefit:last-child { grid-template-columns: 1fr; gap: 22px; }
-  .guarda-benefit:last-child p { font-size: 20px; }
-
-  .guarda-contact__grid { gap: 42px; }
-  .guarda-form { padding: 25px 20px; grid-template-columns: 1fr; }
-  .guarda-form__field--wide { grid-column: auto; }
-  .guarda-form__captcha { grid-template-columns: auto 1fr; }
-  .guarda-form__captcha svg { display: none; }
-}
-
-@media (prefers-reduced-motion: reduce) {
+  @media (prefers-reduced-motion: reduce) {
   .service-page--guarda .service-button,
   .guarda-form__submit { transition: none; }
 }

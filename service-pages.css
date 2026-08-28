@@ -58,7 +58,6 @@ button { font: inherit; }
 .service-hero strong, .service-section strong { color: inherit; }
 .service-hero__actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 32px; }
 .service-button { min-height: 49px; padding: 0 22px; display: inline-flex; align-items: center; justify-content: center; border: 2px solid var(--yellow); background: var(--yellow); color: #111; font-family: "HP Simplified", sans-serif; font-size: 13px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; }
-.service-button--ghost { border-color: #fff; background: transparent; color: #fff; }
 
 /* Service content */
 .service-intro { padding: 86px 0 72px; text-align: center; background: #fff; }

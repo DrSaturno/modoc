@@ -20,14 +20,14 @@ Publicar un sitio institucional bilingüe de MODOC que convierta visitas en cons
 
 ## Dirección visual B2
 
-- Hero de altura completa con fotografía documental y una lámina blanca translúcida que representa el paso de papel a información digital.
+- Hero de altura completa con fotografía documental y un panel blanco opaco que envuelve el texto y representa el paso de papel a información digital. El panel se usa igual en el home y en las cuatro páginas de servicio.
 - Navegación superpuesta y transparente sobre la imagen.
 - Servicios en cuatro columnas en desktop y apilados en mobile.
-- Sección Nosotros en tres columnas: marca, propósito y forma de trabajo.
+- Sección Nosotros sobre fondo negro, en tres columnas alineadas al tope: marca, "Quienes somos" y "Qué hacemos". Las dos columnas de texto comparten barra amarilla y título para que arranquen a la misma altura.
 - Contacto en amarillo para concentrar la conversión principal.
 - Footer negro con certificaciones IRAM descargables.
 
-La firma visual distintiva es la lámina translúcida del hero: una pieza sobria que vincula el soporte físico con la gestión digital sin agregar ornamentos ajenos a la marca.
+La firma visual distintiva es el panel blanco del hero: una pieza sobria que vincula el soporte físico con la gestión digital sin agregar ornamentos ajenos a la marca. El velo del hero es neutro; no lleva tinte amarillo sobre la fotografía.
 
 ## Arquitectura pública
 
@@ -81,3 +81,15 @@ La firma visual distintiva es la lámina translúcida del hero: una pieza sobria
 - El formulario valida campos obligatorios, utiliza CAPTCHA y apunta al correo aprobado sin PHP.
 - Los tres certificados IRAM se descargan desde el home y desde todas las páginas de servicios.
 - Las páginas cargan sin errores 404 ni errores JavaScript en desktop, tablet y mobile.
+
+## Iteración de ajustes 2026
+
+Cambios pedidos por MODOC sobre el sitio ya publicado:
+
+- La barra de navegación queda reducida a Home, Servicios y Contacto en las diez páginas. Nosotros y Clientes siguen siendo secciones del home y se alcanzan desde el footer.
+- El panel blanco del hero envuelve el texto en lugar de ser una caja de alto fijo, y se aplica también a las páginas de servicio, que antes usaban un panel oscuro translúcido.
+- Los degradados de los heroes de servicio pierden el tinte amarillo y quedan neutros para no teñir la fotografía.
+- Las páginas de servicio conservan únicamente el botón Contactanos; se elimina "Conocé el servicio".
+- El carrusel del home avanza solo cada 7 segundos. Se detiene con hover, foco, pestaña oculta o `prefers-reduced-motion`, y cualquier interacción manual reinicia el ciclo.
+- Receptorías amplía el listado y el mapa para ganar legibilidad; el mapa pasa de 520 px a 628 px de ancho.
+- Los logos de clientes se agrandan y los tres originales con más margen interno (Swiss Medical, Ministerio de Hacienda y Gobierno de la Ciudad) reciben una ampliación adicional para leerse a la par del resto.
