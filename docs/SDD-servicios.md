@@ -88,3 +88,4 @@ El backup implementaba Google reCAPTCHA v2. La versión estática utiliza el CAP
 - Las imágenes IRAM abren el visor emergente, Escape y el botón cerrar lo cierran, y la descarga conserva el nombre correcto del PDF.
 - Comercio Exterior PSAD presenta su proceso como una secuencia vertical de cuatro etapas y contiene un formulario funcional en su cierre amarillo.
 - Los títulos y el formulario de Comercio Exterior PSAD no se superponen entre sí en desktop, tablet o mobile.
+- El título “Digitalización de despachos aduaneros” debe permanecer dentro de su columna y no invadir la fotografía en anchos intermedios.

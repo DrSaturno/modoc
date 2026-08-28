@@ -77,7 +77,8 @@ html[lang="en"] .service-page--psad .psad-hero h1 {
 .psad-intro__copy {
   position: relative;
   z-index: 2;
-  padding: clamp(74px, 8vw, 132px) clamp(38px, 6vw, 96px);
+  min-width: 0;
+  padding: clamp(74px, 8vw, 132px) clamp(34px, 5vw, 78px);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -87,7 +88,8 @@ html[lang="en"] .service-page--psad .psad-hero h1 {
 .service-page--psad .psad-intro h2 {
   max-width: 640px;
   margin: 0;
-  font-size: clamp(50px, 5.4vw, 82px);
+  font-size: clamp(46px, 4vw, 62px);
+  letter-spacing: -.015em;
   line-height: .9;
   text-align: left;
 }
