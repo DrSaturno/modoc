@@ -49,6 +49,18 @@ La primera modernización individual se aplica a Comercio Exterior PSAD en espa�
 - La infografía, el formulario y el hero deben conservar su jerarquía a 390 px sin depender de una imagen rasterizada para explicar el proceso.
 - Los llamados comerciales usan el número de WhatsApp `11 6886-1829`; los teléfonos institucionales originales permanecen únicamente dentro de la información legal del footer.
 
+### Iteración 2026 — Consultoría de Archivos
+
+La segunda modernización individual se aplica a Consultoría de Archivos en español e inglés, reutilizando el sistema visual y responsive aprobado para PSAD sin mezclar contenido entre servicios.
+
+- El hero utiliza una fotografía nueva de consultoría documental activa, con espacio de lectura a la izquierda y un velo amarillo/negro moderado.
+- “Asesoramiento experto”, “Nuestro servicio” y las secciones siguientes comparten el mismo ancho `shell` y las mismas guías laterales.
+- Los textos originales de “Nuestro servicio” se conservan y se distribuyen en módulos de instrumentos, mejora del archivo y gestión MODOC.
+- “Contratar servicio de consultoría” conserva sus cuatro beneficios y los presenta como módulos visuales sin numerarlos, porque no constituyen una secuencia operativa.
+- La antigua imagen rasterizada “Nuestra oferta de valor” se reemplaza por una infografía semántica HTML/CSS con Digitalización, Procesamiento e Impresión; su contenido permanece visible y legible en mobile.
+- El cierre amarillo incorpora un formulario propio con destino `contacto.web@modoc.com.ar`, CAPTCHA de FormSubmit, campo trampa y el teléfono de WhatsApp `11 6886-1829`.
+- Las fotografías nuevas se almacenan en `assets/services/consultoria/`; no contienen textos, logos ni zócalos embebidos.
+
 ### Visor de certificados IRAM
 
 Todos los enlaces de imágenes IRAM abren un diálogo accesible con una vista previa del PDF y una acción explícita de descarga. Si JavaScript no se ejecuta, el enlace conserva la descarga directa como alternativa.
@@ -90,3 +102,5 @@ El backup implementaba Google reCAPTCHA v2. La versión estática utiliza el CAP
 - Comercio Exterior PSAD presenta su proceso como una secuencia vertical de cuatro etapas y contiene un formulario funcional en su cierre amarillo.
 - Los títulos y el formulario de Comercio Exterior PSAD no se superponen entre sí en desktop, tablet o mobile.
 - El título “Digitalización de despachos aduaneros” debe permanecer dentro de su columna y no invadir la fotografía en anchos intermedios.
+- Consultoría de Archivos presenta “Nuestra oferta de valor” como contenido HTML/CSS y no depende de una imagen rasterizada para comunicar sus tres componentes.
+- Consultoría de Archivos contiene un formulario funcional en español e inglés y mantiene la misma grilla lateral a 1280 px, tablet y mobile.

@@ -1,0 +1,630 @@
+/* Consultoría de Archivos 2026 — diagnóstico, método y control */
+.service-page--consultoria {
+  --consultoria-black: #0b0c0c;
+  --consultoria-yellow: #ffd400;
+  --consultoria-paper: #f2f1ec;
+  --consultoria-grey: #5b5c58;
+  background: var(--consultoria-paper);
+}
+
+.service-page--consultoria .consultoria-hero {
+  min-height: 780px;
+  align-items: center;
+  background-position: center;
+}
+
+.service-page--consultoria .consultoria-hero::before {
+  background:
+    linear-gradient(90deg, rgb(7 7 6 / 78%) 0%, rgb(10 10 8 / 58%) 42%, rgb(255 212 0 / 20%) 75%, rgb(255 212 0 / 34%) 100%),
+    linear-gradient(0deg, rgb(0 0 0 / 36%) 0%, transparent 58%);
+}
+
+.service-page--consultoria .service-hero__inner {
+  padding-top: 154px;
+  padding-bottom: 80px;
+}
+
+.consultoria-hero__copy {
+  max-width: 800px;
+  padding: clamp(34px, 4.3vw, 58px);
+  background: rgb(8 8 7 / 70%);
+  border-top: 4px solid var(--consultoria-yellow);
+  box-shadow: 0 28px 80px rgb(0 0 0 / 28%);
+  backdrop-filter: blur(5px);
+}
+
+.service-page--consultoria .consultoria-hero h1 {
+  max-width: 760px;
+  margin-bottom: 26px;
+  font-size: clamp(52px, 6vw, 88px);
+}
+
+.service-page--consultoria .consultoria-hero p {
+  max-width: 690px;
+  color: rgb(255 255 255 / 91%);
+  font-size: clamp(16px, 1.35vw, 19px);
+  line-height: 1.72;
+}
+
+html[lang="en"] .service-page--consultoria .consultoria-hero h1 {
+  max-width: 720px;
+  font-size: clamp(52px, 5.6vw, 82px);
+}
+
+.service-page--consultoria .service-button {
+  transition: background-color .2s ease, border-color .2s ease, color .2s ease, transform .2s ease;
+}
+
+.service-page--consultoria .service-button:hover,
+.service-page--consultoria .service-button:focus-visible {
+  transform: translateY(-2px);
+}
+
+.consultoria-intro {
+  padding: 108px 0;
+  overflow: hidden;
+  background: #fff;
+}
+
+.consultoria-intro__layout {
+  width: var(--shell);
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: minmax(0, .82fr) minmax(0, 1.18fr);
+  align-items: stretch;
+  min-height: 560px;
+}
+
+.consultoria-intro__copy {
+  min-width: 0;
+  padding: clamp(60px, 6vw, 96px) clamp(40px, 4vw, 64px) clamp(60px, 6vw, 96px) 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.service-page--consultoria .consultoria-intro h2,
+.service-page--consultoria .consultoria-overview h2,
+.service-page--consultoria .consultoria-implementation h2,
+.service-page--consultoria .consultoria-value h2,
+.service-page--consultoria .consultoria-contact h2 {
+  margin: 0;
+  font-family: "HP Simplified", sans-serif;
+  font-size: clamp(46px, 4.8vw, 72px);
+  line-height: .92;
+  letter-spacing: -.02em;
+  text-transform: uppercase;
+}
+
+.service-page--consultoria .consultoria-intro h2::after,
+.service-page--consultoria .consultoria-overview h2::after,
+.service-page--consultoria .consultoria-implementation h2::after,
+.service-page--consultoria .consultoria-value h2::after {
+  content: "";
+  width: 54px;
+  height: 3px;
+  display: block;
+  margin-top: 24px;
+  background: var(--consultoria-yellow);
+}
+
+.consultoria-intro__copy p {
+  max-width: 430px;
+  margin: 30px 0 0;
+  color: var(--consultoria-grey);
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+.consultoria-intro__media {
+  min-height: 560px;
+  margin: 0;
+  overflow: hidden;
+  background: #111;
+}
+
+.consultoria-intro__media img {
+  width: 100%;
+  height: 100%;
+  min-height: 560px;
+  display: block;
+  object-fit: cover;
+  object-position: 52% center;
+}
+
+.consultoria-overview {
+  padding: 108px 0;
+  background: var(--consultoria-paper);
+}
+
+.consultoria-overview__grid {
+  margin-top: 52px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.consultoria-service-card {
+  min-width: 0;
+  padding: clamp(32px, 4.2vw, 58px);
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #d5d5d0;
+  background: #fff;
+}
+
+.consultoria-service-card:first-child {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(260px, .7fr);
+  align-items: center;
+  gap: clamp(32px, 5vw, 76px);
+}
+
+.consultoria-service-card--yellow {
+  border-color: var(--consultoria-yellow);
+  background: var(--consultoria-yellow);
+}
+
+.consultoria-service-card--dark {
+  border-color: var(--consultoria-black);
+  background: var(--consultoria-black);
+  color: #fff;
+}
+
+.consultoria-service-card__icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 24px;
+  display: grid;
+  place-items: center;
+  border: 2px solid currentColor;
+}
+
+.consultoria-service-card__icon svg {
+  width: 27px;
+  height: 27px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.consultoria-service-card p {
+  margin: 0;
+  color: var(--consultoria-grey);
+  font-size: 16px;
+  line-height: 1.82;
+}
+
+.consultoria-service-card--yellow p { color: #111; }
+.consultoria-service-card--dark p { color: rgb(255 255 255 / 78%); }
+
+.consultoria-instruments {
+  display: grid;
+  gap: 10px;
+}
+
+.consultoria-instruments span {
+  min-height: 62px;
+  padding: 0 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  border-bottom: 1px solid #ccc;
+  font-family: "HP Simplified", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+.consultoria-instruments span::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  flex: 0 0 auto;
+  background: var(--consultoria-yellow);
+}
+
+.consultoria-implementation {
+  padding: 108px 0;
+  background: var(--consultoria-black);
+  color: #fff;
+}
+
+.consultoria-implementation h2 { max-width: 860px; }
+
+.consultoria-implementation__lead {
+  max-width: 680px;
+  margin: 28px 0 0;
+  color: rgb(255 255 255 / 72%);
+  font-size: 18px;
+}
+
+.consultoria-implementation__stage {
+  margin-top: 54px;
+  display: grid;
+  grid-template-columns: minmax(0, .92fr) minmax(0, 1.08fr);
+  align-items: stretch;
+}
+
+.consultoria-implementation__media {
+  min-height: 640px;
+  margin: 0;
+  overflow: hidden;
+}
+
+.consultoria-implementation__media img {
+  width: 100%;
+  height: 100%;
+  min-height: 640px;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+.consultoria-benefits {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  list-style: none;
+  background: #fff;
+  color: #111;
+}
+
+.consultoria-benefits li {
+  min-height: 320px;
+  padding: clamp(30px, 4vw, 50px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 30px;
+  border: 1px solid #ddd;
+  font-size: 15px;
+  line-height: 1.72;
+}
+
+.consultoria-benefits li:nth-child(2),
+.consultoria-benefits li:nth-child(3) {
+  background: var(--consultoria-yellow);
+  border-color: var(--consultoria-yellow);
+}
+
+.consultoria-benefits__mark {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border: 2px solid currentColor;
+}
+
+.consultoria-benefits__mark svg {
+  width: 23px;
+  height: 23px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.consultoria-value {
+  padding: 108px 0;
+  background: #fff;
+}
+
+.consultoria-value__grid {
+  margin-top: 52px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.consultoria-value-card {
+  min-height: 430px;
+  padding: clamp(32px, 3.5vw, 48px);
+  border-top: 8px solid var(--consultoria-yellow);
+  background: var(--consultoria-paper);
+}
+
+.consultoria-value-card:nth-child(2) {
+  background: var(--consultoria-yellow);
+  border-top-color: var(--consultoria-black);
+}
+
+.consultoria-value-card:nth-child(3) {
+  background: var(--consultoria-black);
+  color: #fff;
+}
+
+.consultoria-value-card h3 {
+  margin: 0 0 30px;
+  font-family: "HP Simplified", sans-serif;
+  font-size: clamp(30px, 3vw, 42px);
+  line-height: .95;
+  text-transform: uppercase;
+}
+
+.consultoria-value-card ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.consultoria-value-card li {
+  position: relative;
+  padding: 14px 0 14px 22px;
+  border-top: 1px solid rgb(0 0 0 / 18%);
+  color: var(--consultoria-grey);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.consultoria-value-card li::before {
+  content: "";
+  position: absolute;
+  top: 22px;
+  left: 2px;
+  width: 7px;
+  height: 7px;
+  background: var(--consultoria-yellow);
+}
+
+.consultoria-value-card:nth-child(2) li { color: #111; }
+.consultoria-value-card:nth-child(2) li::before { background: #111; }
+.consultoria-value-card:nth-child(3) li { border-color: rgb(255 255 255 / 18%); color: rgb(255 255 255 / 76%); }
+
+.consultoria-value__statement {
+  margin: 16px 0 0;
+  padding: clamp(28px, 4vw, 46px);
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 28px;
+  background: var(--consultoria-black);
+  color: #fff;
+}
+
+.consultoria-value__statement span {
+  width: 58px;
+  height: 58px;
+  display: grid;
+  place-items: center;
+  border: 2px solid var(--consultoria-yellow);
+  color: var(--consultoria-yellow);
+  font-family: "HP Simplified", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.consultoria-value__statement p {
+  margin: 0;
+  font-family: "HP Simplified", sans-serif;
+  font-size: clamp(18px, 2vw, 27px);
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+.consultoria-contact {
+  padding: 108px 0;
+  background: var(--consultoria-yellow);
+  color: #111;
+}
+
+.consultoria-contact__grid {
+  display: grid;
+  grid-template-columns: minmax(0, .72fr) minmax(0, 1.28fr);
+  align-items: center;
+  gap: clamp(48px, 8vw, 118px);
+}
+
+.consultoria-contact__intro { min-width: 0; }
+
+.consultoria-contact__intro p {
+  max-width: 490px;
+  margin: 32px 0 0;
+  font-size: 16px;
+  line-height: 1.72;
+}
+
+.consultoria-contact__phone {
+  margin-top: 30px;
+  display: inline-block;
+  font-family: "HP Simplified", sans-serif;
+  font-size: clamp(35px, 4vw, 54px);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.consultoria-form {
+  min-width: 0;
+  padding: clamp(30px, 4.5vw, 58px);
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px 24px;
+  background: #fff;
+  border: 1px solid #d4d4d0;
+  box-shadow: 0 26px 70px rgb(0 0 0 / 16%);
+}
+
+.consultoria-form__trap { position: absolute !important; }
+.consultoria-form__field { min-width: 0; }
+.consultoria-form__field--wide { grid-column: 1 / -1; }
+
+.consultoria-form label {
+  display: block;
+  margin-bottom: 6px;
+  font-family: "HP Simplified", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.consultoria-form input,
+.consultoria-form textarea {
+  width: 100%;
+  padding: 11px 2px;
+  border: 0;
+  border-bottom: 1px solid #c7c7c2;
+  border-radius: 0;
+  outline: 0;
+  background: transparent;
+  color: #111;
+  font: inherit;
+}
+
+.consultoria-form textarea {
+  min-height: 108px;
+  resize: vertical;
+}
+
+.consultoria-form input:focus,
+.consultoria-form textarea:focus { border-color: #111; }
+
+.consultoria-form__captcha {
+  min-height: 70px;
+  padding: 14px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 13px;
+  border: 1px solid #d4d4d0;
+  background: #f7f7f5;
+}
+
+.consultoria-form__captcha-check {
+  width: 31px;
+  height: 31px;
+  display: grid;
+  place-items: center;
+  border: 2px solid #111;
+  font-weight: 700;
+}
+
+.consultoria-form__captcha strong,
+.consultoria-form__captcha small { display: block; }
+.consultoria-form__captcha strong { font-size: 12px; }
+.consultoria-form__captcha small { margin-top: 2px; color: #666; font-size: 10px; }
+
+.consultoria-form__captcha svg {
+  width: 25px;
+  height: 25px;
+  fill: none;
+  stroke: #111;
+  stroke-width: 1.7;
+}
+
+.consultoria-form__submit {
+  min-height: 54px;
+  border: 0;
+  background: #111;
+  color: #fff;
+  cursor: pointer;
+  font-family: "HP Simplified", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  transition: background-color .2s ease, color .2s ease;
+}
+
+.consultoria-form__submit:hover,
+.consultoria-form__submit:focus-visible {
+  background: var(--consultoria-yellow);
+  color: #111;
+  outline: 2px solid #111;
+}
+
+@media (max-width: 1080px) {
+  .service-page--consultoria .consultoria-hero h1 { font-size: clamp(52px, 7vw, 76px); }
+  .consultoria-intro { padding: 84px 0; }
+  .consultoria-intro__layout,
+  .consultoria-service-card:first-child,
+  .consultoria-implementation__stage,
+  .consultoria-contact__grid { grid-template-columns: 1fr; }
+  .consultoria-intro__copy { padding: 0 0 58px; }
+  .consultoria-intro__media,
+  .consultoria-intro__media img { min-height: 520px; }
+  .consultoria-overview__grid { grid-template-columns: 1fr; }
+  .consultoria-service-card:first-child { grid-column: auto; }
+  .consultoria-implementation__media,
+  .consultoria-implementation__media img { min-height: 560px; }
+  .consultoria-contact__grid { gap: 54px; }
+}
+
+@media (max-width: 900px) {
+  .consultoria-overview,
+  .consultoria-implementation,
+  .consultoria-value,
+  .consultoria-contact { padding: 84px 0; }
+  .consultoria-benefits { grid-template-columns: 1fr; }
+  .consultoria-benefits li { min-height: 0; }
+  .consultoria-value__grid { grid-template-columns: 1fr; }
+  .consultoria-value-card { min-height: 0; }
+}
+
+@media (max-width: 680px) {
+  .service-page--consultoria .consultoria-hero {
+    min-height: 720px;
+    background-position: 67% center;
+  }
+  .service-page--consultoria .consultoria-hero::before {
+    background:
+      linear-gradient(0deg, rgb(6 6 5 / 94%) 0%, rgb(8 8 7 / 72%) 53%, rgb(255 212 0 / 15%) 100%);
+  }
+  .service-page--consultoria .service-hero__inner { padding-top: 132px; padding-bottom: 44px; }
+  .consultoria-hero__copy {
+    padding: 25px 21px 28px;
+    border-top-width: 3px;
+    backdrop-filter: blur(3px);
+  }
+  .service-page--consultoria .consultoria-hero h1,
+  html[lang="en"] .service-page--consultoria .consultoria-hero h1 { font-size: clamp(40px, 12vw, 54px); }
+  .service-page--consultoria .consultoria-hero p { font-size: 14px; line-height: 1.6; }
+  .service-page--consultoria .service-hero__actions { gap: 9px; }
+  .service-page--consultoria .service-button { padding-inline: 14px; font-size: 11px; }
+  .consultoria-intro { padding: 72px 0; }
+  .consultoria-intro__copy { padding: 0 0 48px; }
+  .service-page--consultoria .consultoria-intro h2,
+  .service-page--consultoria .consultoria-overview h2,
+  .service-page--consultoria .consultoria-implementation h2,
+  .service-page--consultoria .consultoria-value h2,
+  .service-page--consultoria .consultoria-contact h2 { font-size: clamp(40px, 11.5vw, 54px); }
+  .consultoria-intro__copy p { margin-top: 22px; font-size: 16px; }
+  .consultoria-intro__media,
+  .consultoria-intro__media img { min-height: 360px; }
+  .consultoria-intro__media img { object-position: 52% center; }
+  .consultoria-overview,
+  .consultoria-implementation,
+  .consultoria-value,
+  .consultoria-contact { padding: 72px 0; }
+  .consultoria-overview__grid,
+  .consultoria-implementation__stage,
+  .consultoria-value__grid { margin-top: 38px; }
+  .consultoria-service-card { padding: 28px 23px; }
+  .consultoria-service-card p { font-size: 14px; }
+  .consultoria-instruments span { min-height: 54px; padding-inline: 0; font-size: 12px; }
+  .consultoria-implementation__lead { margin-top: 22px; font-size: 16px; }
+  .consultoria-implementation__media,
+  .consultoria-implementation__media img { min-height: 390px; }
+  .consultoria-implementation__media img { object-position: 48% center; }
+  .consultoria-benefits li { padding: 28px 23px; font-size: 14px; }
+  .consultoria-value-card { padding: 28px 23px; }
+  .consultoria-value__statement { grid-template-columns: 1fr; gap: 18px; }
+  .consultoria-value__statement span { width: 48px; height: 48px; font-size: 18px; }
+  .consultoria-contact__intro p { margin-top: 24px; font-size: 14px; }
+  .consultoria-form { padding: 25px 20px; grid-template-columns: 1fr; }
+  .consultoria-form__field--wide { grid-column: auto; }
+  .consultoria-form__captcha { grid-template-columns: auto 1fr; }
+  .consultoria-form__captcha svg { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .service-page--consultoria .service-button,
+  .consultoria-form__submit { transition: none; }
+}

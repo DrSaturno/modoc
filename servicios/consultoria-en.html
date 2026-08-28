@@ -9,10 +9,12 @@
   <meta name="theme-color" content="#111111">
   <link rel="alternate" hreflang="es" href="consultoria.html">
   <link rel="alternate" hreflang="en" href="consultoria-en.html">
-  <link rel="stylesheet" href="../service-pages.css?v=1.0.2">
+  <link rel="preload" href="../assets/services/consultoria/hero-2026.png" as="image" fetchpriority="high">
+  <link rel="stylesheet" href="../service-pages.css?v=1.0.3">
+  <link rel="stylesheet" href="../consultoria-2026.css?v=1.0.0">
   <link rel="stylesheet" href="../certificate-viewer.css?v=1.0.0">
 </head>
-<body>
+<body class="service-page service-page--consultoria">
   <a class="skip-link" href="#contenido">Skip to content</a>
   <header class="service-header"><div class="shell service-nav-shell">
     <a class="service-brand" href="../index-en.html" aria-label="MODOC — Home"><img src="../assets/brand/modoc-logo-white.png" alt="MODOC powered by Kodak"></a>
@@ -22,12 +24,155 @@
   </div></header>
 
   <main id="contenido">
-    <section class="service-hero" style="--hero-image: url('assets/services/consultoria/banner.jpg')"><div class="shell service-hero__inner"><div class="service-hero__copy"><h1>MODOC FILE ADVISORY</h1><p>To develop their activities, all companies have their own<br>specific processes which include document filing and management.<br>The <strong>MODOC's</strong> comprehensive advisory performs a case-by-case analysis to identify<br>possible improvements and increase the business profitability through the<br>accurate management of their files.</p><div class="service-hero__actions"><a class="service-button" href="../index-en.html#contacto">Contact us</a><a class="service-button service-button--ghost" href="#servicio">Our service</a></div></div></div></section>
-    <section class="service-intro" id="servicio"><div class="shell"><h2>QUALIFIED ADVICE</h2><p>Our experts create and provide solutions to suit your needs.</p></div></section>
-    <section class="service-section service-section--white"><div class="shell service-split"><div class="service-copy"><h2>OUR SERVICE</h2><p><strong>MODOC’s</strong> advisory services offer the main instruments for document management: classification framework, access table and security. Whether yours is a big or a middle-sized company, we offer a solution for the management of your files.</p><p>With the proper advice, document storage can always be improved and this will help you to implement the best means and procedures for the information to become space-saving and fluid and, consequently, to increase your corporate benefits. The time your employees devote to organize the information could be spent in specific professional tasks. <strong>MODOC</strong> hold s and manages your documentation so that your business files are perfectly organized, easily reached, safely stored and simply shared with a single click.</p></div><div class="service-media"><img src="../assets/services/consultoria/1.jpg" alt="MODOC file advisory"></div></div></section>
-    <section class="service-section service-section--dark"><div class="shell service-split service-split--reverse"><div class="service-media service-media--contain"><img src="../assets/services/consultoria/2.jpg" alt="File organization"></div><div class="service-copy"><h2>HIRING ADVISORY SERVICES</h2><p>Discover how to improve your company’s document management.</p><ul class="service-list"><li>Count on an advisory service exclusive for middle-sized companies.</li><li>Trust on <strong>MODOC’s</strong> professional experts.</li><li>Adopt a file management system aimed at increasing your profits.</li><li>Benefit from a comprehensive advisory which offers solutions beyond document management.</li></ul></div></div></section>
-    <section class="service-section service-section--white"><div class="shell service-media service-media--contain"><img src="../assets/services/consultoria/ofertaValor.jpg" alt="Value proposition MODOC"></div></section>
-    <section class="service-callout"><div class="shell service-callout__inner"><h2>Message us at 11 6886-1829 or fill in the form in the Contact section and we will be delighted to get in touch to provide information on any service of your interest.</h2><a class="service-button" href="../index-en.html#contacto">Contact us</a></div></section>
+    <section class="service-hero consultoria-hero" style="--hero-image: url('../assets/services/consultoria/hero-2026.png')">
+      <div class="shell service-hero__inner">
+        <div class="service-hero__copy consultoria-hero__copy">
+          <h1>MODOC FILE ADVISORY</h1>
+          <p>To develop their activities, all companies have their own<br>specific processes which include document filing and management.<br>The <strong>MODOC's</strong> comprehensive advisory performs a case-by-case analysis to identify<br>possible improvements and increase the business profitability through the<br>accurate management of their files.</p>
+          <div class="service-hero__actions">
+            <a class="service-button" href="#contacto-consultoria">Contact us</a>
+            <a class="service-button service-button--ghost" href="#servicio">Our service</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="consultoria-intro" id="servicio">
+      <div class="shell consultoria-intro__layout">
+        <div class="consultoria-intro__copy">
+          <h2>QUALIFIED ADVICE</h2>
+          <p>Our experts create and provide solutions to suit your needs.</p>
+        </div>
+        <figure class="consultoria-intro__media">
+          <img src="../assets/services/consultoria/advisory-team-2026.png" alt="Advisory team organizing a document management system" loading="lazy">
+        </figure>
+      </div>
+    </section>
+
+    <section class="consultoria-overview">
+      <div class="shell">
+        <h2>OUR SERVICE</h2>
+        <div class="consultoria-overview__grid">
+          <article class="consultoria-service-card">
+            <div>
+              <div class="consultoria-service-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 64 64"><path d="M10 12h18l6 7h20v33H10zM18 30h28M18 39h22"/></svg>
+              </div>
+              <p><strong>MODOC’s</strong> advisory services offer the main instruments for document management: classification framework, access table and security. Whether yours is a big or a middle-sized company, we offer a solution for the management of your files.</p>
+            </div>
+            <div class="consultoria-instruments" role="group" aria-label="Document management instruments">
+              <span>Classification framework</span>
+              <span>Access table</span>
+              <span>Security</span>
+            </div>
+          </article>
+          <article class="consultoria-service-card consultoria-service-card--yellow">
+            <div class="consultoria-service-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64"><path d="M12 48V31h10v17M27 48V22h10v26M42 48V12h10v36M8 52h48"/></svg>
+            </div>
+            <p>With the proper advice, document storage can always be improved and this will help you to implement the best means and procedures for the information to become space-saving and fluid and, consequently, to increase your corporate benefits.</p>
+          </article>
+          <article class="consultoria-service-card consultoria-service-card--dark">
+            <div class="consultoria-service-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64"><path d="M12 18h40v32H12zM19 12h26v6M23 30h18M23 39h13"/></svg>
+            </div>
+            <p>The time your employees devote to organize the information could be spent in specific professional tasks. <strong>MODOC</strong> hold s and manages your documentation so that your business files are perfectly organized, easily reached, safely stored and simply shared with a single click.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="consultoria-implementation">
+      <div class="shell">
+        <h2>HIRING ADVISORY SERVICES</h2>
+        <p class="consultoria-implementation__lead">Discover how to improve your company’s document management.</p>
+        <div class="consultoria-implementation__stage">
+          <figure class="consultoria-implementation__media">
+            <img src="../assets/services/consultoria/implementation-2026.png" alt="Consultant implementing an organized archive system" loading="lazy">
+          </figure>
+          <ul class="consultoria-benefits">
+            <li><span class="consultoria-benefits__mark" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M8 39h32V15H8zM15 15V9h18v6M16 25h16M16 32h10"/></svg></span><span>Count on an advisory service exclusive for middle-sized companies.</span></li>
+            <li><span class="consultoria-benefits__mark" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="m10 26 9 9 19-22"/></svg></span><span>Trust on <strong>MODOC’s</strong> professional experts.</span></li>
+            <li><span class="consultoria-benefits__mark" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M9 38V26h8v12M20 38V18h8v20M31 38V10h8v28M7 40h34"/></svg></span><span>Adopt a file management system aimed at increasing your profits.</span></li>
+            <li><span class="consultoria-benefits__mark" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M24 6v36M6 24h36M11 11l26 26M37 11 11 37"/></svg></span><span>Benefit from a comprehensive advisory which offers solutions beyond document management.</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="consultoria-value">
+      <div class="shell">
+        <h2>OUR VALUE PROPOSITION</h2>
+        <div class="consultoria-value__grid">
+          <article class="consultoria-value-card">
+            <h3>DIGITIZATION</h3>
+            <ul>
+              <li>Permanent traceability</li>
+              <li>High-volume digitization stations</li>
+              <li>Hardware</li>
+              <li>Technical support.</li>
+            </ul>
+          </article>
+          <article class="consultoria-value-card">
+            <h3>PROCESSING</h3>
+            <ul>
+              <li>Automated indexing platform.</li>
+              <li>Online viewing and control solution.</li>
+            </ul>
+          </article>
+          <article class="consultoria-value-card">
+            <h3>PRINTING</h3>
+            <ul>
+              <li>Modify forms so they can be digitized and automatically recognized.</li>
+              <li>Print images on demand.</li>
+              <li>Archive box assembly.</li>
+            </ul>
+          </article>
+        </div>
+        <div class="consultoria-value__statement">
+          <span aria-hidden="true">M</span>
+          <p>Implement a project management methodology that provides visibility and control with concrete metrics for key stakeholders</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="consultoria-contact" id="contacto-consultoria">
+      <div class="shell consultoria-contact__grid">
+        <div class="consultoria-contact__intro">
+          <h2>CONTACT US</h2>
+          <p>Message us at 11 6886-1829 or fill in the form in the Contact section and we will be delighted to get in touch to provide information on any service of your interest.</p>
+          <a class="consultoria-contact__phone" href="https://wa.me/5491168861829" target="_blank" rel="noopener">11&nbsp;6886&#8209;1829</a>
+        </div>
+        <form class="consultoria-form" action="https://formsubmit.co/contacto.web@modoc.com.ar" method="post" accept-charset="UTF-8">
+          <input type="hidden" name="_subject" value="File Advisory enquiry from modoc.com.ar">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="true">
+          <input class="consultoria-form__trap" type="text" name="_honey" tabindex="-1" autocomplete="off" hidden aria-hidden="true">
+          <div class="consultoria-form__field consultoria-form__field--wide">
+            <label for="consultoria-name">Name/Company</label>
+            <input id="consultoria-name" name="nameCompany" type="text" placeholder="Name/Company" autocomplete="organization" required>
+          </div>
+          <div class="consultoria-form__field">
+            <label for="consultoria-phone">Phone</label>
+            <input id="consultoria-phone" name="phone" type="tel" placeholder="Phone" autocomplete="tel" required>
+          </div>
+          <div class="consultoria-form__field">
+            <label for="consultoria-email">Email</label>
+            <input id="consultoria-email" name="email" type="email" placeholder="Email" autocomplete="email" required>
+          </div>
+          <div class="consultoria-form__field consultoria-form__field--wide">
+            <label for="consultoria-message">Message</label>
+            <textarea id="consultoria-message" name="message" placeholder="Message" required></textarea>
+          </div>
+          <div class="consultoria-form__captcha consultoria-form__field--wide" role="group" aria-label="CAPTCHA verification">
+            <span class="consultoria-form__captcha-check" aria-hidden="true">✓</span>
+            <span><strong>Security verification active</strong><small>CAPTCHA protected by FormSubmit</small></span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 5 6v5c0 4.7 2.9 8.4 7 10 4.1-1.6 7-5.3 7-10V6l-7-3Z"/></svg>
+          </div>
+          <button class="consultoria-form__submit consultoria-form__field--wide" type="submit">SEND ENQUIRY →</button>
+        </form>
+      </div>
+    </section>
   </main>
 
   <footer class="service-footer"><div class="shell service-footer__grid"><div class="service-footer__brand"><img src="../assets/brand/modoc-logo-white.png" alt="MODOC powered by Kodak"><p>LEGAL NAME: MODOC S.A.<br>ADDRESS: San José 1540 - C1136AAH - BUENOS AIRES<br>PHONES: +54 11 4304-2933 / 6823 / 4864</p></div><div class="service-footer__links"><h3>SERVICES</h3><a href="comercio-exterior-en.html">Foreign Trade.</a><a href="consultoria-en.html">Advisory.</a><a href="digitalizacion-en.html">Digitalization and Document Management.</a><a href="guarda-custodia-en.html">Safekeeping and Custody.</a><a href="../index-en.html#nosotros">About us.</a></div><div class="service-certifications"><h3>IRAM CERTIFICATIONS</h3><div class="service-certifications__list"><a class="certificate-link" href="../assets/certifications/official/MODOC-IRAM-ISO-27001.pdf" download="MODOC-IRAM-ISO-27001.pdf" aria-label="Download IRAM ISO/IEC 27001:2026 certificate"><img src="../assets/certifications/iram-iso-27001-badge.png" alt="IRAM ISO/IEC 27001:2026"></a><a class="certificate-link" href="../assets/certifications/official/MODOC-IRAM-ISO-9001.pdf" download="MODOC-IRAM-ISO-9001.pdf" aria-label="Download IRAM ISO 9001:2015 certificate"><img src="../assets/certifications/iram-iso-9001-badge.png" alt="IRAM ISO 9001:2015"></a><a class="certificate-link" href="../assets/certifications/official/MODOC-IRAM-ISO-22301.pdf" download="MODOC-IRAM-ISO-22301.pdf" aria-label="Download IRAM ISO 22301:2019 certificate"><img src="../assets/certifications/iram-iso-22301-badge.png" alt="IRAM ISO 22301:2019"></a></div></div></div><div class="service-footer__bottom"><div class="shell service-footer__bottom-inner"><span>© Copyright 2026 MODOC.SA</span><a class="service-signature" href="http://www.planetasaturno.com" target="_blank" rel="noopener">By <span class="saturn-mark" aria-hidden="true"></span> DrSaturno</a><span>Buenos Aires · Argentina</span></div></div></footer>

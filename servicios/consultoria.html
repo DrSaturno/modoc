@@ -9,10 +9,12 @@
   <meta name="theme-color" content="#111111">
   <link rel="alternate" hreflang="es" href="consultoria.html">
   <link rel="alternate" hreflang="en" href="consultoria-en.html">
-  <link rel="stylesheet" href="../service-pages.css?v=1.0.2">
+  <link rel="preload" href="../assets/services/consultoria/hero-2026.png" as="image" fetchpriority="high">
+  <link rel="stylesheet" href="../service-pages.css?v=1.0.3">
+  <link rel="stylesheet" href="../consultoria-2026.css?v=1.0.0">
   <link rel="stylesheet" href="../certificate-viewer.css?v=1.0.0">
 </head>
-<body>
+<body class="service-page service-page--consultoria">
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
   <header class="service-header"><div class="shell service-nav-shell">
     <a class="service-brand" href="../index.html" aria-label="MODOC — Inicio"><img src="../assets/brand/modoc-logo-white.png" alt="MODOC powered by Kodak"></a>
@@ -22,12 +24,155 @@
   </div></header>
 
   <main id="contenido">
-    <section class="service-hero" style="--hero-image: url('assets/services/consultoria/banner.jpg')"><div class="shell service-hero__inner"><div class="service-hero__copy"><h1>CONSULTORIA DE ARCHIVOS MODOC</h1><p>Cada empresa tiene una serie de procesos específicos en el desarrollo de su actividad,<br>procesos únicos que incluyen el archivo y la gestión documental.<br>La consultoría integral de <strong>MODOC</strong> analiza cada caso particular para detectar<br>posibles mejoras y aumentar la rentabilidad de cualquier negocio, gracias a una<br>correcta gestión de sus archivos</p><div class="service-hero__actions"><a class="service-button" href="../index.html#contacto">Contactanos</a><a class="service-button service-button--ghost" href="#servicio">Conocé el servicio</a></div></div></div></section>
-    <section class="service-intro" id="servicio"><div class="shell"><h2>ASESORAMIENTO EXPERTO</h2><p>Nuestros consultores crean y aportan soluciones ideadas a sus necesidades</p></div></section>
-    <section class="service-section service-section--white"><div class="shell service-split"><div class="service-copy"><h2>NUESTRO SERVICIO</h2><p>Los servicios de consultoría de <strong>MODOC</strong> le ofrecen los principales instrumentos de gestión documental: cuadro de clasificación, tabla de acceso y seguridad. Así, su empresa dispondrá de una solución a la gestión de su documentación, tanto si usted necesita una labor de consultoría general para una gran empresa como si quiere una consultoría específica para PYMES.</p><p>El archivo de documentos, se puede mejorar siempre mediante una consultoría adecuada, implantando los métodos y procedimientos adecuados para que la información ocupe menos espacio, fluya mejor y, en definitiva, aumente los beneficios de su empresa.</p><p>El tiempo que sus empleados dedican a organizar la información es tiempo que podrían dedicar a labores específicas, acordes con su formación profesional. <strong>MODOC</strong> realiza la tarea de archivar y gestionar la documentación para que los archivos de su negocio estén perfectamente organizados, se puedan encontrar con facilidad, guardar con seguridad y compartir con un solo click.</p></div><div class="service-media"><img src="../assets/services/consultoria/1.jpg" alt="Consultoría de archivos MODOC"></div></div></section>
-    <section class="service-section service-section--dark"><div class="shell service-split service-split--reverse"><div class="service-media service-media--contain"><img src="../assets/services/consultoria/2.jpg" alt="Organización de archivos"></div><div class="service-copy"><h2>CONTRATAR SERVICIO DE CONSULTORIA</h2><p>Descubra cómo puede mejorar la gestión documental de su empresa.</p><ul class="service-list"><li>Cuente con un servicio de consultoría específico para PYMES.</li><li>Confíe en la experiencia de los profesionales de <strong>MODOC</strong>.</li><li>Implante un método de gestión de archivos que aumente sus beneficios.</li><li>Benefíciese de una consultoría integral que le ofrece soluciones más allá de la gestión documental.</li></ul></div></div></section>
-    <section class="service-section service-section--white"><div class="shell service-media service-media--contain"><img src="../assets/services/consultoria/ofertaValor.jpg" alt="Oferta de valor MODOC"></div></section>
-    <section class="service-callout"><div class="shell service-callout__inner"><h2>Escríbanos al 11 6886-1829 o rellene el formulario en la sección de contacto y estaremos encantados de contactarlo para ampliar información sobre cualquier servicio que le interese.</h2><a class="service-button" href="../index.html#contacto">Contactanos</a></div></section>
+    <section class="service-hero consultoria-hero" style="--hero-image: url('../assets/services/consultoria/hero-2026.png')">
+      <div class="shell service-hero__inner">
+        <div class="service-hero__copy consultoria-hero__copy">
+          <h1>CONSULTORIA DE ARCHIVOS MODOC</h1>
+          <p>Cada empresa tiene una serie de procesos específicos en el desarrollo de su actividad,<br>procesos únicos que incluyen el archivo y la gestión documental.<br>La consultoría integral de <strong>MODOC</strong> analiza cada caso particular para detectar<br>posibles mejoras y aumentar la rentabilidad de cualquier negocio, gracias a una<br>correcta gestión de sus archivos</p>
+          <div class="service-hero__actions">
+            <a class="service-button" href="#contacto-consultoria">Contactanos</a>
+            <a class="service-button service-button--ghost" href="#servicio">Conocé el servicio</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="consultoria-intro" id="servicio">
+      <div class="shell consultoria-intro__layout">
+        <div class="consultoria-intro__copy">
+          <h2>ASESORAMIENTO EXPERTO</h2>
+          <p>Nuestros consultores crean y aportan soluciones ideadas a sus necesidades</p>
+        </div>
+        <figure class="consultoria-intro__media">
+          <img src="../assets/services/consultoria/advisory-team-2026.png" alt="Equipo de consultoría organizando un sistema documental" loading="lazy">
+        </figure>
+      </div>
+    </section>
+
+    <section class="consultoria-overview">
+      <div class="shell">
+        <h2>NUESTRO SERVICIO</h2>
+        <div class="consultoria-overview__grid">
+          <article class="consultoria-service-card">
+            <div>
+              <div class="consultoria-service-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 64 64"><path d="M10 12h18l6 7h20v33H10zM18 30h28M18 39h22"/></svg>
+              </div>
+              <p>Los servicios de consultoría de <strong>MODOC</strong> le ofrecen los principales instrumentos de gestión documental: cuadro de clasificación, tabla de acceso y seguridad. Así, su empresa dispondrá de una solución a la gestión de su documentación, tanto si usted necesita una labor de consultoría general para una gran empresa como si quiere una consultoría específica para PYMES.</p>
+            </div>
+            <div class="consultoria-instruments" role="group" aria-label="Instrumentos de gestión documental">
+              <span>Cuadro de clasificación</span>
+              <span>Tabla de acceso</span>
+              <span>Seguridad</span>
+            </div>
+          </article>
+          <article class="consultoria-service-card consultoria-service-card--yellow">
+            <div class="consultoria-service-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64"><path d="M12 48V31h10v17M27 48V22h10v26M42 48V12h10v36M8 52h48"/></svg>
+            </div>
+            <p>El archivo de documentos, se puede mejorar siempre mediante una consultoría adecuada, implantando los métodos y procedimientos adecuados para que la información ocupe menos espacio, fluya mejor y, en definitiva, aumente los beneficios de su empresa.</p>
+          </article>
+          <article class="consultoria-service-card consultoria-service-card--dark">
+            <div class="consultoria-service-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64"><path d="M12 18h40v32H12zM19 12h26v6M23 30h18M23 39h13"/></svg>
+            </div>
+            <p>El tiempo que sus empleados dedican a organizar la información es tiempo que podrían dedicar a labores específicas, acordes con su formación profesional. <strong>MODOC</strong> realiza la tarea de archivar y gestionar la documentación para que los archivos de su negocio estén perfectamente organizados, se puedan encontrar con facilidad, guardar con seguridad y compartir con un solo click.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="consultoria-implementation">
+      <div class="shell">
+        <h2>CONTRATAR SERVICIO DE CONSULTORIA</h2>
+        <p class="consultoria-implementation__lead">Descubra cómo puede mejorar la gestión documental de su empresa.</p>
+        <div class="consultoria-implementation__stage">
+          <figure class="consultoria-implementation__media">
+            <img src="../assets/services/consultoria/implementation-2026.png" alt="Consultora implementando un sistema de archivo organizado" loading="lazy">
+          </figure>
+          <ul class="consultoria-benefits">
+            <li><span class="consultoria-benefits__mark" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M8 39h32V15H8zM15 15V9h18v6M16 25h16M16 32h10"/></svg></span><span>Cuente con un servicio de consultoría específico para PYMES.</span></li>
+            <li><span class="consultoria-benefits__mark" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="m10 26 9 9 19-22"/></svg></span><span>Confíe en la experiencia de los profesionales de <strong>MODOC</strong>.</span></li>
+            <li><span class="consultoria-benefits__mark" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M9 38V26h8v12M20 38V18h8v20M31 38V10h8v28M7 40h34"/></svg></span><span>Implante un método de gestión de archivos que aumente sus beneficios.</span></li>
+            <li><span class="consultoria-benefits__mark" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M24 6v36M6 24h36M11 11l26 26M37 11 11 37"/></svg></span><span>Benefíciese de una consultoría integral que le ofrece soluciones más allá de la gestión documental.</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="consultoria-value">
+      <div class="shell">
+        <h2>NUESTRA OFERTA DE VALOR</h2>
+        <div class="consultoria-value__grid">
+          <article class="consultoria-value-card">
+            <h3>DIGITALIZACIÓN</h3>
+            <ul>
+              <li>Trazabilidad permanente</li>
+              <li>Islas de digitalización de alto volumen</li>
+              <li>Hardware</li>
+              <li>Soporte Técnico.</li>
+            </ul>
+          </article>
+          <article class="consultoria-value-card">
+            <h3>PROCESAMIENTO</h3>
+            <ul>
+              <li>Plataforma automatizada para indexación.</li>
+              <li>Solución en línea para visualización y control.</li>
+            </ul>
+          </article>
+          <article class="consultoria-value-card">
+            <h3>IMPRESIÓN</h3>
+            <ul>
+              <li>Modificar los formularios para que sean digitalizables y reconocibles automáticamente.</li>
+              <li>Imprimir imágenes bajo requerimiento.</li>
+              <li>Armado de cajas de guarda.</li>
+            </ul>
+          </article>
+        </div>
+        <div class="consultoria-value__statement">
+          <span aria-hidden="true">M</span>
+          <p>Implementar una metodología de gestión del proyecto que de visibilidad y control con métricas concretas para los principales interesados</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="consultoria-contact" id="contacto-consultoria">
+      <div class="shell consultoria-contact__grid">
+        <div class="consultoria-contact__intro">
+          <h2>CONTACTANOS</h2>
+          <p>Escríbanos al 11 6886-1829 o rellene el formulario en la sección de contacto y estaremos encantados de contactarlo para ampliar información sobre cualquier servicio que le interese.</p>
+          <a class="consultoria-contact__phone" href="https://wa.me/5491168861829" target="_blank" rel="noopener">11&nbsp;6886&#8209;1829</a>
+        </div>
+        <form class="consultoria-form" action="https://formsubmit.co/contacto.web@modoc.com.ar" method="post" accept-charset="UTF-8">
+          <input type="hidden" name="_subject" value="Consulta Consultoría de Archivos desde modoc.com.ar">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="true">
+          <input class="consultoria-form__trap" type="text" name="_honey" tabindex="-1" autocomplete="off" hidden aria-hidden="true">
+          <div class="consultoria-form__field consultoria-form__field--wide">
+            <label for="consultoria-nombre">Nombre/Empresa</label>
+            <input id="consultoria-nombre" name="nombreEmpresa" type="text" placeholder="Nombre/Empresa" autocomplete="organization" required>
+          </div>
+          <div class="consultoria-form__field">
+            <label for="consultoria-telefono">Teléfono</label>
+            <input id="consultoria-telefono" name="telefono" type="tel" placeholder="Teléfono" autocomplete="tel" required>
+          </div>
+          <div class="consultoria-form__field">
+            <label for="consultoria-email">Mail</label>
+            <input id="consultoria-email" name="email" type="email" placeholder="Mail" autocomplete="email" required>
+          </div>
+          <div class="consultoria-form__field consultoria-form__field--wide">
+            <label for="consultoria-mensaje">Mensaje</label>
+            <textarea id="consultoria-mensaje" name="mensaje" placeholder="Mensaje" required></textarea>
+          </div>
+          <div class="consultoria-form__captcha consultoria-form__field--wide" role="group" aria-label="Verificación CAPTCHA">
+            <span class="consultoria-form__captcha-check" aria-hidden="true">✓</span>
+            <span><strong>Verificación de seguridad activa</strong><small>CAPTCHA protegido por FormSubmit</small></span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 5 6v5c0 4.7 2.9 8.4 7 10 4.1-1.6 7-5.3 7-10V6l-7-3Z"/></svg>
+          </div>
+          <button class="consultoria-form__submit consultoria-form__field--wide" type="submit">ENVIAR CONSULTA →</button>
+        </form>
+      </div>
+    </section>
   </main>
 
   <footer class="service-footer"><div class="shell service-footer__grid"><div class="service-footer__brand"><img src="../assets/brand/modoc-logo-white.png" alt="MODOC powered by Kodak"><p>RAZÓN SOCIAL: MODOC S.A.<br>DIRECCIÓN: San José 1540 - C1136AAH - BUENOS AIRES<br>TELÉFONOS: +54 11 4304-2933 / 6823 / 4864</p></div><div class="service-footer__links"><h3>SERVICIOS</h3><a href="comercio-exterior.html">Comercio Exterior.</a><a href="consultoria.html">Consultoría.</a><a href="digitalizacion.html">Digitalización y Gestión Documental.</a><a href="guarda-custodia.html">Guarda y Custodia.</a><a href="../index.html#nosotros">Nosotros.</a></div><div class="service-certifications"><h3>CERTIFICACIONES IRAM</h3><div class="service-certifications__list"><a class="certificate-link" href="../assets/certifications/official/MODOC-IRAM-ISO-27001.pdf" download="MODOC-IRAM-ISO-27001.pdf" aria-label="Descargar certificado IRAM ISO/IEC 27001:2026"><img src="../assets/certifications/iram-iso-27001-badge.png" alt="IRAM ISO/IEC 27001:2026"></a><a class="certificate-link" href="../assets/certifications/official/MODOC-IRAM-ISO-9001.pdf" download="MODOC-IRAM-ISO-9001.pdf" aria-label="Descargar certificado IRAM ISO 9001:2015"><img src="../assets/certifications/iram-iso-9001-badge.png" alt="IRAM ISO 9001:2015"></a><a class="certificate-link" href="../assets/certifications/official/MODOC-IRAM-ISO-22301.pdf" download="MODOC-IRAM-ISO-22301.pdf" aria-label="Descargar certificado IRAM ISO 22301:2019"><img src="../assets/certifications/iram-iso-22301-badge.png" alt="IRAM ISO 22301:2019"></a></div></div></div><div class="service-footer__bottom"><div class="shell service-footer__bottom-inner"><span>© Copyright 2026 MODOC.SA</span><a class="service-signature" href="http://www.planetasaturno.com" target="_blank" rel="noopener">By <span class="saturn-mark" aria-hidden="true"></span> DrSaturno</a><span>Buenos Aires · Argentina</span></div></div></footer>
