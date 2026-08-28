@@ -61,6 +61,19 @@ La segunda modernización individual se aplica a Consultoría de Archivos en esp
 - El cierre amarillo incorpora un formulario propio con destino `contacto.web@modoc.com.ar`, CAPTCHA de FormSubmit, campo trampa y el teléfono de WhatsApp `11 6886-1829`.
 - Las fotografías nuevas se almacenan en `assets/services/consultoria/`; no contienen textos, logos ni zócalos embebidos.
 
+### Iteración 2026 — Digitalización y Gestión Documental
+
+La tercera modernización individual se aplica a Digitalización y Gestión Documental en español e inglés, manteniendo el contenido del backup y el sistema visual aprobado para PSAD y Consultoría.
+
+- El hero utiliza una fotografía nueva de un centro de digitalización en actividad, con espacio de lectura a la izquierda y un velo amarillo/negro moderado.
+- “Tecnología inteligente” incorpora una fotografía luminosa del equipo trabajando con escáneres de producción y conserva el texto original.
+- La transición de papel a documento administrado se representa como una secuencia HTML/CSS de papel, captura y repositorio; no depende de una infografía rasterizada.
+- “Las recompensas de no usar papel” mantiene sus tres beneficios y los presenta como módulos visuales diferenciados de reducción de costes, seguridad y operaciones.
+- La antigua animación `4.gif` se reemplaza por una infografía vertical HTML/CSS de siete etapas, con las mismas denominaciones del proceso original y lectura lineal en mobile.
+- Las secciones de registros en papel, firma digital, validez jurídica y recibos de sueldo conservan sus textos originales y se distribuyen en mapas de relación, módulos legales y tarjetas de funcionalidades.
+- El cierre amarillo incorpora un formulario propio con destino `contacto.web@modoc.com.ar`, CAPTCHA de FormSubmit, campo trampa y el teléfono de WhatsApp `11 6886-1829`.
+- Las fotografías nuevas se almacenan en `assets/services/digitalizacion/`; no contienen textos, logos, zócalos ni una dominante azul.
+
 ### Visor de certificados IRAM
 
 Todos los enlaces de imágenes IRAM abren un diálogo accesible con una vista previa del PDF y una acción explícita de descarga. Si JavaScript no se ejecuta, el enlace conserva la descarga directa como alternativa.
@@ -104,3 +117,5 @@ El backup implementaba Google reCAPTCHA v2. La versión estática utiliza el CAP
 - El título “Digitalización de despachos aduaneros” debe permanecer dentro de su columna y no invadir la fotografía en anchos intermedios.
 - Consultoría de Archivos presenta “Nuestra oferta de valor” como contenido HTML/CSS y no depende de una imagen rasterizada para comunicar sus tres componentes.
 - Consultoría de Archivos contiene un formulario funcional en español e inglés y mantiene la misma grilla lateral a 1280 px, tablet y mobile.
+- Digitalización y Gestión Documental presenta el proceso completo como siete etapas HTML/CSS y no depende de `4.gif` para comunicarlo.
+- Digitalización y Gestión Documental contiene un formulario funcional en español e inglés y no genera overflow horizontal a 1280 px, 834 px ni 390 px.
