@@ -717,26 +717,12 @@ html[data-theme="3"] .site-footer { background: #050505; color: #fff; }
   opacity: .62;
 }
 
-.saturn-mark {
-  position: relative;
-  width: 9px;
-  height: 9px;
+/* El planeta se pinta de blanco: brightness(0) lo lleva a negro sólido
+   y invert(1) lo pasa a blanco, sin depender del color original del emoji. */
+.signature-planet {
   display: inline-block;
-  border: 1px solid currentColor;
-  border-radius: 50%;
-}
-
-.saturn-mark::after {
-  content: "";
-  position: absolute;
-  left: -3px;
-  right: -3px;
-  top: 3px;
-  height: 3px;
-  border-top: 1px solid currentColor;
-  border-bottom: 1px solid currentColor;
-  border-radius: 50%;
-  transform: rotate(-18deg);
+  margin-inline: .08em;
+  filter: grayscale(1) brightness(0) invert(1);
 }
 
 .whatsapp { background: var(--accent); color: #111; }
