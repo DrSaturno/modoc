@@ -1,0 +1,32 @@
+# Equivalente para Apache/cPanel de la configuración de vercel.json.
+#
+# vercel.json solo lo interpreta Vercel: es el entorno de prueba para
+# mostrarle el sitio al cliente antes del pase. Cuando el código se lleva
+# al hosting definitivo, este archivo es el que reproduce los mismos
+# redirects y cabeceras de seguridad. Si cambia algo en vercel.json
+# (una redirección, la CSP, el hash del pixel), hay que replicarlo acá.
+#
+# Pensado para Apache con mod_rewrite y mod_headers, habilitados por
+# defecto en la enorme mayoría de los hostings cPanel/LiteSpeed de
+# Argentina. Si el hosting real no es Apache, este archivo no aplica:
+# avisar para preparar el equivalente de ese servidor.
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  RewriteRule ^propuestas-v2/servicios/(.*)$ /servicios/$1 [R=301,L]
+  RewriteRule ^propuestas-v2/index\.html$ / [R=301,L]
+  RewriteRule ^propuestas-v2/?$ / [R=301,L]
+  RewriteRule ^comercio-exterior\.html$ /servicios/comercio-exterior.html [R=301,L]
+  RewriteRule ^consultoria\.html$ /servicios/consultoria.html [R=301,L]
+  RewriteRule ^digitalizacion\.html$ /servicios/digitalizacion.html [R=301,L]
+  RewriteRule ^guarda-custodia\.html$ /servicios/guarda-custodia.html [R=301,L]
+</IfModule>
+
+<IfModule mod_headers.c>
+  Header always set Content-Security-Policy "default-src 'self'; img-src 'self' data: https://www.facebook.com; font-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'sha256-/kEeV0ypFO4km7tkYaFOEA/yPzfBxCgFTVjB7LvErgg=' https://connect.facebook.net; connect-src 'self' https://www.facebook.com https://connect.facebook.net; form-action 'self' https://formsubmit.co; frame-ancestors 'self'; base-uri 'self'"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+</IfModule>

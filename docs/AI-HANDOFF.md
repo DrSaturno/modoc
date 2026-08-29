@@ -113,6 +113,7 @@ Además:
 - No enviar el formulario real durante pruebas visuales.
 - Mantener `vercel.json` como configuración de raíz y cabeceras de seguridad.
 - La CSP de `vercel.json` es estricta y no permite scripts inline sueltos. Todo script de terceros (medición, chat, mapas) requiere ampliar la política además de pegar el fragmento, o falla solo en producción y no en local. El pixel de Meta se habilita por hash SHA-256 del fragmento: si se edita el fragmento hay que recalcular el hash y actualizar `vercel.json`.
+- Vercel es un entorno de prueba: `vercel.json` solo lo interpreta Vercel y no viaja al hosting definitivo del cliente. El archivo `.htaccess` en la raíz reproduce lo mismo (redirects y cabeceras) para Apache/cPanel, que es el hosting esperado según las restricciones de PHP del proyecto. Cualquier cambio en `vercel.json` — una redirección nueva, la CSP, el hash del pixel — hay que replicarlo también en `.htaccess`, o el sitio se comporta distinto en el entorno de prueba y en producción. Si el hosting real no resulta ser Apache, `.htaccess` no sirve y hay que preparar el equivalente de ese servidor.
 
 ## Pendientes externos
 

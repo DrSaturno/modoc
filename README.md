@@ -49,4 +49,6 @@ Las consultas se envían por HTTPS mediante FormSubmit a `contacto.web@modoc.com
 
 ## Publicación
 
-El repositorio está preparado para despliegue estático en Vercel. `vercel.json` mantiene redirecciones de compatibilidad para las URLs anteriores y define cabeceras de seguridad.
+Vercel se usa como entorno de prueba para que el cliente revise el sitio antes del pase a producción; `vercel.json` mantiene ahí las redirecciones de compatibilidad para las URLs anteriores y las cabeceras de seguridad (incluida la política que habilita el pixel de Meta).
+
+El sitio definitivo se publica en el hosting propio del cliente, copiando el código — no a través de Vercel. `vercel.json` no viaja a ese hosting: `.htaccess` en la raíz reproduce las mismas redirecciones y cabeceras para Apache/cPanel. Si se cambia algo en uno, hay que replicarlo en el otro.

@@ -120,4 +120,6 @@ La política de seguridad de contenido de `vercel.json` bloqueaba el pixel por c
 
 El hash corresponde al contenido exacto del fragmento del pixel, idéntico en las diez páginas. Si se modifica una sola letra del fragmento hay que recalcular el hash y actualizar `vercel.json`, o el pixel deja de ejecutarse en producción sin aviso.
 
+`vercel.json` solo rige en el entorno de prueba de Vercel. El pase al hosting definitivo del cliente se hace copiando el código, no a través de Vercel, así que estas reglas no viajan solas: `.htaccess` en la raíz del repositorio las reproduce para Apache/cPanel. Los dos archivos deben mantenerse sincronizados a mano.
+
 Pendiente: Google Analytics, a la espera del ID de medición. Con Meta y Analytics activos conviene definir con MODOC si se agrega un aviso de cookies.
