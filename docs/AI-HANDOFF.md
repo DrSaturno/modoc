@@ -112,6 +112,7 @@ Además:
 - Revisar consola, carga de imágenes, navegación, menús y enlaces IRAM.
 - No enviar el formulario real durante pruebas visuales.
 - Mantener `vercel.json` como configuración de raíz y cabeceras de seguridad.
+- La CSP de `vercel.json` es estricta y no permite scripts inline sueltos. Todo script de terceros (medición, chat, mapas) requiere ampliar la política además de pegar el fragmento, o falla solo en producción y no en local. El pixel de Meta se habilita por hash SHA-256 del fragmento: si se edita el fragmento hay que recalcular el hash y actualizar `vercel.json`.
 
 ## Pendientes externos
 
