@@ -105,3 +105,15 @@ Bajo la línea de certificaciones IRAM, en el pie de las diez páginas, se muest
 
 - El pie del diálogo enlaza a `https://www.rite.gob.ar/` en una pestaña nueva con `rel="noopener"`.
 - El texto existe en español e inglés, igual que el resto del sitio.
+
+## Medición
+
+Pixel de Meta `2154921781722526` ("Modoc Pixel") instalado en las diez páginas.
+
+- El fragmento de inicialización va al final del `<head>` y dispara `PageView`.
+- El `<img>` de respaldo para navegadores sin JavaScript va al comienzo del `<body>`, no en el `<head>`: dentro de `<head>` un `<img>` en `<noscript>` no es HTML válido.
+- `analytics.js` reporta el evento `Lead` cuando se envía cualquiera de los formularios, que son la conversión principal del sitio. Sin ese evento la pauta solo podría optimizar por visitas.
+- El `Lead` viaja con `content_category` tomado del asunto del formulario, de modo que en el administrador de anuncios se distingue de qué servicio provino cada consulta.
+- El evento solo se dispara si `fbq` existe, así que un bloqueador de anuncios no rompe el envío del formulario.
+
+Pendiente: Google Analytics, a la espera del ID de medición. Con Meta y Analytics activos conviene definir con MODOC si se agrega un aviso de cookies.
