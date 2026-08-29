@@ -112,7 +112,7 @@ Además:
 - Revisar consola, carga de imágenes, navegación, menús y enlaces IRAM.
 - No enviar el formulario real durante pruebas visuales.
 - Mantener `vercel.json` como configuración de raíz y cabeceras de seguridad.
-- La CSP de `vercel.json` es estricta y no permite scripts inline sueltos. Todo script de terceros (medición, chat, mapas) requiere ampliar la política además de pegar el fragmento, o falla solo en producción y no en local. El pixel de Meta se habilita por hash SHA-256 del fragmento: si se edita el fragmento hay que recalcular el hash y actualizar `vercel.json`.
+- La CSP es estricta y no permite scripts inline sueltos. Todo script de terceros (medición, chat, mapas) requiere ampliar la política además de pegar el fragmento, o falla solo en producción y no en local. El pixel de Meta y GA4 se habilitan cada uno por el hash SHA-256 de su propio fragmento inline: si se edita cualquiera de los dos fragmentos hay que recalcular ese hash y actualizarlo en `vercel.json` **y** en `.htaccess`.
 - Vercel es un entorno de prueba: `vercel.json` solo lo interpreta Vercel y no viaja al hosting definitivo del cliente. El archivo `.htaccess` en la raíz reproduce lo mismo (redirects y cabeceras) para Apache/cPanel, que es el hosting esperado según las restricciones de PHP del proyecto. Cualquier cambio en `vercel.json` — una redirección nueva, la CSP, el hash del pixel — hay que replicarlo también en `.htaccess`, o el sitio se comporta distinto en el entorno de prueba y en producción. Si el hosting real no resulta ser Apache, `.htaccess` no sirve y hay que preparar el equivalente de ese servidor.
 
 ## Pendientes externos
@@ -138,7 +138,7 @@ Vercel es entorno de prueba; el sitio real se publica copiando el código al hos
 curl -I https://SU-DOMINIO-REAL/ | grep -i content-security-policy
 ```
 
-- Si el header aparece con el hash del pixel (`sha256-/kEeV0ypFO4km7tkYaFOEA/yPzfBxCgFTVjB7LvErgg=`) adentro, `.htaccess` se está aplicando y el pixel de Meta debería funcionar.
+- Si el header aparece con los dos hashes adentro —`sha256-/kEeV0ypFO4km7tkYaFOEA/yPzfBxCgFTVjB7LvErgg=` (pixel de Meta) y `sha256-tqYQtqrBFvuBwiG7/Y8GZYJRWQu+0vM2IYQruBIA4tM=` (GA4)—, `.htaccess` se está aplicando y ambos deberían funcionar.
 - Si no aparece nada, `.htaccess` no se está leyendo. Es casi siempre un tema de `AllowOverride` deshabilitado en la configuración del servidor — pedirle al hosting que lo habilite para ese directorio, no es un problema de código.
 - Confirmar también, abriendo la consola del navegador en el sitio ya publicado, que no aparezca ningún error de `Content-Security-Policy`.
 - De paso, probar que un redirect viejo funcione (por ejemplo `/comercio-exterior.html` debe llevar a `/servicios/comercio-exterior.html`), para confirmar que las `RewriteRule` también están activas.

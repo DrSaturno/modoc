@@ -122,4 +122,9 @@ El hash corresponde al contenido exacto del fragmento del pixel, idéntico en la
 
 `vercel.json` solo rige en el entorno de prueba de Vercel. El pase al hosting definitivo del cliente se hace copiando el código, no a través de Vercel, así que estas reglas no viajan solas: `.htaccess` en la raíz del repositorio las reproduce para Apache/cPanel. Los dos archivos deben mantenerse sincronizados a mano.
 
-Pendiente: Google Analytics, a la espera del ID de medición. Con Meta y Analytics activos conviene definir con MODOC si se agrega un aviso de cookies.
+Google Analytics 4 (`G-KKVCGFB5XJ`) instalado en las diez páginas, con el mismo criterio que el pixel de Meta.
+
+- `gtag.js` va apenas se abre el `<head>`, antes que cualquier otro recurso, siguiendo la recomendación de Google para no perder mediciones tempranas de carga.
+- El fragmento inline de inicialización se habilita en la CSP por su propio hash SHA-256 (distinto del hash del pixel), no por `'unsafe-inline'`.
+- `analytics.js` reporta `generate_lead` en GA4 al mismo tiempo que reporta `Lead` en Meta, cuando se envía cualquier formulario. Los dos eventos viajan con el asunto del formulario para poder separar el rendimiento por servicio.
+- La CSP permite `https://*.googletagmanager.com`, `https://*.google-analytics.com` y `https://*.analytics.google.com` porque gtag.js reparte sus peticiones entre subdominios regionales; restringir a un host fijo rompe la medición de forma intermitente. Con Meta y Analytics activos conviene definir con MODOC si se agrega un aviso de cookies.
