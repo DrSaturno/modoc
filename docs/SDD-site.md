@@ -116,4 +116,8 @@ Pixel de Meta `2154921781722526` ("Modoc Pixel") instalado en las diez páginas.
 - El `Lead` viaja con `content_category` tomado del asunto del formulario, de modo que en el administrador de anuncios se distingue de qué servicio provino cada consulta.
 - El evento solo se dispara si `fbq` existe, así que un bloqueador de anuncios no rompe el envío del formulario.
 
+La política de seguridad de contenido de `vercel.json` bloqueaba el pixel por completo: script inline, `connect.facebook.net`, la imagen de `facebook.com` y las conexiones salientes. Se amplió lo mínimo necesario y el script inline se habilita por hash SHA-256, no con `'unsafe-inline'`, para no permitir cualquier script inline en el sitio.
+
+El hash corresponde al contenido exacto del fragmento del pixel, idéntico en las diez páginas. Si se modifica una sola letra del fragmento hay que recalcular el hash y actualizar `vercel.json`, o el pixel deja de ejecutarse en producción sin aviso.
+
 Pendiente: Google Analytics, a la espera del ID de medición. Con Meta y Analytics activos conviene definir con MODOC si se agrega un aviso de cookies.
