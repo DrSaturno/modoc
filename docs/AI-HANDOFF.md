@@ -138,7 +138,7 @@ Vercel es entorno de prueba; el sitio real se publica copiando el código al hos
 curl -I https://SU-DOMINIO-REAL/ | grep -i content-security-policy
 ```
 
-- Si el header aparece con los dos hashes adentro —`sha256-/kEeV0ypFO4km7tkYaFOEA/yPzfBxCgFTVjB7LvErgg=` (pixel de Meta) y `sha256-tqYQtqrBFvuBwiG7/Y8GZYJRWQu+0vM2IYQruBIA4tM=` (GA4)—, `.htaccess` se está aplicando y ambos deberían funcionar.
+- Si el header aparece con los dos hashes adentro —`sha256-/kEeV0ypFO4km7tkYaFOEA/yPzfBxCgFTVjB7LvErgg=` (pixel de Meta) y `sha256-e5jINWbhnF8isr9IwgKeWpCN48QLCWigs8EuDnEj5cU=` (GA4)—, `.htaccess` se está aplicando y ambos deberían funcionar.
 - Si no aparece nada, `.htaccess` no se está leyendo. Es casi siempre un tema de `AllowOverride` deshabilitado en la configuración del servidor — pedirle al hosting que lo habilite para ese directorio, no es un problema de código.
 - Confirmar también, abriendo la consola del navegador en el sitio ya publicado, que no aparezca ningún error de `Content-Security-Policy`.
 - De paso, probar que un redirect viejo funcione (por ejemplo `/comercio-exterior.html` debe llevar a `/servicios/comercio-exterior.html`), para confirmar que las `RewriteRule` también están activas.
