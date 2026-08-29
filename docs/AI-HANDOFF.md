@@ -115,6 +115,14 @@ Además:
 - La CSP es estricta y no permite scripts inline sueltos. Todo script de terceros (medición, chat, mapas) requiere ampliar la política además de pegar el fragmento, o falla solo en producción y no en local. El pixel de Meta y GA4 se habilitan cada uno por el hash SHA-256 de su propio fragmento inline: si se edita cualquiera de los dos fragmentos hay que recalcular ese hash y actualizarlo en `vercel.json` **y** en `.htaccess`.
 - Vercel es un entorno de prueba: `vercel.json` solo lo interpreta Vercel y no viaja al hosting definitivo del cliente. El archivo `.htaccess` en la raíz reproduce lo mismo (redirects y cabeceras) para Apache/cPanel, que es el hosting esperado según las restricciones de PHP del proyecto. Cualquier cambio en `vercel.json` — una redirección nueva, la CSP, el hash del pixel — hay que replicarlo también en `.htaccess`, o el sitio se comporta distinto en el entorno de prueba y en producción. Si el hosting real no resulta ser Apache, `.htaccess` no sirve y hay que preparar el equivalente de ese servidor.
 
+## Deuda técnica conocida (no urgente)
+
+- CSS sin uso, heredado de etapas anteriores del diseño. No afecta al usuario ni al peso real de forma significativa; se dejó para no tocar hojas de estilo cerca de la entrega:
+  - `styles.css`: clases de las variantes de tema descartadas (`.about-visual__cube`, `.about-visual__frame`, `.hero-kicker`, `.brand__image--dark/--light`, `.about-logo--dark/--light`).
+  - `service-pages.css`: clases del layout de servicios previo a la modernización 2026 (`.service-callout`, `.service-copy`, `.service-media`, `.service-list`, `.service-gallery`, `.service-feature`).
+  - Antes de borrarlas, verificar que ninguna página de `propuestas/` o `entrega-propuestas/` que se quiera conservar dependa de ellas.
+- `style.css` (singular, en la raíz) no lo referencia ninguna página productiva; `styles.css` (plural) es el que se usa. Confirmar y eliminar el huérfano en una limpieza posterior.
+
 ## Pendientes externos
 
 - Activación inicial de FormSubmit desde `contacto.web@modoc.com.ar` si todavía no fue realizada.

@@ -215,3 +215,13 @@ button { font: inherit; }
 
   .rite-trigger { max-width: 210px; }
 }
+
+/* Los títulos son palabras largas en mayúsculas ("DOCUMENTACION",
+   "REORGANIZATION"): por debajo de ~360px no entran en una línea y se
+   recortaban contra el borde. Solo se parten cuando no hay alternativa;
+   a anchos normales esta regla no cambia nada. */
+.service-page h1,
+.service-page h2,
+.service-page h3 {
+  overflow-wrap: break-word;
+}

@@ -933,3 +933,9 @@ html[lang="en"] .service-page--digitalizacion .digital-hero h1 {
   .service-page--digitalizacion .service-button,
   .digital-form__submit { transition: none; }
 }
+
+/* Mismo caso en las etiquetas del puente ("METADATOS"). */
+.digital-bridge__pole strong,
+.digital-bridge__span strong {
+  overflow-wrap: break-word;
+}
