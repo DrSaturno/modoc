@@ -35,7 +35,6 @@ No editar como fuente productiva:
 
 - `Backup 20-04/`: fuente histórica de textos e imágenes; es de consulta.
 - `propuestas/`, `propuestas-v2/` y `entrega-propuestas/`: mockups y entregas anteriores.
-- `comercio-exterior.html`, `consultoria.html`, `digitalizacion.html` y `guarda-custodia.html` de la raíz: duplicados históricos cubiertos por redirecciones de Vercel.
 - `output/`, `tmp/` y `.playwright-cli/`: artefactos locales.
 
 ## Estado funcional
@@ -115,13 +114,17 @@ Además:
 - La CSP es estricta y no permite scripts inline sueltos. Todo script de terceros (medición, chat, mapas) requiere ampliar la política además de pegar el fragmento, o falla solo en producción y no en local. El pixel de Meta y GA4 se habilitan cada uno por el hash SHA-256 de su propio fragmento inline: si se edita cualquiera de los dos fragmentos hay que recalcular ese hash y actualizarlo en `vercel.json` **y** en `.htaccess`.
 - Vercel es un entorno de prueba: `vercel.json` solo lo interpreta Vercel y no viaja al hosting definitivo del cliente. El archivo `.htaccess` en la raíz reproduce lo mismo (redirects y cabeceras) para Apache/cPanel, que es el hosting esperado según las restricciones de PHP del proyecto. Cualquier cambio en `vercel.json` — una redirección nueva, la CSP, el hash del pixel — hay que replicarlo también en `.htaccess`, o el sitio se comporta distinto en el entorno de prueba y en producción. Si el hosting real no resulta ser Apache, `.htaccess` no sirve y hay que preparar el equivalente de ese servidor.
 
-## Deuda técnica conocida (no urgente)
+## Limpieza de CSS y archivos muertos (hecha)
 
-- CSS sin uso, heredado de etapas anteriores del diseño. No afecta al usuario ni al peso real de forma significativa; se dejó para no tocar hojas de estilo cerca de la entrega:
-  - `styles.css`: clases de las variantes de tema descartadas (`.about-visual__cube`, `.about-visual__frame`, `.hero-kicker`, `.brand__image--dark/--light`, `.about-logo--dark/--light`).
-  - `service-pages.css`: clases del layout de servicios previo a la modernización 2026 (`.service-callout`, `.service-copy`, `.service-media`, `.service-list`, `.service-gallery`, `.service-feature`).
-  - Antes de borrarlas, verificar que ninguna página de `propuestas/` o `entrega-propuestas/` que se quiera conservar dependa de ellas.
-- `style.css` (singular, en la raíz) no lo referencia ninguna página productiva; `styles.css` (plural) es el que se usa. Confirmar y eliminar el huérfano en una limpieza posterior.
+Se eliminó el código que había quedado de etapas anteriores del diseño, verificando que el render no cambiara:
+
+- `styles.css`: 127 reglas (variantes de tema descartadas `data-theme="1"/"3"`, `.standard-rail`, `.hero-trace`, `.about-visual__cube`, `.hero-kicker`, y las clases del mapa SVG de receptorías que hoy es un PNG). 61 KB → 47 KB.
+- `service-pages.css`: 43 reglas del layout de servicios previo a la modernización 2026 (`.service-callout`, `.service-copy`, `.service-media`, `.service-list`, `.service-tiles`, `.service-gallery`, `.service-table`). 19 KB → 15 KB.
+- `comercio-exterior.html`, `consultoria.html`, `digitalizacion.html`, `guarda-custodia.html` de la raíz y su hoja `style.css`: eran una línea de diseño abandonada, sin ningún marcador del diseño 2026 y cargando Font Awesome por CDN (que la CSP bloquea). Ninguna página los enlazaba y `vercel.json` y `.htaccess` ya redirigen esas cuatro URLs a `/servicios/`. Mantenerlos era un riesgo: si una redirección fallara, el visitante habría visto la página vieja en lugar de la actual.
+
+Método de verificación, reutilizable si se repite la limpieza: se capturaron 38 propiedades computadas de cada elemento en las diez páginas a 320, 390, 834 y 1280 px —10.140 filas— antes y después de borrar. Las dos huellas resultaron idénticas.
+
+`propuestas-v2/` tiene copias propias de `styles.css` y `service-pages.css`, así que no se ve afectada.
 
 ## Pendientes externos
 

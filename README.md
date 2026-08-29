@@ -41,7 +41,7 @@ Abrir `http://127.0.0.1:8000/`.
 
 ## Fuentes canónicas
 
-Editar únicamente `index.html`, `index-en.html`, `servicios/`, los CSS/JS de raíz y `assets/`. Las carpetas `propuestas/`, `propuestas-v2/`, `entrega-propuestas/`, `Backup 20-04/` y los cuatro HTML de servicios duplicados en la raíz son material histórico o de compatibilidad; no son la implementación productiva.
+Editar únicamente `index.html`, `index-en.html`, `servicios/`, los CSS/JS de raíz y `assets/`. Las carpetas `propuestas/`, `propuestas-v2/`, `entrega-propuestas/` y `Backup 20-04/` son material histórico; no son la implementación productiva.
 
 ## Formulario
 
