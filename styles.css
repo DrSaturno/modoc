@@ -216,6 +216,7 @@ html[data-theme="1"] .client-access, html[data-theme="3"] .client-access { backg
 .socials { display: flex; gap: 8px; margin-top: 24px; }
 .socials a, .socials span { width: 36px; height: 36px; display: grid; place-items: center; border: 1px solid rgb(255 255 255 / 25%); font-family: Arial, sans-serif; font-weight: 700; }
 .socials span { color: rgb(255 255 255 / 48%); cursor: not-allowed; }
+.socials a:hover, .socials a:focus-visible { border-color: var(--accent); color: var(--accent); }
 .footer-nav { display: grid; grid-template-columns: .72fr 1.28fr; gap: 28px; }
 .footer-nav h3, .footer-certifications h3 { margin: 0 0 20px; color: var(--accent); font-family: "HP Simplified", sans-serif; font-size: 15px; }
 .footer-nav a { display: block; margin-bottom: 12px; color: rgb(255 255 255 / 60%); font-size: 10px; line-height: 1.45; }

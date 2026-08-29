@@ -55,7 +55,7 @@ No editar como fuente productiva:
 Las cuatro páginas de servicio ya están modernizadas. No hay una tarea de modernización pendiente por defecto; antes de iniciar trabajo nuevo:
 
 1. Confirmar con Comercial de MODOC si hay pedidos de ajuste de contenido, fotografía o formulario sobre alguno de los cuatro servicios.
-2. Revisar los "Pendientes externos" de este documento (redes sociales, activación de FormSubmit, aprobación final de textos) por si ya fueron resueltos y pueden cerrarse.
+2. Revisar los "Pendientes externos" de este documento (activación de FormSubmit, aprobación final de textos) por si ya fueron resueltos y pueden cerrarse.
 3. Si no hay pedidos nuevos, tratar cualquier cambio como una iteración puntual: documentar la decisión en `docs/SDD-servicios.md` y validar HTML/responsive antes de cerrar.
 
 ## Reglas que no deben cambiarse sin aprobación
@@ -70,7 +70,7 @@ Las cuatro páginas de servicio ya están modernizadas. No hay una tarea de mode
 - Teléfonos institucionales del footer: `+54 11 4304-2933 / 6823 / 4864`.
 - Acceso Clientes contiene solamente los dos enlaces aprobados existentes.
 - Firma del footer: `By DrSaturno`, enlazada a `http://www.planetasaturno.com` y tratada como detalle secundario.
-- Las redes sociales siguen pendientes de URLs oficiales; no inventarlas.
+- Redes sociales confirmadas por MODOC: Instagram `https://www.instagram.com/modocarg/` y Facebook `https://www.facebook.com/ModocArgentina`. No hay LinkedIn; el ícono placeholder se sacó del footer en vez de dejarlo apagado.
 
 ## Recursos visuales
 
@@ -117,7 +117,6 @@ Además:
 
 ## Pendientes externos
 
-- Confirmación de las URLs oficiales de redes sociales.
 - Activación inicial de FormSubmit desde `contacto.web@modoc.com.ar` si todavía no fue realizada.
 - Revisión y aprobación final de textos por Comercial de MODOC.
 - Confirmación definitiva de URLs de Acceso Clientes, si MODOC informa cambios.

@@ -69,9 +69,12 @@ La firma visual distintiva es el panel blanco del hero: una pieza sobria que vin
 
 ## Pendientes externos
 
-- URLs oficiales de redes sociales de MODOC: los perfiles deben confirmarse antes de activar enlaces públicos.
 - Activación inicial de FormSubmit desde `contacto.web@modoc.com.ar`.
 - Revisión final de textos por el sector Comercial.
+
+## Redes sociales
+
+El pie del home enlaza Instagram (`https://www.instagram.com/modocarg/`) y Facebook (`https://www.facebook.com/ModocArgentina`), los únicos dos perfiles oficiales confirmados por MODOC. No hay LinkedIn: no se muestra un tercer ícono apagado, se saca directamente del footer. Los enlaces abren en pestaña nueva con `rel="noopener"`.
 
 ## Criterios de aceptación
 
