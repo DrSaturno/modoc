@@ -129,3 +129,16 @@ Además:
 3. Comprobar que el árbol de trabajo contenga únicamente cambios de la iteración.
 4. Crear un commit descriptivo en `main`.
 5. Subir a `origin/main`.
+
+## Pase al hosting definitivo del cliente
+
+Vercel es entorno de prueba; el sitio real se publica copiando el código al hosting de MODOC, no a través de Vercel. `vercel.json` no viaja a ese servidor — lo reemplaza `.htaccess` (ver "Publicación" en `README.md`). Antes de confirmarle a MODOC que el sitio está en producción, verificar que `.htaccess` se esté aplicando de verdad, porque si Apache lo ignora no tira ningún error visible:
+
+```bash
+curl -I https://SU-DOMINIO-REAL/ | grep -i content-security-policy
+```
+
+- Si el header aparece con el hash del pixel (`sha256-/kEeV0ypFO4km7tkYaFOEA/yPzfBxCgFTVjB7LvErgg=`) adentro, `.htaccess` se está aplicando y el pixel de Meta debería funcionar.
+- Si no aparece nada, `.htaccess` no se está leyendo. Es casi siempre un tema de `AllowOverride` deshabilitado en la configuración del servidor — pedirle al hosting que lo habilite para ese directorio, no es un problema de código.
+- Confirmar también, abriendo la consola del navegador en el sitio ya publicado, que no aparezca ningún error de `Content-Security-Policy`.
+- De paso, probar que un redirect viejo funcione (por ejemplo `/comercio-exterior.html` debe llevar a `/servicios/comercio-exterior.html`), para confirmar que las `RewriteRule` también están activas.
