@@ -59,6 +59,7 @@ La primera modernización individual se aplicó a Comercio Exterior PSAD en espa
 - El cierre amarillo contiene el mismo llamado comercial y un formulario propio que utiliza el mismo destinatario, CAPTCHA y protección antispam del home.
 - La infografía, el formulario y el hero deben conservar su jerarquía a 390 px sin depender de una imagen rasterizada para explicar el proceso.
 - Los llamados comerciales usan el número de WhatsApp `11 6886-1829`; los teléfonos institucionales originales permanecen únicamente dentro de la información legal del footer.
+- A partir de la primera devolución del cliente, el módulo amarillo de tiempos informa un plazo de 24/48 horas para la digitalización y publicación de los despachos en ARCA, en español e inglés.
 
 ### Iteración 2026 — Consultoría de Archivos
 

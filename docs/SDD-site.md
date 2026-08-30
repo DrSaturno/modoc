@@ -97,6 +97,12 @@ Cambios pedidos por MODOC sobre el sitio ya publicado:
 - Receptorías amplía el listado y el mapa para ganar legibilidad; el mapa pasa de 520 px a 628 px de ancho.
 - Los logos de clientes se agrandan y los tres originales con más margen interno (Swiss Medical, Ministerio de Hacienda y Gobierno de la Ciudad) reciben una ampliación adicional para leerse a la par del resto.
 
+### Primera devolución del cliente
+
+- Receptorías incorpora la sucursal de Santo Tomé, Corrientes, tanto en el listado como en el mapa, y actualiza la cobertura nacional a 19 puntos.
+- Dentro de la misma sección se comunica el plazo de 24/48 horas para la digitalización y publicación en ARCA.
+- Se descarta el pedido de sumar retiros personalizados como contenido nuevo; el resto del home permanece sin cambios.
+
 ## RITE
 
 Bajo la línea de certificaciones IRAM, en el pie de las diez páginas, se muestra centrado el logotipo conjunto de RITE y la Oficina Anticorrupción. Al pulsarlo se abre un diálogo con el texto institucional sobre la participación de MODOC en el Registro de Integridad y Transparencia para Empresas y Entidades.

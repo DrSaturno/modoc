@@ -307,6 +307,15 @@ html[lang="en"] .service-page--psad .psad-hero h1 {
 .psad-method__step:first-child { background: var(--psad-yellow); }
 .psad-method__step:last-child { border-bottom: 0; }
 
+.psad-method__label {
+  margin-bottom: 12px;
+  font-family: "Myriad Pro", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  line-height: 1.3;
+}
+
 .psad-method__step > strong {
   margin-bottom: 20px;
   font-family: "HP Simplified", sans-serif;

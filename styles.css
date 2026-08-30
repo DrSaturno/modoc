@@ -867,6 +867,40 @@ html[data-theme="2"] .about-logo-column {
   color: #5f5f5a;
 }
 
+.receptorias-time {
+  max-width: 640px;
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: stretch;
+  border: 1px solid #111;
+  background: #fff;
+}
+
+.receptorias-time strong,
+.receptorias-time span {
+  min-height: 58px;
+  display: flex;
+  align-items: center;
+}
+
+.receptorias-time strong {
+  padding: 12px 16px;
+  background: #ffd400;
+  font-family: "HP Simplified", sans-serif;
+  font-size: 22px;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.receptorias-time span {
+  padding: 12px 18px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+
 .receptorias-contacts {
   display: flex;
   flex-wrap: wrap;
@@ -958,14 +992,78 @@ html[data-theme="2"] .about-logo-column {
   color: #ffd400;
 }
 
-.receptorias-map__image {
+.receptorias-map__visual {
   position: relative;
   z-index: 1;
   display: block;
-  width: min(100%, 680px);
-  height: auto;
+  width: min(100%, 617px);
   margin: 16px auto 4px;
+}
+
+.receptorias-map__image {
+  display: block;
+  width: 100%;
+  height: auto;
   object-fit: contain;
+}
+
+.receptorias-map__santo-tome {
+  position: absolute;
+  top: 17%;
+  left: 68.4%;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.receptorias-map__pin {
+  position: relative;
+  width: clamp(11px, 1.45vw, 18px);
+  height: clamp(11px, 1.45vw, 18px);
+  display: block;
+  flex: 0 0 auto;
+  border-radius: 50% 50% 50% 0;
+  background: #ffd400;
+  box-shadow: 0 3px 8px rgb(0 0 0 / 35%);
+  transform: rotate(-45deg);
+}
+
+.receptorias-map__pin::after {
+  content: "";
+  position: absolute;
+  inset: 31%;
+  border-radius: 50%;
+  background: #111;
+}
+
+.receptorias-map__place {
+  position: absolute;
+  top: 50%;
+  right: calc(100% + 8px);
+  width: max-content;
+  padding: clamp(3px, .45vw, 5px) clamp(5px, .6vw, 8px);
+  border-right: 2px solid #ffd400;
+  background: rgb(255 255 255 / 92%);
+  color: #111;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 12%);
+  line-height: 1.05;
+  text-align: right;
+  transform: translateY(-50%);
+}
+
+.receptorias-map__place small,
+.receptorias-map__place strong {
+  display: block;
+  font-family: "Myriad Pro", sans-serif;
+  font-size: clamp(6px, .8vw, 10px);
+}
+
+.receptorias-map__place small {
+  margin-bottom: 2px;
+  font-weight: 400;
+  letter-spacing: .05em;
 }
 
 .receptorias-map__footer {
@@ -1012,8 +1110,8 @@ html[data-theme="2"] .about-logo-column {
     padding: 20px 16px 16px;
   }
 
-  .receptorias-map__image {
-    width: min(100%, 360px);
+  .receptorias-map__visual {
+    width: min(100%, 349px);
   }
 
   .receptorias-map__header,
@@ -1251,13 +1349,6 @@ html[data-theme="2"] .about-logo-column {
   color: #111;
 }
 
-.receptorias-map__image {
-  width: min(100%, 680px);
-  max-height: 760px;
-  margin: 16px auto 4px;
-  object-fit: contain;
-}
-
 .receptorias-map__footer {
   border-color: rgb(17 17 17 / 25%);
   color: rgb(17 17 17 / 70%);
@@ -1269,9 +1360,8 @@ html[data-theme="2"] .about-logo-column {
     margin-inline: 16px;
   }
 
-  .receptorias-map__image {
-    width: min(100%, 360px);
-    max-height: 430px;
+  .receptorias-map__visual {
+    width: min(100%, 349px);
   }
 }
 
