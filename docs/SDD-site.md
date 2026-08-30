@@ -101,6 +101,7 @@ Cambios pedidos por MODOC sobre el sitio ya publicado:
 
 - Receptorías incorpora la sucursal de Santo Tomé, Corrientes, tanto en el listado como en el mapa, y actualiza la cobertura nacional a 19 puntos.
 - Dentro de la misma sección se comunica el plazo de 24/48 horas para la digitalización y publicación en ARCA.
+- La información de retiros, beneficios, plazo y contactos se agrupa en una ficha de filas equivalentes; el amarillo funciona como acento lateral y ningún dato secundario domina visualmente sobre los demás.
 - Se descarta el pedido de sumar retiros personalizados como contenido nuevo; el resto del home permanece sin cambios.
 
 ## RITE
