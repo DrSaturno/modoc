@@ -110,11 +110,14 @@ Los formularios del home y de las páginas modernizadas se envían por HTTPS a F
 
 ### Acceso Clientes
 
-El control se convierte en un botón accesible con apertura por click, hover y teclado. Por decisión del cliente, el submenú muestra únicamente los dos accesos con hipervínculo aprobados:
+El control es un botón accesible que abre el panel con click o teclado; pasar el puntero por encima ya no lo abre. Mientras el panel está abierto, el botón se invierte a negro con borde y texto amarillos. Por decisión del cliente, el panel muestra únicamente los dos accesos con hipervínculo aprobados:
 
 1. `https://gd.modoc.com.ar/zamba.web/` — Gestor Documental - Despachantes de Aduana.
 2. `http://gdg1.modoc.com.ar` — Gestor Documental - Administración de Archivos.
-No se muestran el tercer renglón ni los iconos decorativos del panel anterior.
+
+Los dos accesos ocupan cada uno la mitad del panel, como tarjetas con el ícono de 52 px en cuadro amarillo del resto del sitio: un contenedor para Despachantes de Aduana y una caja de archivo para Administración de Archivos. Al pasar el puntero o al recibir foco, la tarjeta se pinta de amarillo, el texto y la flecha de enlace externo pasan a negro y el ícono queda en un cuadro blanco con borde negro, igual que las tarjetas amarillas de las páginas de servicio.
+
+En mobile el panel se posiciona contra el header y no contra el botón: anclado al botón se salía por la izquierda, porque el botón no está pegado al borde derecho. Ocupa el ancho de pantalla menos 14 px por lado y mantiene las dos tarjetas lado a lado.
 
 ### Menú Servicios y carrusel
 
@@ -130,7 +133,7 @@ El backup implementaba Google reCAPTCHA v2. La versión estática utiliza el CAP
 - Cada detalle tiene URL HTML independiente y versión inglesa independiente.
 - No existe una referencia funcional a `index.php` para renderizar las páginas nuevas.
 - El formulario contiene el destinatario `contacto.web@modoc.com.ar` y el botón es de tipo submit.
-- Acceso Clientes abre y cierra el submenú con mouse, teclado y click fuera; Escape lo cierra.
+- Acceso Clientes abre y cierra el panel con click y teclado, y lo cierra con click fuera o Escape; el panel no excede la pantalla a 320, 360, 390, 700, 834 ni 1280 px.
 - Servicios abre sus cuatro enlaces con mouse, teclado y toque, tanto en el home como en las páginas de detalle.
 - El carrusel presenta cuatro slides y cada botón “Más información” abre el detalle correspondiente.
 - Las cabeceras de los servicios muestran una imagen a pantalla completa con contraste suficiente para el texto.

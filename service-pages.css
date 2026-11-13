@@ -41,12 +41,6 @@ button { font: inherit; }
 .service-language span { opacity: .5; padding-inline: 4px; }
 .client-access-wrap { position: relative; z-index: 120; }
 .client-access { min-height: 44px; padding: 0 20px; display: inline-flex; align-items: center; justify-content: center; border: 2px solid var(--yellow); background: var(--yellow); color: #111; cursor: pointer; font-family: "HP Simplified", sans-serif; font-size: 13px; font-weight: 700; letter-spacing: .045em; text-transform: uppercase; }
-.client-access-menu { position: absolute; top: calc(100% + 14px); right: 0; width: min(410px, calc(100vw - 34px)); padding: 25px 25px 20px; display: flex; flex-direction: column; gap: 12px; background: #202020; color: #fff; box-shadow: 0 22px 55px rgb(0 0 0 / 34%); opacity: 0; visibility: hidden; pointer-events: none; transform: translateY(-8px); transition: opacity .18s ease, transform .18s ease, visibility .18s ease; }
-.client-access-menu::before { content: ""; position: absolute; top: -8px; right: 32px; width: 16px; height: 16px; background: #202020; transform: rotate(45deg); }
-.client-access-wrap:not(.is-hover-suppressed):hover .client-access-menu, .client-access-menu.is-open { opacity: 1; visibility: visible; pointer-events: auto; transform: translateY(0); }
-.client-access-menu > strong { position: relative; z-index: 1; margin-bottom: 2px; font-family: "HP Simplified", sans-serif; font-size: 22px; line-height: 1; }
-.client-access-menu > a { position: relative; z-index: 1; padding-top: 10px; border-top: 1px solid rgb(255 255 255 / 17%); color: rgb(255 255 255 / 82%); font-family: "Myriad Pro", sans-serif; font-size: 11px; letter-spacing: .13em; line-height: 1.45; text-transform: uppercase; }
-.client-access-menu > a:hover, .client-access-menu > a:focus-visible { color: var(--yellow); }
 
 /* Service hero */
 .service-hero { min-height: 640px; display: flex; align-items: flex-end; position: relative; overflow: hidden; background: var(--dark) var(--hero-image) center / cover no-repeat; color: #fff; }
@@ -120,9 +114,6 @@ button { font: inherit; }
   .service-nav-toggle span { width: 19px; height: 2px; background: currentColor; }
   .service-actions { justify-self: end; }
   .client-access { min-height: 40px; padding: 0 11px; font-size: 10px; }
-  .client-access-menu { top: calc(100% + 11px); width: min(410px, calc(100vw - 28px)); padding: 21px 20px 18px; }
-  .client-access-menu > strong { font-size: 18px; }
-  .client-access-menu > a { font-size: 10px; letter-spacing: .09em; }
   .service-hero { min-height: 640px; background-position: 64% center; }
   .service-hero::before { background: linear-gradient(0deg, rgb(4 8 10 / 94%) 0%, rgb(4 8 10 / 70%) 49%, rgb(4 8 10 / 12%) 100%); }
   .service-hero__inner { padding-top: 150px; padding-bottom: 55px; }
@@ -181,4 +172,205 @@ button { font: inherit; }
 .service-page h2,
 .service-page h3 {
   overflow-wrap: break-word;
+}
+
+/* Acceso Clientes: se abre con click y muestra los dos sistemas como
+   tarjetas lado a lado; la que está bajo el puntero o el foco se pinta
+   de amarillo y su texto e ícono pasan a negro. */
+.client-access[aria-expanded="true"] {
+  border-color: #ffd400;
+  background: #111;
+  color: #ffd400;
+}
+
+.client-access-menu {
+  --access-yellow: #ffd400;
+  position: absolute;
+  top: calc(100% + 14px);
+  right: 0;
+  width: min(540px, calc(100vw - 34px));
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: #141414;
+  border-top: 3px solid var(--access-yellow);
+  color: #fff;
+  box-shadow: 0 26px 60px rgb(0 0 0 / 40%);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(-8px);
+  transition: opacity .18s ease, transform .18s ease, visibility .18s ease;
+}
+
+.client-access-menu::before {
+  content: "";
+  position: absolute;
+  top: -9px;
+  right: 34px;
+  width: 14px;
+  height: 14px;
+  background: var(--access-yellow);
+  transform: rotate(45deg);
+}
+
+.client-access-menu.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: none;
+}
+
+.client-access-menu > strong {
+  font-family: "HP Simplified", sans-serif;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: .14em;
+  color: rgb(255 255 255 / 64%);
+}
+
+.client-access-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.access-option {
+  position: relative;
+  min-height: 196px;
+  padding: 20px 18px 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 1px solid rgb(255 255 255 / 16%);
+  background: rgb(255 255 255 / 4%);
+  color: #fff;
+  text-decoration: none;
+  transition: background-color .2s ease, border-color .2s ease, color .2s ease, transform .2s ease;
+}
+
+.access-option__icon {
+  width: 52px;
+  height: 52px;
+  margin-bottom: auto;
+  display: grid;
+  place-items: center;
+  border: 2px solid var(--access-yellow);
+  color: var(--access-yellow);
+  transition: background-color .2s ease, border-color .2s ease, color .2s ease;
+}
+
+.access-option__icon svg {
+  width: 28px;
+  height: 28px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.9;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.access-option__eyebrow {
+  margin: 22px 0 6px;
+  font-family: "Myriad Pro", sans-serif;
+  font-size: 10px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: rgb(255 255 255 / 58%);
+  transition: color .2s ease;
+}
+
+.access-option__title {
+  font-family: "HP Simplified", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.05;
+  text-transform: uppercase;
+  overflow-wrap: break-word;
+}
+
+.access-option__go {
+  position: absolute;
+  top: 18px;
+  right: 16px;
+  width: 26px;
+  height: 26px;
+  display: grid;
+  place-items: center;
+  color: rgb(255 255 255 / 50%);
+  transition: color .2s ease, transform .2s ease;
+}
+
+.access-option__go svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.access-option:hover,
+.access-option:focus-visible {
+  border-color: var(--access-yellow);
+  background: var(--access-yellow);
+  color: #111;
+  transform: translateY(-2px);
+  outline: none;
+}
+
+.access-option:focus-visible { box-shadow: 0 0 0 2px #141414, 0 0 0 4px #fff; }
+
+.access-option:hover .access-option__icon,
+.access-option:focus-visible .access-option__icon {
+  border-color: #111;
+  background: #fff;
+  color: #111;
+}
+
+.access-option:hover .access-option__eyebrow,
+.access-option:focus-visible .access-option__eyebrow { color: rgb(0 0 0 / 62%); }
+
+.access-option:hover .access-option__go,
+.access-option:focus-visible .access-option__go {
+  color: #111;
+  transform: translate(2px, -2px);
+}
+
+@media (max-width: 760px) {
+  /* En mobile el botón no está pegado al borde derecho: anclado a él, el
+     panel se salía por la izquierda. Se posiciona contra el header, que
+     ocupa todo el ancho, y la flecha se oculta porque ya no apunta al botón. */
+  .client-access-wrap { position: static; }
+
+  .client-access-menu {
+    top: calc(100% - 8px);
+    right: 14px;
+    z-index: 120;
+    width: min(440px, calc(100% - 28px));
+    padding: 14px;
+    gap: 12px;
+  }
+
+  .client-access-menu::before { display: none; }
+
+  .client-access-menu > strong { font-size: 12px; }
+  .client-access-options { gap: 10px; }
+  .access-option { min-height: 164px; padding: 14px 12px 14px; }
+  .access-option__icon { width: 42px; height: 42px; }
+  .access-option__icon svg { width: 23px; height: 23px; }
+  .access-option__eyebrow { margin: 16px 0 5px; font-size: 9px; letter-spacing: .12em; }
+  .access-option__title { font-size: 15px; }
+  .access-option__go { top: 12px; right: 10px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .client-access-menu,
+  .access-option,
+  .access-option__icon,
+  .access-option__go { transition: none; }
+  .access-option:hover,
+  .access-option:focus-visible { transform: none; }
 }

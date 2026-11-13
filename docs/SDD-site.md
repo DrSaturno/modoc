@@ -41,7 +41,7 @@ La firma visual distintiva es el panel blanco del hero: una pieza sobria que vin
 ## Navegación
 
 - El selector ES/EN enlaza páginas equivalentes; no depende de parámetros de URL.
-- Servicios y Acceso Clientes funcionan por hover, click, teclado y toque.
+- Servicios funciona por hover, click, teclado y toque. Acceso Clientes se abre con click, toque o teclado.
 - Acceso Clientes contiene únicamente los dos sistemas con hipervínculos aprobados.
 - WhatsApp usa `+54 9 11 6886-1829`.
 
